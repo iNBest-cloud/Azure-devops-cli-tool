@@ -1,0 +1,135 @@
+name: Monthly Developer Report
+
+on:
+  # Scheduled to run on the 30th of every month at 23:00 UTC
+  schedule:
+    - cron: '0 23 30 * *'
+
+  # Manual trigger with customizable date range
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Start date (YYYY-MM-DD)'
+        required: true
+        type: string
+      end_date:
+        description: 'End date (YYYY-MM-DD)'
+        required: true
+        type: string
+      assigned_to:
+        description: 'Comma-separated list of developers (leave empty for all)'
+        required: false
+        type: string
+        default: ''
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    environment: main
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Calculate date range for scheduled run
+        id: dates
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            # Manual trigger - use provided dates
+            echo "start_date=${{ inputs.start_date }}" >> $GITHUB_OUTPUT
+            echo "end_date=${{ inputs.end_date }}" >> $GITHUB_OUTPUT
+            echo "filename_suffix=${{ inputs.start_date }}_to_${{ inputs.end_date }}" >> $GITHUB_OUTPUT
+          else
+            # Scheduled run - first to 30th of current month
+            YEAR=$(date +%Y)
+            MONTH=$(date +%m)
+            START_DATE="${YEAR}-${MONTH}-01"
+            END_DATE="${YEAR}-${MONTH}-30"
+            echo "start_date=${START_DATE}" >> $GITHUB_OUTPUT
+            echo "end_date=${END_DATE}" >> $GITHUB_OUTPUT
+            echo "filename_suffix=${YEAR}-${MONTH}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Load default developers from config
+        id: config
+        run: |
+          # Extract default_developers from config file
+          DEFAULT_DEVS=$(python -c "
+          import json
+          with open('config/azure_devops_config.json', 'r') as f:
+              config = json.load(f)
+              devs = config.get('work_item_query', {}).get('default_developers', [])
+              print(','.join(devs))
+          ")
+          echo "default_developers=${DEFAULT_DEVS}" >> $GITHUB_OUTPUT
+
+      - name: Generate developer report
+        env:
+          AZURE_DEVOPS_ORG: ${{ secrets.AZURE_DEVOPS_ORG }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+        run: |
+          # Determine which developers to use
+          if [ -n "${{ inputs.assigned_to }}" ]; then
+            # Manual trigger with specified developers
+            DEVELOPERS="${{ inputs.assigned_to }}"
+          else
+            # Use default developers from config
+            DEVELOPERS="${{ steps.config.outputs.default_developers }}"
+          fi
+
+          # Build the command
+          CMD="python run.py --query-work-items \
+            --start-date ${{ steps.dates.outputs.start_date }} \
+            --end-date ${{ steps.dates.outputs.end_date }} \
+            --optimized \
+            --export-csv developer_report_${{ steps.dates.outputs.filename_suffix }}.csv"
+
+          # Add assigned_to parameter
+          if [ -n "${DEVELOPERS}" ]; then
+            CMD="${CMD} --assigned-to \"${DEVELOPERS}\""
+          fi
+
+          # Execute the command
+          eval $CMD
+
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: developer-report-${{ steps.dates.outputs.filename_suffix }}
+          path: |
+            developer_report_${{ steps.dates.outputs.filename_suffix }}.csv
+            developer_report_${{ steps.dates.outputs.filename_suffix }}_developer_summary.csv
+          retention-days: 90
+
+      - name: Create report summary
+        run: |
+          echo "## Developer Report Generated" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date Range:** ${{ steps.dates.outputs.start_date }} to ${{ steps.dates.outputs.end_date }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Files Generated:**" >> $GITHUB_STEP_SUMMARY
+          echo "- \`developer_report_${{ steps.dates.outputs.filename_suffix }}.csv\` (Detailed)" >> $GITHUB_STEP_SUMMARY
+          echo "- \`developer_report_${{ steps.dates.outputs.filename_suffix }}_developer_summary.csv\` (Summary)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Show file sizes if they exist
+          if [ -f "developer_report_${{ steps.dates.outputs.filename_suffix }}.csv" ]; then
+            SIZE=$(du -h "developer_report_${{ steps.dates.outputs.filename_suffix }}.csv" | cut -f1)
+            echo "**Detailed Report Size:** ${SIZE}" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -f "developer_report_${{ steps.dates.outputs.filename_suffix }}_developer_summary.csv" ]; then
+            LINES=$(wc -l < "developer_report_${{ steps.dates.outputs.filename_suffix }}_developer_summary.csv")
+            DEVS=$((LINES - 1))
+            echo "**Developers Analyzed:** ${DEVS}" >> $GITHUB_STEP_SUMMARY
+          fi

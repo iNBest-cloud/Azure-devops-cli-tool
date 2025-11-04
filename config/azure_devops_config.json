@@ -23,7 +23,14 @@
     ],
     "date_field": "ClosedDate",
     "include_active_items": true,
-    "smart_filtering": true
+    "smart_filtering": true,
+    "default_developers": [
+      "Luis Nocedal",
+      "Carlos Vazquez",
+      "Fernando Alcaraz",
+      "Rodrigo Mendoza",
+      "Jorge Hernandez"
+    ]
   },
   "state_categories": {
     "assigned_states": [
