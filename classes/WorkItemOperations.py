@@ -67,10 +67,16 @@ class WorkItemOperations(AzureDevOps):
             # Call Logic App to get estimated hours
             fabric_response = self.fabric_helper.get_estimated_hours_by_ids(work_item_ids)
 
-            # Parse Logic App response
+            # Parse Logic App response - handle both direct and body-wrapped formats
+            fabric_work_items = None
             if fabric_response and 'ResultSets' in fabric_response:
+                # Direct format: {'ResultSets': {'Table1': [...]}}
                 fabric_work_items = fabric_response['ResultSets']['Table1']
+            elif fabric_response and 'body' in fabric_response and 'ResultSets' in fabric_response['body']:
+                # Wrapped format: {'body': {'ResultSets': {'Table1': [...]}}}
+                fabric_work_items = fabric_response['body']['ResultSets']['Table1']
 
+            if fabric_work_items is not None:
                 # Create lookup dictionary: WorkItemId -> estimated hours
                 fabric_estimates = {}
                 for fabric_item in fabric_work_items:
@@ -90,9 +96,10 @@ class WorkItemOperations(AzureDevOps):
                         enriched_count += 1
 
                 print(f"   ✅ Set estimates for {enriched_count} work items from Fabric Logic App")
-
             else:
                 print(f"   ⚠️ Unexpected Logic App response format: {fabric_response}")
+                print(f"   Expected: {{'ResultSets': {{'Table1': [...]}}}} or {{'body': {{'ResultSets': {{'Table1': [...]}} }}}}")
+                print(f"   Make sure Logic App returns data in ResultSets.Table1 or body.ResultSets.Table1 format")
 
         except Exception as e:
             print(f"   ❌ Error fetching from Logic App: {e}")
