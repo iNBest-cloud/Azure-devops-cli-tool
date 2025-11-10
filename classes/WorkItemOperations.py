@@ -3,16 +3,19 @@ from classes.efficiency_calculator import EfficiencyCalculator
 from classes.project_discovery import ProjectDiscovery
 from config.config_loader import ConfigLoader
 from helpers.fabric_logic_app_helper import create_fabric_helper
+from helpers.logic_app_client import create_logic_app_client
+from helpers.env_loader import get_logic_app_url, EnvironmentError
+from helpers.email_mapping import resolve_emails
+from helpers.timezone_utils import get_date_boundaries_mexico_city
 from datetime import datetime, timedelta
 import json
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 import csv
 import os
-from urllib.parse import quote
 import concurrent.futures
 import time
 import requests
-from typing import Tuple
+import logging
 
 
 class WorkItemOperations(AzureDevOps):
@@ -22,10 +25,13 @@ class WorkItemOperations(AzureDevOps):
     
     def __init__(self, organization=None, personal_access_token=None, scoring_config=None, config_file=None):
         super().__init__(organization, personal_access_token)
-        
+
+        # Initialize logger
+        self.logger = logging.getLogger(__name__)
+
         # Initialize configuration loader
         self.config_loader = ConfigLoader(config_file or "config/azure_devops_config.json")
-        
+
         # Merge scoring config with loaded config
         if scoring_config:
             efficiency_config = self.config_loader.get_efficiency_scoring_config()
@@ -33,7 +39,7 @@ class WorkItemOperations(AzureDevOps):
             developer_config = self.config_loader.get_developer_scoring_config()
             if 'developer_score_weights' in scoring_config:
                 developer_config['weights'].update(scoring_config['developer_score_weights'])
-        
+
         # Initialize helper modules
         combined_config = {
             **self.config_loader.get_efficiency_scoring_config(),
@@ -43,9 +49,18 @@ class WorkItemOperations(AzureDevOps):
         self.efficiency_calculator = EfficiencyCalculator(combined_config)
         self.project_discovery = ProjectDiscovery(self)
 
-        # Initialize Fabric Logic App helper
+        # Initialize Fabric Logic App helper (legacy estimated hours)
         logic_app_url = "https://prod-10.northcentralus.logic.azure.com:443/workflows/9e4bccaa8aab448083f7b95d55db8660/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=PgB2Drl6tRQ7Ki418LzCop5QV3wtpVhpVBoiW3I2mS4"
         self.fabric_helper = create_fabric_helper(logic_app_url)
+
+        # Initialize Logic App client for work item fetching (new)
+        try:
+            work_items_logic_app_url = get_logic_app_url()
+            self.logic_app_client = create_logic_app_client(work_items_logic_app_url)
+            self.logger.info("✅ Logic App client initialized successfully")
+        except EnvironmentError as e:
+            self.logger.warning(f"⚠️  Logic App client not initialized: {e}")
+            self.logic_app_client = None
 
         # Project caching
         self.projects_cache_file = "projects_cache.json"
@@ -445,35 +460,23 @@ class WorkItemOperations(AzureDevOps):
         work_items = response.get("workItems", [])
         return [wi.get("id") for wi in work_items if wi.get("id")]
     
-    def _get_project_url_segment(self, project_id, project_name):
-        """
-        Utility to get the correct project segment for API URLs, preferring ID, else URL-encoded name.
-        """
-        if project_id and project_id != "Unknown":
-            return project_id
-        elif project_name and project_name != "Unknown":
-            return quote(project_name.strip(), safe='')
-        else:
-            raise ValueError("No valid project identifier available")
-
-    
-    def get_work_item_details_batch(self, project_id: str, work_item_ids: List[int], 
+    def get_work_item_details_batch(self, project_id: str, work_item_ids: List[int],
                                   project_name: str = None, batch_size: int = 200) -> Tuple[List[Dict], Dict]:
         """
-        Get detailed information for work items using batch processing for optimal performance.
-        
+        Get detailed information for work items using batch processing and organization-level API.
+
         Args:
-            project_id: Project ID
+            project_id: Project ID (unused, kept for backward compatibility)
             work_item_ids: List of work item IDs
-            project_name: Project name (optional, for fallback)
+            project_name: Project name (unused, kept for backward compatibility)
             batch_size: Number of items to fetch per API call (max 200)
-            
+
         Returns:
             Tuple of (work_items, performance_metrics)
         """
         if not work_item_ids:
             return [], {"batch_calls": 0, "items_processed": 0, "execution_time": 0}
-        
+
         start_time = time.time()
         performance_metrics = {
             "batch_calls": 0,
@@ -481,22 +484,22 @@ class WorkItemOperations(AzureDevOps):
             "execution_time": 0,
             "average_batch_size": 0
         }
-        
+
         print(f"🔄 Fetching details for {len(work_item_ids)} work items in batches of {batch_size}")
-        
+
         all_simplified_items = []
-        project_segment = self._get_project_url_segment(project_id, project_name)
-        
+
         # Process in batches to optimize API calls
         for i in range(0, len(work_item_ids), batch_size):
             batch = work_item_ids[i:i + batch_size]
             batch_num = (i // batch_size) + 1
             total_batches = ((len(work_item_ids) - 1) // batch_size) + 1
-            
+
             print(f"  Processing batch {batch_num}/{total_batches}: {len(batch)} items")
-            
+
             ids_str = ",".join(map(str, batch))
-            endpoint = f"{project_segment}/_apis/wit/workitems?ids={ids_str}&api-version={self.get_api_version('work_items')}"
+            # Use organization-level API to avoid project name URL encoding issues
+            endpoint = f"_apis/wit/workitems?ids={ids_str}&api-version={self.get_api_version('work_items')}"
             
             try:
                 response = self.handle_request("GET", endpoint)
@@ -550,16 +553,17 @@ class WorkItemOperations(AzureDevOps):
 
     def get_work_item_revisions(self, project_id: str, work_item_id: int, project_name: str = None) -> List[Dict]:
         """
-        Get revision history for a work item.
+        Get revision history for a work item using organization-level API.
+
         Args:
-            project_id: Project ID
+            project_id: Project ID (unused, kept for backward compatibility)
             work_item_id: Work item ID
-            project_name: Project name (optional, for fallback)
+            project_name: Project name (unused, kept for backward compatibility)
         Returns:
             List of revisions with state and date information
         """
-        project_segment = self._get_project_url_segment(project_id, project_name)
-        endpoint = f"{project_segment}/_apis/wit/workitems/{work_item_id}/revisions?api-version={self.get_api_version('work_items')}"
+        # Use organization-level API to avoid project name URL encoding issues
+        endpoint = f"_apis/wit/workitems/{work_item_id}/revisions?api-version={self.get_api_version('work_items')}"
         response = self.handle_request("GET", endpoint)
         revisions = response.get("value", [])
         # Transform revisions to simpler format
@@ -621,11 +625,11 @@ class WorkItemOperations(AzureDevOps):
             return session
         
         def fetch_revisions_for_item(session, item):
-            """Fetch revisions for a single work item."""
+            """Fetch revisions for a single work item using organization-level API."""
             try:
-                project_segment = self._get_project_url_segment(item.get('project_id'), item.get('project_name'))
-                url = f"{self.base_url}{project_segment}/_apis/wit/workitems/{item['id']}/revisions?api-version={self.get_api_version('work_items')}"
-                
+                # Use organization-level API to avoid project name URL encoding issues
+                url = f"{self.base_url}_apis/wit/workitems/{item['id']}/revisions?api-version={self.get_api_version('work_items')}"
+
                 response = session.get(url, timeout=30)
                 response.raise_for_status()
                 
@@ -1199,6 +1203,321 @@ class WorkItemOperations(AzureDevOps):
                 all_work_items.append(simplified_item)
         return all_work_items
 
+
+
+    def get_work_items_from_logic_app(self,
+                                       from_date: str,
+                                       to_date: str,
+                                       assigned_to: Optional[List[str]] = None,
+                                       calculate_efficiency: bool = True,
+                                       use_parallel_processing: bool = True,
+                                       max_workers: int = 10,
+                                       export_csv: Optional[str] = None) -> Dict:
+        """
+        🚀 NEW DEFAULT METHOD: Fetch work items from Logic App and calculate efficiency.
+
+        This is the new default flow for --query-work-items that replaces WIQL/Analytics fetching.
+
+        Flow:
+        1. Resolve user names/emails from user_email_mapping.json
+        2. Call Logic App with date range and emails
+        3. Parse ResultSets.Table1 into work items list
+        4. For each unique (WorkItemId, AssignedToUser): fetch DevOps activity log
+        5. Calculate productivity time using existing efficiency calculator
+        6. Produce same CSVs and summaries as before
+
+        Args:
+            from_date: Start date in YYYY-MM-DD format
+            to_date: End date in YYYY-MM-DD format
+            assigned_to: List of user names or emails (None = all users from mapping)
+            calculate_efficiency: Whether to calculate efficiency metrics (default: True)
+            use_parallel_processing: Enable parallel revision fetching (default: True)
+            max_workers: Number of parallel workers (default: 10)
+            export_csv: CSV filename for export (optional)
+
+        Returns:
+            Dictionary with work items, KPIs, and query info
+        """
+        overall_start_time = time.time()
+
+        print("🚀 ========================================")
+        print("🚀 LOGIC APP WORK ITEM FETCHING")
+        print("🚀 ========================================")
+
+        # Validate Logic App client
+        if not self.logic_app_client:
+            raise EnvironmentError(
+                "Logic App client not initialized. Please set AZURE_LOGIC_APP_URL in .env file."
+            )
+
+        # Phase 1: Resolve emails
+        phase_start = time.time()
+        print(f"\n📧 Phase 1: Resolving emails...")
+
+        emails = resolve_emails(assigned_to)
+        if not emails:
+            print("❌ No valid emails resolved. Please check user_email_mapping.json")
+            return self._empty_result()
+
+        print(f"✅ Resolved {len(emails)} email(s): {', '.join(emails)}")
+        resolution_time = time.time() - phase_start
+
+        # Phase 2: Fetch from Logic App
+        phase_start = time.time()
+        print(f"\n🔄 Phase 2: Fetching work items from Logic App...")
+        print(f"   Date range: {from_date} to {to_date}")
+
+        try:
+            logic_app_response = self.logic_app_client.get_work_items_by_date_range(
+                from_date=from_date,
+                to_date=to_date,
+                emails=emails
+            )
+        except requests.exceptions.RequestException as e:
+            print(f"❌ Failed to fetch from Logic App: {e}")
+            raise
+
+        # Parse response
+        work_items_raw = logic_app_response.get('ResultSets', {}).get('Table1', [])
+        print(f"✅ Retrieved {len(work_items_raw)} work item assignments from Logic App")
+        logic_app_time = time.time() - phase_start
+
+        if not work_items_raw:
+            print("📭 No work items found for specified criteria")
+            return self._empty_result()
+
+        # Phase 3: Process and deduplicate
+        phase_start = time.time()
+        print(f"\n🔧 Phase 3: Processing work items...")
+
+        work_items = self._process_logic_app_work_items(work_items_raw, from_date, to_date)
+        print(f"✅ Processed {len(work_items)} unique work items")
+        processing_time = time.time() - phase_start
+
+        # Phase 4: Fetch activity logs and calculate efficiency
+        if calculate_efficiency:
+            phase_start = time.time()
+            print(f"\n📊 Phase 4: Fetching activity logs and calculating efficiency...")
+
+            self._fetch_activity_logs_and_calculate_efficiency(
+                work_items,
+                from_date,
+                to_date,
+                use_parallel_processing,
+                max_workers
+            )
+            efficiency_time = time.time() - phase_start
+        else:
+            efficiency_time = 0
+            print(f"\n⏭️  Phase 4: Skipped efficiency calculation (--no-efficiency)")
+
+        # Phase 5: Calculate KPIs
+        phase_start = time.time()
+        print(f"\n📈 Phase 5: Calculating KPIs...")
+
+        kpis = self.calculate_comprehensive_kpi_per_developer(work_items, {})
+        kpi_time = time.time() - phase_start
+
+        # Summary
+        total_time = time.time() - overall_start_time
+        print(f"\n✅ ========================================")
+        print(f"✅ COMPLETE - Total time: {total_time:.2f}s")
+        print(f"✅ ========================================")
+        print(f"   Email resolution: {resolution_time:.2f}s")
+        print(f"   Logic App fetch: {logic_app_time:.2f}s")
+        print(f"   Processing: {processing_time:.2f}s")
+        print(f"   Efficiency calc: {efficiency_time:.2f}s")
+        print(f"   KPI calculation: {kpi_time:.2f}s")
+
+        result = {
+            "work_items": work_items,
+            "kpis": kpis,
+            "query_info": {
+                "total_items": len(work_items),
+                "source": "Logic App (Fabric Data Warehouse)",
+                "filters_applied": {
+                    "assigned_to": assigned_to or ["All users"],
+                    "emails": emails,
+                    "date_range": f"{from_date} to {to_date}"
+                }
+            }
+        }
+
+        # Export to CSV if requested
+        if export_csv:
+            base_filename = export_csv.replace('.csv', '')
+            self.export_enhanced_work_items_to_csv(work_items, kpis, base_filename)
+
+        return result
+
+    def _process_logic_app_work_items(self, work_items_raw: List[Dict], from_date: str, to_date: str) -> List[Dict]:
+        """
+        Process raw work items from Logic App ResultSets.Table1.
+
+        Deduplicates by (WorkItemId, AssignedToUser) and converts to standardized format.
+
+        Expected fields from Logic App:
+        - WorkItemId: Work item ID
+        - AssignedToUser: Assigned user email
+        - Title: Work item title
+        - StartDate: Start date
+        - TargetDate: Target date
+        - OriginalEstimate: Estimated hours
+        - Project_Name: Azure DevOps project name (REQUIRED for revision fetching)
+        """
+        seen_keys = set()
+        work_items = []
+
+        for item in work_items_raw:
+            work_item_id = item.get('WorkItemId')
+            assigned_to = item.get('AssignedToUser', '').strip()
+
+            if not work_item_id or not assigned_to:
+                continue
+
+            # Deduplicate by (WorkItemId, AssignedToUser)
+            key = (work_item_id, assigned_to)
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+
+            # Extract project name from Logic App response (note: underscore in field name)
+            project_name = item.get('Project_Name', '').strip()
+
+            # Convert to standardized format
+            work_item = {
+                'id': work_item_id,
+                'title': item.get('Title', ''),
+                'assigned_to': assigned_to,
+                'start_date': item.get('StartDate'),
+                'target_date': item.get('TargetDate'),
+                'original_estimate': item.get('OriginalEstimate'),
+                'fabric_enriched': True,
+                'revisions': [],
+                'project_id': project_name if project_name else None,  # Use project name as identifier
+                'project_name': project_name if project_name else None,
+                'state': None,  # Will be determined from revisions or current state
+                'work_item_type': None  # Will be determined from revisions
+            }
+
+            work_items.append(work_item)
+
+        return work_items
+
+    def _fetch_activity_logs_and_calculate_efficiency(self,
+                                                       work_items: List[Dict],
+                                                       from_date: str,
+                                                       to_date: str,
+                                                       use_parallel: bool,
+                                                       max_workers: int):
+        """
+        Fetch Azure DevOps activity logs for work items and calculate efficiency.
+
+        Uses existing revision fetching and efficiency calculation logic.
+        Requires project_name to be populated in work items from Logic App.
+        """
+        # Get date boundaries in Mexico City timezone
+        start_boundary, _ = get_date_boundaries_mexico_city(from_date)
+        _, end_boundary = get_date_boundaries_mexico_city(to_date)
+
+        print(f"   Fetching activity logs from {start_boundary} to {end_boundary} (America/Mexico_City)")
+
+        # Check how many work items have project names
+        items_with_project = sum(1 for item in work_items if item.get('project_id'))
+        items_without_project = len(work_items) - items_with_project
+
+        if items_without_project > 0:
+            print(f"   ⚠️  Warning: {items_without_project} work items missing Project_Name")
+            print(f"   These items will be skipped for efficiency calculations")
+            print(f"   Please ensure Logic App returns 'Project_Name' field for all work items")
+
+        if use_parallel and max_workers > 1:
+            print(f"   Using parallel processing with {max_workers} workers...")
+            work_items_with_revisions, _ = self.get_work_item_revisions_parallel(
+                work_items,
+                max_workers=max_workers,
+                batch_size=50
+            )
+        else:
+            print(f"   Using sequential processing...")
+            for item in work_items:
+                try:
+                    # Fetch revisions using project_name from Logic App
+                    if item.get('project_id') and item.get('project_name'):
+                        state_history = self.get_work_item_revisions(
+                            item['project_id'],  # This is the project name from Logic App
+                            item['id'],
+                            item['project_name']
+                        )
+                        item['revisions'] = state_history
+                    else:
+                        self.logger.warning(f"Skipping item {item['id']}: missing project name")
+                        item['revisions'] = []
+                except Exception as e:
+                    self.logger.error(f"Failed to get revisions for item {item['id']}: {e}")
+                    item['revisions'] = []
+
+        # Update state and work_item_type from revisions
+        for item in work_items:
+            revisions = item.get('revisions', [])
+            if revisions:
+                # Get the latest state and work_item_type from most recent revision
+                latest_revision = revisions[-1]
+                if not item.get('state'):
+                    item['state'] = latest_revision.get('state', 'Unknown')
+                if not item.get('work_item_type'):
+                    item['work_item_type'] = latest_revision.get('work_item_type', 'Unknown')
+
+        # Calculate efficiency for each work item
+        state_config = self.config_loader.get_state_categories()
+
+        for item in work_items:
+            try:
+                if not self.config_loader.should_include_work_item_with_history(item, item.get("revisions", [])):
+                    continue
+
+                efficiency = self.calculate_fair_efficiency_metrics(
+                    item,
+                    item.get("revisions", []),
+                    state_config,
+                    from_date,
+                    to_date
+                )
+                item["efficiency"] = efficiency
+            except Exception as e:
+                self.logger.error(f"Error calculating efficiency for item {item['id']}: {e}")
+                item["efficiency"] = {}
+
+    def _get_work_item_details_simple(self, work_item_id: int) -> Dict:
+        """
+        Get basic work item details to determine project and current state.
+        """
+        try:
+            endpoint = f"_apis/wit/workitems/{work_item_id}?api-version=7.1-preview.3"
+            response = self.handle_request("GET", endpoint)
+
+            fields = response.get('fields', {})
+            return {
+                'project_id': fields.get('System.TeamProject'),  # Project name, not ID
+                'project_name': fields.get('System.TeamProject'),
+                'state': fields.get('System.State'),
+                'work_item_type': fields.get('System.WorkItemType')
+            }
+        except Exception as e:
+            self.logger.error(f"Failed to get details for work item {work_item_id}: {e}")
+            return {}
+
+    def _empty_result(self) -> Dict:
+        """Return empty result structure."""
+        return {
+            "work_items": [],
+            "kpis": {},
+            "query_info": {
+                "total_items": 0,
+                "source": "Logic App (Fabric Data Warehouse)",
+                "filters_applied": {}
+            }
+        }
 
     def get_work_items_with_efficiency_optimized(self,
                                      project_id: Optional[str] = None,

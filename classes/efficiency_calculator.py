@@ -99,8 +99,12 @@ class EfficiencyCalculator:
         Returns:
             Dictionary with enhanced efficiency metrics
         """
+        estimated_hours = self._calculate_estimated_time_from_work_item(
+            work_item, timeframe_start, timeframe_end
+        )
+
         if len(state_history) < 2:
-            return self._empty_efficiency_metrics()
+            return self._empty_efficiency_metrics(estimated_hours)
         
         # Use provided state config or defaults
         if state_config is None:
@@ -125,7 +129,7 @@ class EfficiencyCalculator:
         
         # Check if work item should be ignored
         if state_stack.should_ignore_work_item():
-            return self._ignored_work_item_metrics()
+            return self._ignored_work_item_metrics(estimated_hours)
         
         # Get time metrics from stack
         raw_productive_hours = state_stack.get_total_productive_hours()
@@ -133,9 +137,6 @@ class EfficiencyCalculator:
         total_hours = state_stack.get_total_time_all_states()
         state_durations = state_stack.get_state_durations()
         pattern_summary = state_stack.get_pattern_summary()
-        
-        # Calculate estimated time from OriginalEstimate field, considering timeframe
-        estimated_hours = self._calculate_estimated_time_from_work_item(work_item, timeframe_start, timeframe_end)
         
         # Apply active hours capping logic: 1.2x estimate cap, exclude if no estimate
         # Now uses exact Logic App estimates (no transformations)
@@ -538,14 +539,14 @@ class EfficiencyCalculator:
         
         return round(overall_score, 2)
     
-    def _empty_efficiency_metrics(self) -> Dict:
+    def _empty_efficiency_metrics(self, estimated_hours: float = 0.0) -> Dict:
         """Return empty efficiency metrics structure."""
         return {
             "active_time_hours": 0,
             "raw_active_time_hours": 0,
             "paused_time_hours": 0,
             "total_time_hours": 0,
-            "estimated_time_hours": 0,
+            "estimated_time_hours": round(estimated_hours, 2),
             "efficiency_percentage": 0,
             "fair_efficiency_score": 0,
             "delivery_score": 0,
@@ -562,14 +563,14 @@ class EfficiencyCalculator:
             "stack_summary": {}
         }
     
-    def _ignored_work_item_metrics(self) -> Dict:
+    def _ignored_work_item_metrics(self, estimated_hours: float = 0.0) -> Dict:
         """Return metrics structure for ignored work items."""
         return {
             "active_time_hours": 0,
             "raw_active_time_hours": 0,
             "paused_time_hours": 0,
             "total_time_hours": 0,
-            "estimated_time_hours": 0,
+            "estimated_time_hours": round(estimated_hours, 2),
             "efficiency_percentage": 0,
             "fair_efficiency_score": 0,
             "delivery_score": 0,
