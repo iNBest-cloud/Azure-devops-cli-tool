@@ -79,49 +79,47 @@ Commands:
         python main.py --list-and-upgrade-webhooks --filter-tag "Production"
 
   --query-work-items
-      Query work items with dynamic filtering and KPI calculations.
-      Project scope (choose one):
-        --project-id : Query a specific project ID.
-        --project-names : Query specific projects by name (comma-separated).
-        (No project args) : Query ALL projects in the organization.
+      Query work items from Logic App (Fabric Data Warehouse) with KPI calculations.
+
+      IMPORTANT: This command now uses Logic App as the default and only source.
+      Legacy WIQL/Analytics methods have been removed.
+
+      Required arguments:
+        --start-date : Start date in YYYY-MM-DD format (required)
+        --end-date : End date in YYYY-MM-DD format (required)
+
       Optional arguments:
-        --assigned-to : List of users to filter by (comma-separated).
-        --work-item-types : List of work item types (comma-separated).
-        --states : List of states to filter by (comma-separated). 
-                   Default: Includes both completed (Closed, Done, Resolved) and active (Active, New, To Do, In Progress) items
-        --start-date : Start date for filtering (YYYY-MM-DD format).
-                      For closed items: filters by closed date. For active items: filters by target date.
-        --end-date : End date for filtering (YYYY-MM-DD format).
-                    For closed items: filters by closed date. For active items: filters by target date.
-        --date-field : Field to use for date filtering (default: ClosedDate).
+        --assigned-to : Comma-separated list of user names or emails.
+                       If omitted, queries all users from user_email_mapping.json.
+                       Supports both names ("Carlos Vazquez") and emails ("carlos.vazquez@inbest.cloud").
         --no-efficiency : Skip efficiency calculations for faster results.
-        --export-csv : Export results to CSV file.
-        --area-path : Filter by area path.
-        --iteration-path : Filter by iteration path.
-        --all-projects : Query all projects (skip smart filtering based on user activity).
-        --max-projects : Maximum number of projects to check for user activity (default: 50).
+        --export-csv : Export results to CSV file (detailed and summary).
+        --no-parallel : Disable parallel revision fetching (use sequential).
+        --max-workers : Number of parallel workers (default: 10).
+
       Examples:
-        # Query projects with user activity (smart filtering)
-        python main.py --query-work-items --assigned-to "Carlos Vazquez,Alex Valenzuela"
-        
-        # Query all projects (no smart filtering)
-        python main.py --query-work-items --assigned-to "Carlos Vazquez,Alex Valenzuela" --all-projects
-        
-        # Query more projects for user activity (check up to 100 projects)
-        python main.py --query-work-items --assigned-to "Carlos Vazquez,Alex Valenzuela" --max-projects 100
-        
-        # Query specific projects
-        python main.py --query-work-items --project-names "ProjectA,ProjectB" --states "Closed,Done"
-        
-        # Query single project
-        python main.py --query-work-items --project-id <project_id> --start-date "2025-06-01"
+        # Query all users for October 2025
+        python main.py --query-work-items --start-date 2025-10-01 --end-date 2025-10-31 --export-csv reports/october.csv
+
+        # Query specific users
+        python main.py --query-work-items --start-date 2025-10-01 --end-date 2025-10-31 --assigned-to "Carlos Vazquez,Diego Lopez"
+
+        # Query using emails directly
+        python main.py --query-work-items --start-date 2025-10-01 --end-date 2025-10-31 --assigned-to "carlos.vazquez@inbest.cloud"
+
+        # Query without efficiency calculations (faster)
+        python main.py --query-work-items --start-date 2025-10-01 --end-date 2025-10-31 --no-efficiency
 
 Environment Variables:
   AZURE_DEVOPS_ORG   : Default Azure DevOps organization name.
   AZURE_DEVOPS_PAT   : Default Azure DevOps personal access token.
+  AZURE_LOGIC_APP_URL : Logic App URL for work item fetching (REQUIRED for --query-work-items).
   AZURE_DEVOPS_WORKITEM_WEBHOOK_URL : Default webhook URL for workitem.updated events.
   AZURE_DEVOPS_BUILD_WEBHOOK_URL : Default webhook URL for build.complete events.
   AZURE_DEVOPS_RELEASE_WEBHOOK_URL : Default webhook URL for release.deployment.completed events.
+
+Configuration Files:
+  user_email_mapping.json : Name-to-email mapping for user resolution (REQUIRED for --query-work-items).
 
 Use --help for a detailed usage guide.
 """
@@ -154,6 +152,9 @@ def handle_project_operations(args, project_ops):
 def handle_work_item_query(args, organization, personal_access_token):
     """
     Handle work item querying with dynamic filtering and KPI calculations.
+
+    NEW DEFAULT: Uses Logic App for work item fetching.
+    Legacy WIQL/Analytics method removed per refactoring requirements.
     """
     # Parse comma-separated values (strip whitespace)
     assigned_to = [name.strip() for name in args.assigned_to.split(',')] if args.assigned_to else None
@@ -206,82 +207,38 @@ def handle_work_item_query(args, organization, personal_access_token):
     
     # Create WorkItemOperations instance with scoring configuration
     work_item_ops = WorkItemOperations(organization, personal_access_token, scoring_config)
-    
-    # Determine query scope
-    if args.project_id:
-        print(f"Querying single project: {args.project_id}")
-        query_scope = "single project"
-    else:
-        if project_names:
-            print(f"Querying filtered projects: {', '.join(project_names)}")
-            query_scope = f"projects: {', '.join(project_names)}"
-        elif args.all_projects:
-            print("Querying ALL projects in organization (forced)")
-            query_scope = "all projects (forced)"
-        elif assigned_to:
-            print(f"Querying projects with activity for: {', '.join(assigned_to)}")
-            query_scope = f"projects with activity for: {', '.join(assigned_to)}"
-        else:
-            print("Querying ALL projects in organization")
-            query_scope = "all projects"
-    
-    # Execute query - Always use optimized method (removed redundant fallback)
-    if args.ultra_optimized:
-        print("⚡ Using ULTRA-OPTIMIZED processing - maximum speed mode!")
-        print("   • Bypassing project discovery completely")
-        print("   • Direct organization-level WIQL query")
-        print("   • Optimized KPI calculations")
-        print(f"   • Parallel processing: {'Disabled' if args.no_parallel else 'Enabled'}")
-        print(f"   • Max workers: {args.max_workers}")
-        
-        result = work_item_ops.get_work_items_with_efficiency_optimized(
-            project_id=args.project_id,
-            project_names=project_names,
+
+    # NEW DEFAULT FLOW: Use Logic App for work item fetching
+    # This replaces the previous WIQL/Analytics method
+    print("🚀 Using Logic App (Fabric Data Warehouse) for work item fetching")
+
+    # Validate required arguments for Logic App flow
+    if not args.start_date or not args.end_date:
+        print("❌ Error: --start-date and --end-date are required for Logic App flow")
+        print("   Example: --start-date 2025-10-01 --end-date 2025-10-31")
+        return
+
+    # Execute query using Logic App
+    try:
+        result = work_item_ops.get_work_items_from_logic_app(
+            from_date=args.start_date,
+            to_date=args.end_date,
             assigned_to=assigned_to,
-            work_item_types=work_item_types,
-            states=states,
-            start_date=args.start_date,
-            end_date=args.end_date,
-            date_field=args.date_field,
-            additional_filters=additional_filters if additional_filters else None,
             calculate_efficiency=not args.no_efficiency,
-            productive_states=productive_states,
-            blocked_states=blocked_states,
-            all_projects=args.all_projects,
-            max_projects=args.max_projects,
             use_parallel_processing=not args.no_parallel,
             max_workers=args.max_workers,
-            batch_size=min(args.batch_size, 200),  # Enforce Azure DevOps API limit
-            ultra_mode=True  # Enable ultra-optimized mode
+            export_csv=args.export_csv
         )
-    else:
-        # Use optimized method as default (was --optimized flag, now standard behavior)
-        optimization_mode = "ULTRA-OPTIMIZED" if args.optimized else "OPTIMIZED"
-        print(f"🚀 Using {optimization_mode} batch processing with parallel execution!")
-        print(f"   • Parallel processing: {'Disabled' if args.no_parallel else 'Enabled'}")
-        print(f"   • Max workers: {args.max_workers}")
-        print(f"   • Batch size: {min(args.batch_size, 200)}")  # Enforce Azure DevOps limit
-        
-        result = work_item_ops.get_work_items_with_efficiency_optimized(
-            project_id=args.project_id,
-            project_names=project_names,
-            assigned_to=assigned_to,
-            work_item_types=work_item_types,
-            states=states,
-            start_date=args.start_date,
-            end_date=args.end_date,
-            date_field=args.date_field,
-            additional_filters=additional_filters if additional_filters else None,
-            calculate_efficiency=not args.no_efficiency,
-            productive_states=productive_states,
-            blocked_states=blocked_states,
-            all_projects=args.all_projects,
-            max_projects=args.max_projects,
-            use_parallel_processing=not args.no_parallel,
-            max_workers=args.max_workers,
-            batch_size=min(args.batch_size, 200),  # Enforce Azure DevOps API limit
-            ultra_mode=args.optimized  # Enable ultra mode for --optimized flag
-        )
+    except Exception as e:
+        print(f"❌ Failed to fetch work items from Logic App: {e}")
+        print("\nTroubleshooting:")
+        print("1. Ensure AZURE_LOGIC_APP_URL is set in .env file")
+        print("2. Verify user_email_mapping.json exists with valid name→email mappings")
+        print("3. Check Logic App is accessible and responding")
+        return
+
+    # Note: CSV export is handled within get_work_items_from_logic_app if --export-csv is provided
+    query_scope = f"Logic App query for {', '.join(assigned_to) if assigned_to else 'all users'}"
     
     # Display results
     print("\n" + "="*80)
@@ -427,24 +384,26 @@ def main():
     parser.add_argument("--export-projects-csv", action="store_true",
                         help="Export all projects (Name, ID, Tags) to projects_export.csv")
 
-    # Work item querying arguments
+    # Work item querying arguments (Logic App flow)
     parser.add_argument("--query-work-items", action="store_true",
-                        help="Query work items with dynamic filtering and KPI calculations")
-    parser.add_argument("--assigned-to", help="Comma-separated list of users to filter by")
-    parser.add_argument("--work-item-types", help="Comma-separated list of work item types")
-    parser.add_argument("--states", help="Comma-separated list of states to filter by")
-    parser.add_argument("--start-date", help="Start date for filtering (YYYY-MM-DD format)")
-    parser.add_argument("--end-date", help="End date for filtering (YYYY-MM-DD format)")
-    parser.add_argument("--date-field", default="ClosedDate", help="Field to use for date filtering")
+                        help="Query work items from Logic App (Fabric Data Warehouse) with KPI calculations")
+    parser.add_argument("--assigned-to", help="Comma-separated list of user names or emails (omit for all users)")
+    parser.add_argument("--start-date", help="Start date for filtering (YYYY-MM-DD format) - REQUIRED")
+    parser.add_argument("--end-date", help="End date for filtering (YYYY-MM-DD format) - REQUIRED")
     parser.add_argument("--no-efficiency", action="store_true", help="Skip efficiency calculations")
     parser.add_argument("--export-csv", help="Export results to CSV file")
-    parser.add_argument("--area-path", help="Filter by area path")
-    parser.add_argument("--iteration-path", help="Filter by iteration path")
-    parser.add_argument("--project-names", help="Comma-separated list of project names to filter by (for cross-project queries)")
-    parser.add_argument("--all-projects", action="store_true", help="Query all projects (skip smart filtering based on user activity)")
-    parser.add_argument("--max-projects", type=int, default=50, help="Maximum number of projects to check for user activity (default: 50)")
-    parser.add_argument("--productive-states", help="Comma-separated list of states considered productive (e.g., 'Active,In Progress,Development')")
-    parser.add_argument("--blocked-states", help="Comma-separated list of states considered blocked (e.g., 'Blocked,On Hold,Waiting')")
+
+    # Legacy arguments (kept for backward compatibility but ignored in Logic App flow)
+    parser.add_argument("--work-item-types", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--states", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--date-field", default="ClosedDate", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--area-path", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--iteration-path", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--project-names", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--all-projects", action="store_true", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--max-projects", type=int, default=50, help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--productive-states", help="(Legacy - ignored in Logic App flow)")
+    parser.add_argument("--blocked-states", help="(Legacy - ignored in Logic App flow)")
     
     # Developer scoring configuration
     parser.add_argument("--scoring-config", help="Path to JSON file with custom scoring configuration")
@@ -456,12 +415,9 @@ def main():
     parser.add_argument("--completion-rate-weight", type=float, help="Completion rate weight in developer score (default: 0.2)")
     parser.add_argument("--on-time-delivery-weight", type=float, help="On-time delivery weight in developer score (default: 0.1)")
     
-    # Performance optimization flags
-    parser.add_argument("--optimized", action="store_true", help="🚀 Use optimized batch processing with parallel execution for faster performance")
-    parser.add_argument("--ultra-optimized", action="store_true", help="⚡ Use ULTRA-OPTIMIZED processing - bypasses project discovery completely for maximum speed")
+    # Performance optimization flags (kept for compatibility with new Logic App flow)
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel revision fetching (use sequential instead)")
     parser.add_argument("--max-workers", type=int, default=10, help="Maximum number of parallel workers for revision fetching (default: 10)")
-    parser.add_argument("--batch-size", type=int, default=200, help="Batch size for work item details fetching (default: 200, max: 200)")
     
     args = parser.parse_args()
 

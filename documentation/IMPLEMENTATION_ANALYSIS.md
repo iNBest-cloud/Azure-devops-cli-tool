@@ -200,3 +200,62 @@ python main.py --query-work-items \
 6. **Business Logic Separation**: Clear separation between data and calculations
 
 This implementation should resolve the major data quality issues observed in the August analysis and provide more accurate, realistic efficiency metrics for all developers.
+
+## Estimate Time Bug Fixes (November 2025)
+
+### Intentional Commented-Out Blocks
+
+The following code blocks have been intentionally disabled to preserve exact Logic App estimates. Fabric Logic App is the source of truth for estimates - no transformations, fallbacks, or minimum guarantees should alter these values.
+
+#### 1. **Timeframe Scaling Disabled** (`classes/efficiency_calculator.py`, lines ~227-230)
+```python
+# DISABLED: Timeframe scaling is intentionally off because Fabric is the source of truth.
+# Exact Logic App estimates must remain unaltered - no proportional adjustments.
+# if timeframe_start or timeframe_end:
+#     return self._adjust_estimate_for_timeframe(work_item, base_estimate, timeframe_start, timeframe_end)
+```
+
+#### 2. **_adjust_estimate_for_timeframe Method Parked** (`classes/efficiency_calculator.py`, lines 286-310)
+```python
+def _adjust_estimate_for_timeframe(self, work_item: Dict, base_estimate: float,
+                                  timeframe_start: Optional[str], timeframe_end: Optional[str]) -> float:
+    """
+    INTENTIONALLY DISABLED: This method is parked to preserve exact Logic App estimates.
+
+    Previously: Adjusted the estimated hours proportionally based on the timeframe.
+
+    Current Status: DISABLED because Fabric Logic App is the source of truth.
+    Exact estimates from Logic App must remain unaltered. No proportional adjustments,
+    minimum hour guarantees, or timeframe-based scaling should be applied.
+
+    If future timeframe-based adjustments are desired, this method would need a new,
+    non-transforming design aligned with the Fabric source-of-truth policy.
+
+    Returns:
+        Always returns the base_estimate unchanged (exact Logic App value)
+    """
+    # DISABLED: Return original estimate unchanged to preserve Fabric Logic App values
+    return base_estimate
+```
+
+#### 3. **Productive Hours Capping Disabled** (`classes/efficiency_calculator.py`, lines 140-144)
+```python
+# DISABLED: Productive hours capping is intentionally disabled to preserve exact Logic App estimates
+# Previously applied 1.2x estimate cap and excluded items with no estimate
+# Now allowing raw productive hours to pass through unchanged
+productive_hours = raw_productive_hours
+pattern_summary['capping_applied'] = 'no_capping_applied_raw_estimate'
+```
+
+### Validation Results
+
+After implementing these changes, regenerate October data and verify specific work items match Logic App values:
+
+- **WorkItemId 39079**: Expected `1.0` (was transformed to `2.0` due to minimum fallback)
+- **WorkItemId 39081**: Expected `0.5` (was `0` due to no estimate exclusion)
+- **WorkItemId 44137**: Expected `1.5` (was `2.0` due to minimum fallback)
+- **WorkItemId 44280**: Expected `1.5` (was `2.0` due to minimum fallback)
+
+### Impact on Efficiency Metrics
+
+Disabling the productive-hour cap may shift efficiency percentages. Stakeholders should recalibrate dashboards or thresholds that relied on the 1.2× limit. Future timeframe-based adjustments require a new design aligned with the Fabric source-of-truth policy.

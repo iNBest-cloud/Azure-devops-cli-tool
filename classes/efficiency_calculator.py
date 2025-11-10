@@ -99,8 +99,12 @@ class EfficiencyCalculator:
         Returns:
             Dictionary with enhanced efficiency metrics
         """
+        estimated_hours = self._calculate_estimated_time_from_work_item(
+            work_item, timeframe_start, timeframe_end
+        )
+
         if len(state_history) < 2:
-            return self._empty_efficiency_metrics()
+            return self._empty_efficiency_metrics(estimated_hours)
         
         # Use provided state config or defaults
         if state_config is None:
@@ -125,7 +129,7 @@ class EfficiencyCalculator:
         
         # Check if work item should be ignored
         if state_stack.should_ignore_work_item():
-            return self._ignored_work_item_metrics()
+            return self._ignored_work_item_metrics(estimated_hours)
         
         # Get time metrics from stack
         raw_productive_hours = state_stack.get_total_productive_hours()
@@ -134,16 +138,14 @@ class EfficiencyCalculator:
         state_durations = state_stack.get_state_durations()
         pattern_summary = state_stack.get_pattern_summary()
         
-        # Calculate estimated time from OriginalEstimate field, considering timeframe
-        estimated_hours = self._calculate_estimated_time_from_work_item(work_item, timeframe_start, timeframe_end)
-        
         # Apply active hours capping logic: 1.2x estimate cap, exclude if no estimate
+        # Now uses exact Logic App estimates (no transformations)
         if estimated_hours <= 0:
             # If no estimate hours, don't count active time
             productive_hours = 0
             pattern_summary['capping_applied'] = 'no_estimate_exclusion'
         else:
-            # Cap active hours at 1.2x the estimated hours
+            # Cap active hours at 1.2x the estimated hours (using exact Logic App values)
             max_allowed_hours = estimated_hours * 1.2
             if raw_productive_hours > max_allowed_hours:
                 productive_hours = max_allowed_hours
@@ -224,7 +226,8 @@ class EfficiencyCalculator:
         if original_estimate is not None and original_estimate > 0:
             base_estimate = float(original_estimate)
 
-            # # If timeframe is provided, adjust the estimate proportionally
+            # DISABLED: Timeframe scaling is intentionally off because Fabric is the source of truth.
+            # Exact Logic App estimates must remain unaltered - no proportional adjustments.
             # if timeframe_start or timeframe_end:
             #     return self._adjust_estimate_for_timeframe(work_item, base_estimate, timeframe_start, timeframe_end)
 
@@ -282,54 +285,31 @@ class EfficiencyCalculator:
             
         return adjusted_start, adjusted_target
     
-    def _adjust_estimate_for_timeframe(self, work_item: Dict, base_estimate: float, 
+    def _adjust_estimate_for_timeframe(self, work_item: Dict, base_estimate: float,
                                       timeframe_start: Optional[str], timeframe_end: Optional[str]) -> float:
         """
-        Adjust the estimated hours proportionally based on the timeframe.
-        
+        INTENTIONALLY DISABLED: This method is parked to preserve exact Logic App estimates.
+
+        Previously: Adjusted the estimated hours proportionally based on the timeframe.
+
+        Current Status: DISABLED because Fabric Logic App is the source of truth.
+        Exact estimates from Logic App must remain unaltered. No proportional adjustments,
+        minimum hour guarantees, or timeframe-based scaling should be applied.
+
+        If future timeframe-based adjustments are desired, this method would need a new,
+        non-transforming design aligned with the Fabric source-of-truth policy.
+
         Args:
             work_item: Work item details
             base_estimate: Original estimated hours
-            timeframe_start: Query timeframe start date (YYYY-MM-DD format)  
+            timeframe_start: Query timeframe start date (YYYY-MM-DD format)
             timeframe_end: Query timeframe end date (YYYY-MM-DD format)
-            
+
         Returns:
-            Adjusted estimated hours as float
+            Always returns the base_estimate unchanged (exact Logic App value)
         """
-        start_date = work_item.get('start_date')
-        target_date = work_item.get('target_date')
-        
-        if not start_date or not target_date:
-            return base_estimate
-            
-        try:
-            start = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
-            target = datetime.fromisoformat(target_date.replace('Z', '+00:00'))
-            
-            # Calculate total office days in the original work period
-            total_office_days = self._calculate_office_days_between_dates(start, target)
-            if total_office_days <= 0:
-                return base_estimate
-            
-            # Calculate office days that fall within the timeframe
-            adjusted_start, adjusted_target = self._adjust_dates_for_timeframe(start, target, timeframe_start, timeframe_end)
-            if adjusted_start >= adjusted_target:
-                return 2.0  # Minimum hours if no overlap
-                
-            timeframe_office_days = self._calculate_office_days_between_dates(adjusted_start, adjusted_target)
-            
-            # Calculate proportional hours
-            if timeframe_office_days <= 0:
-                return 2.0  # Minimum hours if no office days in timeframe
-                
-            proportion = timeframe_office_days / total_office_days
-            adjusted_estimate = base_estimate * proportion
-            
-            # Ensure minimum of 2 hours
-            return max(adjusted_estimate, 2.0)
-            
-        except (ValueError, TypeError):
-            return base_estimate
+        # DISABLED: Return original estimate unchanged to preserve Fabric Logic App values
+        return base_estimate
     
     def _calculate_office_days_between_dates(self, start_date: datetime, end_date: datetime) -> float:
         """
@@ -559,14 +539,14 @@ class EfficiencyCalculator:
         
         return round(overall_score, 2)
     
-    def _empty_efficiency_metrics(self) -> Dict:
+    def _empty_efficiency_metrics(self, estimated_hours: float = 0.0) -> Dict:
         """Return empty efficiency metrics structure."""
         return {
             "active_time_hours": 0,
             "raw_active_time_hours": 0,
             "paused_time_hours": 0,
             "total_time_hours": 0,
-            "estimated_time_hours": 0,
+            "estimated_time_hours": round(estimated_hours, 2),
             "efficiency_percentage": 0,
             "fair_efficiency_score": 0,
             "delivery_score": 0,
@@ -583,14 +563,14 @@ class EfficiencyCalculator:
             "stack_summary": {}
         }
     
-    def _ignored_work_item_metrics(self) -> Dict:
+    def _ignored_work_item_metrics(self, estimated_hours: float = 0.0) -> Dict:
         """Return metrics structure for ignored work items."""
         return {
             "active_time_hours": 0,
             "raw_active_time_hours": 0,
             "paused_time_hours": 0,
             "total_time_hours": 0,
-            "estimated_time_hours": 0,
+            "estimated_time_hours": round(estimated_hours, 2),
             "efficiency_percentage": 0,
             "fair_efficiency_score": 0,
             "delivery_score": 0,
