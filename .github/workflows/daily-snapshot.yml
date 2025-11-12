@@ -121,8 +121,9 @@ jobs:
       #   if: success()
       #   run: |
       #     curl -X POST "${{ secrets.SHAREPOINT_LOGIC_APP_URL }}" \
-      #       -F "file=@${{ steps.file.outputs.snapshot_file }}" \
-      #       -H "Content-Type: multipart/form-data"
+      #       -H "Content-Type: text/csv" \
+      #       -H "x-file-name: ${{ steps.file.outputs.snapshot_file }}" \
+      #       --data-binary "@${{ steps.file.outputs.snapshot_file }}"
 
       - name: Create snapshot summary
         run: |

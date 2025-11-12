@@ -786,9 +786,10 @@ class WorkItemOperations(AzureDevOps):
             for project in target_projects:
                 try:
                     # Build query to get assigned items with date filtering
+                    work_item_types_str = "', '".join(work_item_types)
                     conditions = [
                         f"[System.AssignedTo] = '{developer}'",
-                        f"[System.WorkItemType] IN ('{"', '".join(work_item_types)}')"
+                        f"[System.WorkItemType] IN ('{work_item_types_str}')"
                     ]
                     
                     # Add date filtering for start_date or target_date within timeframe
