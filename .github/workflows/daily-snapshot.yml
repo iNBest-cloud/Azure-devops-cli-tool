@@ -1,0 +1,163 @@
+name: Daily Work Item Snapshot
+
+on:
+  # Scheduled to run daily at 01:00 UTC (7:00 PM CST previous day)
+  schedule:
+    - cron: '0 1 * * *'
+
+  # Manual trigger for testing
+  workflow_dispatch:
+    inputs:
+      snapshot_mode:
+        description: 'Snapshot mode'
+        required: false
+        type: choice
+        options:
+          - month-to-date
+          - yesterday
+          - today
+        default: 'month-to-date'
+      assigned_to:
+        description: 'Comma-separated list of developers (leave empty for all)'
+        required: false
+        type: string
+        default: ''
+
+jobs:
+  generate-snapshot:
+    runs-on: ubuntu-latest
+    environment: main
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Generate daily snapshot
+        env:
+          AZURE_DEVOPS_ORG: ${{ secrets.AZURE_DEVOPS_ORG }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+          AZURE_LOGIC_APP_URL: ${{ secrets.AZURE_LOGIC_APP_URL }}
+        run: |
+          # Determine snapshot mode
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            MODE="${{ inputs.snapshot_mode }}"
+          else
+            # Default for scheduled runs: month-to-date
+            MODE="month-to-date"
+          fi
+
+          # Build the command
+          CMD="python entry_points/main.py --daily-snapshot --snapshot-mode ${MODE}"
+
+          # Add assigned_to parameter if provided
+          if [ -n "${{ inputs.assigned_to }}" ]; then
+            CMD="${CMD} --assigned-to \"${{ inputs.assigned_to }}\""
+          fi
+
+          echo "Executing: ${CMD}"
+          eval $CMD
+
+      - name: Identify generated snapshot file
+        id: file
+        run: |
+          # Find the generated snapshot file
+          if [ -f "daily_snapshot_november.csv" ]; then
+            FILE="daily_snapshot_november.csv"
+          elif [ -f "daily_snapshot_december.csv" ]; then
+            FILE="daily_snapshot_december.csv"
+          elif [ -f "daily_snapshot_january.csv" ]; then
+            FILE="daily_snapshot_january.csv"
+          elif [ -f "daily_snapshot_february.csv" ]; then
+            FILE="daily_snapshot_february.csv"
+          elif [ -f "daily_snapshot_march.csv" ]; then
+            FILE="daily_snapshot_march.csv"
+          elif [ -f "daily_snapshot_april.csv" ]; then
+            FILE="daily_snapshot_april.csv"
+          elif [ -f "daily_snapshot_may.csv" ]; then
+            FILE="daily_snapshot_may.csv"
+          elif [ -f "daily_snapshot_june.csv" ]; then
+            FILE="daily_snapshot_june.csv"
+          elif [ -f "daily_snapshot_july.csv" ]; then
+            FILE="daily_snapshot_july.csv"
+          elif [ -f "daily_snapshot_august.csv" ]; then
+            FILE="daily_snapshot_august.csv"
+          elif [ -f "daily_snapshot_september.csv" ]; then
+            FILE="daily_snapshot_september.csv"
+          elif [ -f "daily_snapshot_october.csv" ]; then
+            FILE="daily_snapshot_october.csv"
+          else
+            # Fallback: find any daily_snapshot_*.csv file
+            FILE=$(ls -t daily_snapshot_*.csv 2>/dev/null | head -1)
+          fi
+
+          if [ -z "$FILE" ]; then
+            echo "Error: No snapshot file found"
+            exit 1
+          fi
+
+          echo "snapshot_file=${FILE}" >> $GITHUB_OUTPUT
+          echo "Found snapshot file: ${FILE}"
+
+      - name: Upload snapshot to artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-snapshot-${{ steps.file.outputs.snapshot_file }}
+          path: ${{ steps.file.outputs.snapshot_file }}
+          retention-days: 30
+
+      # Optional: Upload to SharePoint via Logic App
+      # Uncomment and configure SHAREPOINT_LOGIC_APP_URL secret to enable
+      # - name: Upload to SharePoint
+      #   if: success()
+      #   run: |
+      #     curl -X POST "${{ secrets.SHAREPOINT_LOGIC_APP_URL }}" \
+      #       -F "file=@${{ steps.file.outputs.snapshot_file }}" \
+      #       -H "Content-Type: multipart/form-data"
+
+      - name: Create snapshot summary
+        run: |
+          echo "## Daily Work Item Snapshot Generated" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Snapshot File:** \`${{ steps.file.outputs.snapshot_file }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Show file details
+          if [ -f "${{ steps.file.outputs.snapshot_file }}" ]; then
+            SIZE=$(du -h "${{ steps.file.outputs.snapshot_file }}" | cut -f1)
+            LINES=$(wc -l < "${{ steps.file.outputs.snapshot_file }}")
+            ITEMS=$((LINES - 1))
+
+            echo "**File Size:** ${SIZE}" >> $GITHUB_STEP_SUMMARY
+            echo "**Work Items:** ${ITEMS}" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+
+            # Calculate totals
+            ACTIVE_HOURS=$(awk -F',' 'NR>1 {sum+=$11} END {printf "%.2f", sum}' "${{ steps.file.outputs.snapshot_file }}")
+            BLOCKED_HOURS=$(awk -F',' 'NR>1 {sum+=$12} END {printf "%.2f", sum}' "${{ steps.file.outputs.snapshot_file }}")
+
+            echo "**Cumulative Hours:**" >> $GITHUB_STEP_SUMMARY
+            echo "- Active: ${ACTIVE_HOURS} hours" >> $GITHUB_STEP_SUMMARY
+            echo "- Blocked: ${BLOCKED_HOURS} hours" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "## ⚠️ Daily Snapshot Failed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The daily snapshot generation failed. Please check the logs for details." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Common Issues:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Azure DevOps credentials expired" >> $GITHUB_STEP_SUMMARY
+          echo "- Logic App URL not configured" >> $GITHUB_STEP_SUMMARY
+          echo "- Network connectivity issues" >> $GITHUB_STEP_SUMMARY
