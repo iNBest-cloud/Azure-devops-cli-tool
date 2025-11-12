@@ -1,8 +1,28 @@
 # GitHub Actions Workflow Documentation
 
-## Monthly Developer Report Workflow
+## Available Workflows
 
-Automated workflow that generates developer performance reports from Azure DevOps work items.
+### 1. 📸 Daily Work Item Snapshot (`daily-snapshot.yml`)
+
+**NEW!** Automated workflow that generates simplified daily snapshots with cumulative month-to-date data.
+
+**Purpose:** Lightweight CSV reports for automated tracking via Logic App → SharePoint workflows.
+
+**Schedule:** Runs daily at 01:00 UTC (7:00 PM CST previous day)
+
+**Output Format:**
+- Filename: `daily_snapshot_november.csv` (auto-switches monthly)
+- 12 columns: ID, Title, Project, Assigned To, State, Type, Dates, Hours
+- Contains cumulative data from 1st of month to current day
+- File overwrites daily - one file per month
+
+**Performance:** 40-60% faster than full query (10-40 seconds for 100-400 items)
+
+---
+
+### 2. 📊 Monthly Developer Report (`monthly-developer-report.yml`)
+
+Automated workflow that generates comprehensive developer performance reports with KPIs from Azure DevOps work items.
 
 ### Features
 
@@ -17,16 +37,18 @@ Automated workflow that generates developer performance reports from Azure DevOp
 
 ### 1. Configure GitHub Secrets
 
-The workflow requires two secrets to be configured in the `main` environment:
+Both workflows require the following secrets to be configured in the `main` environment:
 
 1. Go to your GitHub repository
 2. Navigate to **Settings** → **Environments** → **main** (create if it doesn't exist)
 3. Add the following secrets:
 
-| Secret Name | Description | Example |
-|-------------|-------------|---------|
-| `AZURE_DEVOPS_ORG` | Your Azure DevOps organization name | `MyCompany` |
-| `AZURE_DEVOPS_PAT` | Personal Access Token with Work Items: Read permission | `a1b2c3d4...` |
+| Secret Name | Description | Required For | Example |
+|-------------|-------------|--------------|---------|
+| `AZURE_DEVOPS_ORG` | Azure DevOps organization name | Both workflows | `MyCompany` |
+| `AZURE_DEVOPS_PAT` | Personal Access Token (Work Items: Read) | Both workflows | `a1b2c3d4...` |
+| `AZURE_LOGIC_APP_URL` | Logic App URL for work item fetching | Both workflows | `https://prod-10...` |
+| `SHAREPOINT_LOGIC_APP_URL` | Logic App URL for SharePoint upload | Daily Snapshot (optional) | `https://prod-11...` |
 
 **To create a PAT:**
 - Go to Azure DevOps → User Settings → Personal Access Tokens
@@ -44,7 +66,51 @@ The workflow requires two secrets to be configured in the `main` environment:
 
 ## Usage
 
-### Automatic Monthly Reports
+### Daily Snapshot Workflow
+
+#### Automatic Daily Execution
+
+The workflow runs automatically every day at **01:00 UTC** and:
+1. Generates month-to-date cumulative snapshot
+2. Creates/overwrites `daily_snapshot_<month>.csv`
+3. Uploads to GitHub Actions artifacts (30-day retention)
+4. Optionally uploads to SharePoint via Logic App
+
+**Current Month File:**
+- November: `daily_snapshot_november.csv`
+- December: `daily_snapshot_december.csv`
+- Auto-switches on 1st of each month
+
+#### Manual Trigger
+
+1. Go to **Actions** → **Daily Work Item Snapshot**
+2. Click **Run workflow**
+3. Configure options:
+   - **Snapshot mode:**
+     - `month-to-date` (recommended): Cumulative from 1st to today
+     - `yesterday`: Previous day only
+     - `today`: Current day up to now
+   - **Assigned to:** Filter by developers (optional, comma-separated)
+
+#### Example Use Cases
+
+**Test the snapshot:**
+```
+Snapshot mode: yesterday
+Assigned to: (leave empty for all users)
+```
+
+**Generate specific developer snapshot:**
+```
+Snapshot mode: month-to-date
+Assigned to: Carlos Vazquez,Diego Lopez
+```
+
+---
+
+### Monthly Report Workflow
+
+#### Automatic Monthly Reports
 
 The workflow automatically runs on the **30th of each month at 23:00 UTC** and generates a report for:
 - **Start Date**: 1st of the current month
