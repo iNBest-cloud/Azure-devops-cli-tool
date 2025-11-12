@@ -1,27 +1,27 @@
 name: Daily Work Item Snapshot
 
 on:
-  # Scheduled to run daily at 01:00 UTC (7:00 PM CST previous day)
+  # Scheduled to run daily at 09:00 Mexico City time
   schedule:
-    - cron: '0 1 * * *'
+    - cron: "0 15 * * *"
 
   # Manual trigger for testing
   workflow_dispatch:
     inputs:
       snapshot_mode:
-        description: 'Snapshot mode'
+        description: "Snapshot mode"
         required: false
         type: choice
         options:
           - month-to-date
           - yesterday
           - today
-        default: 'month-to-date'
+        default: "month-to-date"
       assigned_to:
-        description: 'Comma-separated list of developers (leave empty for all)'
+        description: "Comma-separated list of developers (leave empty for all)"
         required: false
         type: string
-        default: ''
+        default: ""
 
 jobs:
   generate-snapshot:
@@ -35,8 +35,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
