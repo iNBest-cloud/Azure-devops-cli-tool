@@ -116,14 +116,13 @@ jobs:
           retention-days: 30
 
       # Optional: Upload to SharePoint via Logic App
-      # Uncomment and configure SHAREPOINT_LOGIC_APP_URL secret to enable
-      # - name: Upload to SharePoint
-      #   if: success()
-      #   run: |
-      #     curl -X POST "${{ secrets.SHAREPOINT_LOGIC_APP_URL }}" \
-      #       -H "Content-Type: text/csv" \
-      #       -H "x-file-name: ${{ steps.file.outputs.snapshot_file }}" \
-      #       --data-binary "@${{ steps.file.outputs.snapshot_file }}"
+      - name: Upload to SharePoint
+        if: success()
+        run: |
+          curl -X POST "${{ secrets.SHAREPOINT_LOGIC_APP_URL }}" \
+            -H "Content-Type: text/csv" \
+            -H "x-file-name: ${{ steps.file.outputs.snapshot_file }}" \
+            --data-binary "@${{ steps.file.outputs.snapshot_file }}"
 
       - name: Create snapshot summary
         run: |
