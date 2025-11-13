@@ -1532,13 +1532,22 @@ class WorkItemOperations(AzureDevOps):
 
         This method is optimized for automated tracking workflows:
         - Skips complex efficiency calculations and KPI aggregation
-        - Only calculates active and blocked time
+        - Calculates TOTAL ACCUMULATED active and blocked time from entire work item history
         - Exports directly to simplified 12-column CSV
         - 40-60% faster than full query method
 
+        IMPORTANT: Active/Blocked time shows TOTAL ACCUMULATED hours from all history,
+        not filtered to the date range. The date range (from_date, to_date) is only
+        used to filter which work items to include in the report.
+
+        This means:
+        - A work item active from Nov 15 → Dec 10 will show ~17 days of active time
+          in BOTH November and December reports (accumulated total).
+        - Each daily run adds new accumulated time as work progresses.
+
         Args:
-            from_date: Start date in YYYY-MM-DD format
-            to_date: End date in YYYY-MM-DD format
+            from_date: Start date in YYYY-MM-DD format (filters which work items to include)
+            to_date: End date in YYYY-MM-DD format (filters which work items to include)
             assigned_to: List of user names or emails (None = all users from mapping)
             use_parallel_processing: Enable parallel revision fetching (default: True)
             max_workers: Number of parallel workers (default: 10)
@@ -1623,8 +1632,12 @@ class WorkItemOperations(AzureDevOps):
         Fetch Azure DevOps activity logs and calculate ONLY basic time metrics.
 
         This method skips all complex scoring algorithms and only extracts:
-        - Active time hours
-        - Blocked time hours
+        - Active time hours (TOTAL ACCUMULATED from all history, not filtered to timeframe)
+        - Blocked time hours (TOTAL ACCUMULATED from all history, not filtered to timeframe)
+
+        Note: from_date and to_date are used only to filter which work items to query,
+        but the active/blocked time shown is the TOTAL ACCUMULATED time from the entire
+        work item history, not just the time within the date range.
 
         Performance: 50-60% faster than full efficiency calculation.
         """
@@ -1690,12 +1703,14 @@ class WorkItemOperations(AzureDevOps):
                     continue
 
                 # Call efficiency calculator but extract only time fields
+                # Pass None for timeframe to show TOTAL ACCUMULATED time from all history
+                # instead of filtering to the query date range
                 efficiency = self.calculate_fair_efficiency_metrics(
                     item,
                     item.get("revisions", []),
                     state_config,
-                    from_date,
-                    to_date
+                    None,  # No timeframe filtering - show total accumulated active time
+                    None   # No timeframe filtering - show total accumulated blocked time
                 )
 
                 # Extract only the time fields we need
@@ -1715,6 +1730,9 @@ class WorkItemOperations(AzureDevOps):
         - ID, Title, Project Name, Assigned To, State, Work Item Type
         - Start Date, Target Date, Closed Date
         - Estimated Hours, Active Time (Hours), Blocked Time (Hours)
+
+        Note: Active Time and Blocked Time show TOTAL ACCUMULATED hours from the entire
+        work item history, not filtered to any specific date range.
 
         This is a simplified version of the full export (20 columns → 12 columns).
         """

@@ -139,6 +139,13 @@ Commands:
         Start Date, Target Date, Closed Date, Estimated Hours,
         Active Time (Hours), Blocked Time (Hours)
 
+      IMPORTANT: Active Time and Blocked Time show TOTAL ACCUMULATED hours from the entire
+      work item history, NOT filtered to the date range. This means:
+        - A work item active from Nov 15 → Dec 10 will show ~17 days in both November
+          and December reports (running total)
+        - Each daily run shows updated accumulated time as work progresses
+        - Date range only filters WHICH work items to include, not the time calculation
+
       Examples:
         # Yesterday's snapshot (default mode) - all users
         python main.py --daily-snapshot
@@ -155,7 +162,7 @@ Commands:
         # Month-to-date snapshot (auto-generates monthly filename)
         python main.py --daily-snapshot --snapshot-mode month-to-date
         # Output: daily_snapshot_november.csv (or current month)
-        # File is overwritten daily with cumulative month-to-date data
+        # File is overwritten daily with month-to-date work items and their total accumulated time
 
         # Yesterday's snapshot with sequential processing
         python main.py --daily-snapshot --no-parallel
@@ -168,7 +175,9 @@ Commands:
       Automation Workflow (GitHub Actions → Logic App):
         # Recommended: Monthly cumulative file (one file per month)
         python main.py --daily-snapshot --snapshot-mode month-to-date
-        # Overwrites daily_snapshot_november.csv daily with cumulative data
+        # Overwrites daily_snapshot_november.csv daily with:
+        #   - Work items active in November (filtered by date range)
+        #   - Total accumulated active/blocked time from entire history (not filtered)
         # Automatically switches to daily_snapshot_december.csv on Dec 1st
 
         # Alternative: Fixed filename (overwrites same file daily)
