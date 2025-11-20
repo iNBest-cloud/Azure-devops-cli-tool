@@ -3,7 +3,7 @@ name: Daily Work Item Snapshot
 on:
   # Scheduled to run daily at 09:00 Mexico City time
   schedule:
-    - cron: "0 15 * * *"
+    - cron: "0 13 * * *"
 
   # Manual trigger for testing
   workflow_dispatch:
@@ -164,3 +164,4 @@ jobs:
           echo "- Azure DevOps credentials expired" >> $GITHUB_STEP_SUMMARY
           echo "- Logic App URL not configured" >> $GITHUB_STEP_SUMMARY
           echo "- Network connectivity issues" >> $GITHUB_STEP_SUMMARY
+
