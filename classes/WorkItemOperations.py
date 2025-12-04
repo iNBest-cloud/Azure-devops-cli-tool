@@ -2208,7 +2208,7 @@ class WorkItemOperations(AzureDevOps):
         
         try:
             # Export detailed work items
-            items_filename = f"{base_filename}_detailed.csv"
+            items_filename = f"{base_filename}.csv"
             with open(items_filename, 'w', newline='', encoding='utf-8') as csvfile:
                 fieldnames = [
                     'ID', 'Title', 'Project Name', 'Assigned To', 'State', 'Work Item Type',

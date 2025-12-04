@@ -105,9 +105,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: developer-report-${{ steps.dates.outputs.filename_suffix }}
-          path: |
-            developer_report_${{ steps.dates.outputs.filename_suffix }}.csv
-            developer_report_${{ steps.dates.outputs.filename_suffix }}_developer_summary.csv
+          path: developer_report_${{ steps.dates.outputs.filename_suffix }}*.csv
           retention-days: 90
 
       - name: Create report summary
