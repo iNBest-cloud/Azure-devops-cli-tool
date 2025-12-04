@@ -453,8 +453,32 @@ class EfficiencyCalculator:
             }
         
         try:
-            target = datetime.fromisoformat(target_date.replace('Z', '+00:00'))
-            closed = datetime.fromisoformat(closed_date.replace('Z', '+00:00'))
+            # Handle potential mixing of naive and aware datetimes
+            # Append +00:00 if Z is missing and it looks like it should be UTC, or handle it robustly
+            
+            target_str = target_date.replace('Z', '+00:00')
+            closed_str = closed_date.replace('Z', '+00:00')
+            
+            target = datetime.fromisoformat(target_str)
+            closed = datetime.fromisoformat(closed_str)
+            
+            # If one is aware and the other is naive, make both aware (assuming naive is UTC)
+            # Then convert to Mexico City time if needed, or at least ensure they are comparable
+            if target.tzinfo is None and closed.tzinfo is not None:
+                target = target.replace(tzinfo=closed.tzinfo)
+            elif target.tzinfo is not None and closed.tzinfo is None:
+                closed = closed.replace(tzinfo=target.tzinfo)
+            
+            # Normalize to Mexico City time if possible, or just ensure they are in the same timezone
+            try:
+                mexico_tz = pytz.timezone('America/Mexico_City')
+                if target.tzinfo:
+                    target = target.astimezone(mexico_tz)
+                if closed.tzinfo:
+                    closed = closed.astimezone(mexico_tz)
+            except Exception:
+                # If pytz conversion fails, fall back to simple comparison
+                pass
             
             days_difference = (closed - target).total_seconds() / 86400
             
