@@ -2203,7 +2203,23 @@ class WorkItemOperations(AzureDevOps):
             base_filename: Base filename for exports (without extension)
         """
         if not work_items:
-            print("No work items to export.")
+            print("No work items to export. Creating empty CSV with headers.")
+            # Create empty detailed report with headers
+            items_filename = f"{base_filename}.csv"
+            try:
+                with open(items_filename, 'w', newline='', encoding='utf-8') as csvfile:
+                    fieldnames = [
+                        'ID', 'Title', 'Project Name', 'Assigned To', 'State', 'Work Item Type',
+                        'Start Date', 'Target Date', 'Closed Date', 'Estimated Hours',
+                        'Active Time (Hours)', 'Blocked Time (Hours)', 'Efficiency %',
+                        'Delivery Score', 'Days Ahead/Behind Target',
+                        'Completion Bonus', 'Timing Bonus', 'Was Reopened', 'Active After Reopen'
+                    ]
+                    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                    writer.writeheader()
+                print(f"Created empty detailed report: {items_filename}")
+            except Exception as e:
+                print(f"Error creating empty CSV: {e}")
             return
         
         try:

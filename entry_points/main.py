@@ -403,7 +403,7 @@ def handle_work_item_query(args, organization, personal_access_token):
         print("1. Ensure AZURE_LOGIC_APP_URL is set in .env file")
         print("2. Verify user_email_mapping.json exists with valid name→email mappings")
         print("3. Check Logic App is accessible and responding")
-        return
+        sys.exit(1)
 
     # Note: CSV export is handled within get_work_items_from_logic_app if --export-csv is provided
     query_scope = f"Logic App query for {', '.join(assigned_to) if assigned_to else 'all users'}"
