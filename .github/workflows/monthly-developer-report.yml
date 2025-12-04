@@ -3,24 +3,24 @@ name: Monthly Developer Report
 on:
   # Scheduled to run on the 30th of every month at 23:00 UTC
   schedule:
-    - cron: '0 23 30 * *'
+    - cron: "0 23 30 * *"
 
   # Manual trigger with customizable date range
   workflow_dispatch:
     inputs:
       start_date:
-        description: 'Start date (YYYY-MM-DD)'
+        description: "Start date (YYYY-MM-DD)"
         required: true
         type: string
       end_date:
-        description: 'End date (YYYY-MM-DD)'
+        description: "End date (YYYY-MM-DD)"
         required: true
         type: string
       assigned_to:
-        description: 'Comma-separated list of developers (leave empty for all)'
+        description: "Comma-separated list of developers (leave empty for all)"
         required: false
         type: string
-        default: ''
+        default: ""
 
 jobs:
   generate-report:
@@ -34,8 +34,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
@@ -91,7 +91,6 @@ jobs:
           CMD="python run.py --query-work-items \
             --start-date ${{ steps.dates.outputs.start_date }} \
             --end-date ${{ steps.dates.outputs.end_date }} \
-            --optimized \
             --export-csv developer_report_${{ steps.dates.outputs.filename_suffix }}.csv"
 
           # Add assigned_to parameter
