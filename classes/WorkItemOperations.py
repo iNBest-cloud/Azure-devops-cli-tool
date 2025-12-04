@@ -651,11 +651,16 @@ class WorkItemOperations(AzureDevOps):
                         "changed_date": fields.get("System.ChangedDate", ""),
                         "changed_by": fields.get("System.ChangedBy", {}).get("displayName", "Unknown"),
                         "reason": fields.get("System.Reason", ""),
-                        # Include fields for historical estimate retrieval
+                        # Include fields for historical estimate retrieval and date tracking
                         "fields": {
                             "Microsoft.VSTS.Scheduling.OriginalEstimate": fields.get("Microsoft.VSTS.Scheduling.OriginalEstimate", 0),
                             "System.State": fields.get("System.State", ""),
-                            "System.Reason": fields.get("System.Reason", "")
+                            "System.Reason": fields.get("System.Reason", ""),
+                            "Microsoft.VSTS.Scheduling.TargetDate": fields.get("Microsoft.VSTS.Scheduling.TargetDate"),
+                            "Microsoft.VSTS.Scheduling.DueDate": fields.get("Microsoft.VSTS.Scheduling.DueDate"),
+                            "Custom.FechaPlanificada": fields.get("Custom.FechaPlanificada"),
+                            "Microsoft.VSTS.Common.ClosedDate": fields.get("Microsoft.VSTS.Common.ClosedDate"),
+                            "Microsoft.VSTS.Common.ResolvedDate": fields.get("Microsoft.VSTS.Common.ResolvedDate")
                         }
                     }
                     simplified_revisions.append(simplified_revision)
@@ -1192,7 +1197,7 @@ class WorkItemOperations(AzureDevOps):
                     "changed_date": fields.get("System.ChangedDate", ""),
                     "start_date": fields.get("Microsoft.VSTS.Scheduling.StartDate", ""),
                     "target_date": fields.get("Microsoft.VSTS.Scheduling.TargetDate") or fields.get("Microsoft.VSTS.Scheduling.DueDate") or fields.get("Custom.FechaPlanificada") or "",
-                    "closed_date": fields.get("Microsoft.VSTS.Common.ClosedDate", ""),
+                    "closed_date": fields.get("Microsoft.VSTS.Common.ClosedDate") or fields.get("Microsoft.VSTS.Common.ResolvedDate") or "",
                     "resolved_date": fields.get("Microsoft.VSTS.Common.ResolvedDate", ""),
                     "area_path": fields.get("System.AreaPath", ""),
                     "iteration_path": fields.get("System.IterationPath", ""),
