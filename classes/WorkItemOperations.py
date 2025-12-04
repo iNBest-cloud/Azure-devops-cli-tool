@@ -518,8 +518,8 @@ class WorkItemOperations(AzureDevOps):
                         "created_date": fields.get("System.CreatedDate", ""),
                         "changed_date": fields.get("System.ChangedDate", ""),
                         "start_date": fields.get("Microsoft.VSTS.Scheduling.StartDate", ""),
-                        "target_date": fields.get("Microsoft.VSTS.Scheduling.TargetDate", ""),
-                        "closed_date": fields.get("Microsoft.VSTS.Common.ClosedDate", ""),
+                        "target_date": fields.get("Microsoft.VSTS.Scheduling.TargetDate") or fields.get("Microsoft.VSTS.Scheduling.DueDate") or fields.get("Custom.FechaPlanificada") or "",
+                        "closed_date": fields.get("Microsoft.VSTS.Common.ClosedDate") or fields.get("Microsoft.VSTS.Common.ResolvedDate") or "",
                         "resolved_date": fields.get("Microsoft.VSTS.Common.ResolvedDate", ""),
                         "area_path": fields.get("System.AreaPath", ""),
                         "iteration_path": fields.get("System.IterationPath", ""),
@@ -580,7 +580,12 @@ class WorkItemOperations(AzureDevOps):
                 "fields": {
                     "Microsoft.VSTS.Scheduling.OriginalEstimate": fields.get("Microsoft.VSTS.Scheduling.OriginalEstimate", 0),
                     "System.State": fields.get("System.State", ""),
-                    "System.Reason": fields.get("System.Reason", "")
+                    "System.Reason": fields.get("System.Reason", ""),
+                    "Microsoft.VSTS.Scheduling.TargetDate": fields.get("Microsoft.VSTS.Scheduling.TargetDate"),
+                    "Microsoft.VSTS.Scheduling.DueDate": fields.get("Microsoft.VSTS.Scheduling.DueDate"),
+                    "Custom.FechaPlanificada": fields.get("Custom.FechaPlanificada"),
+                    "Microsoft.VSTS.Common.ClosedDate": fields.get("Microsoft.VSTS.Common.ClosedDate"),
+                    "Microsoft.VSTS.Common.ResolvedDate": fields.get("Microsoft.VSTS.Common.ResolvedDate")
                 }
             }
             simplified_revisions.append(simplified_revision)
@@ -1186,7 +1191,7 @@ class WorkItemOperations(AzureDevOps):
                     "created_date": fields.get("System.CreatedDate", ""),
                     "changed_date": fields.get("System.ChangedDate", ""),
                     "start_date": fields.get("Microsoft.VSTS.Scheduling.StartDate", ""),
-                    "target_date": fields.get("Microsoft.VSTS.Scheduling.TargetDate", ""),
+                    "target_date": fields.get("Microsoft.VSTS.Scheduling.TargetDate") or fields.get("Microsoft.VSTS.Scheduling.DueDate") or fields.get("Custom.FechaPlanificada") or "",
                     "closed_date": fields.get("Microsoft.VSTS.Common.ClosedDate", ""),
                     "resolved_date": fields.get("Microsoft.VSTS.Common.ResolvedDate", ""),
                     "area_path": fields.get("System.AreaPath", ""),
@@ -1392,6 +1397,7 @@ class WorkItemOperations(AzureDevOps):
                 'assigned_to': assigned_to,
                 'start_date': item.get('StartDate'),
                 'target_date': item.get('TargetDate'),
+                'closed_date': None,  # Will be populated from revisions
                 'original_estimate': item.get('OriginalEstimate'),
                 'fabric_enriched': True,
                 'revisions': [],
@@ -1468,6 +1474,18 @@ class WorkItemOperations(AzureDevOps):
                     item['state'] = latest_revision.get('state', 'Unknown')
                 if not item.get('work_item_type'):
                     item['work_item_type'] = latest_revision.get('work_item_type', 'Unknown')
+                
+                # Enrich with dates from latest revision if missing in Logic App response
+                rev_fields = latest_revision.get('fields', {})
+                
+                if not item.get('target_date'):
+                    item['target_date'] = (rev_fields.get('Microsoft.VSTS.Scheduling.TargetDate') or 
+                                         rev_fields.get('Microsoft.VSTS.Scheduling.DueDate') or 
+                                         rev_fields.get('Custom.FechaPlanificada') or "")
+                
+                if not item.get('closed_date'):
+                    item['closed_date'] = (rev_fields.get('Microsoft.VSTS.Common.ClosedDate') or 
+                                         rev_fields.get('Microsoft.VSTS.Common.ResolvedDate') or "")
 
         # Calculate efficiency for each work item
         state_config = self.config_loader.get_state_categories()
