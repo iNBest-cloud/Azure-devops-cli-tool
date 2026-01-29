@@ -19,7 +19,8 @@
     ],
     "work_item_types": [
       "Task",
-      "Bugs"
+      "Bug",
+      "User Story"
     ],
     "date_field": "ClosedDate",
     "include_active_items": true,
@@ -211,36 +212,41 @@
       "Start Date",
       "Target Date",
       "Closed Date",
-      "Original Estimate Hours",
+      "Estimated Hours",
       "Active Time (Hours)",
-      "Paused Time (Hours)",
-      "Total Time (Hours)",
-      "Traditional Efficiency",
-      "Fair Efficiency Score",
+      "Blocked Time (Hours)",
+      "Efficiency %",
       "Delivery Score",
       "Days Ahead/Behind Target",
       "Completion Bonus",
       "Timing Bonus",
       "Was Reopened",
-      "State Transitions Count"
+      "Active After Reopen"
     ],
     "developer_summary_fields": [
       "Developer",
       "Total Work Items",
       "Completed Items",
-      "Ignored Items",
+      "Items With Active Time",
+      "Sample Confidence %",
       "Completion Rate %",
       "On-Time Delivery %",
-      "Average Fair Efficiency",
+      "Average Efficiency %",
       "Average Delivery Score",
       "Overall Developer Score",
       "Total Active Hours",
-      "Total Paused Hours",
-      "Total Original Estimate Hours",
+      "Total Estimated Hours",
       "Avg Days Ahead/Behind",
       "Reopened Items Handled",
+      "Reopened Rate %",
       "Work Item Types",
-      "Projects Count"
+      "Projects Count",
+      "Early Deliveries",
+      "On-Time Deliveries",
+      "Late 1-3 Days",
+      "Late 4-7 Days",
+      "Late 8-14 Days",
+      "Late 15+ Days"
     ]
   },
   "debugging": {
