@@ -232,10 +232,17 @@ def handle_daily_snapshot(args, organization, personal_access_token):
     Optimized for GitHub Actions → Logic App → SharePoint workflows.
     """
     from datetime import datetime, timedelta
+    from helpers.email_mapping import validate_configuration_on_startup
 
     print("📸 ========================================")
     print("📸 DAILY SNAPSHOT GENERATION")
     print("📸 ========================================")
+
+    # Validate configuration before proceeding
+    if not validate_configuration_on_startup():
+        print("❌ Snapshot aborted due to configuration errors.")
+        print("   Fix the issues above and try again.")
+        return
 
     # Calculate date range based on snapshot mode
     snapshot_mode = args.snapshot_mode
