@@ -1223,7 +1223,8 @@ class WorkItemOperations(AzureDevOps):
                                        calculate_efficiency: bool = True,
                                        use_parallel_processing: bool = True,
                                        max_workers: int = 10,
-                                       export_csv: Optional[str] = None) -> Dict:
+                                       export_csv: Optional[str] = None,
+                                       compare_planned_hours: Optional[float] = None) -> Dict:
         """
         🚀 NEW DEFAULT METHOD: Fetch work items from Logic App and calculate efficiency.
 
@@ -1245,6 +1246,7 @@ class WorkItemOperations(AzureDevOps):
             use_parallel_processing: Enable parallel revision fetching (default: True)
             max_workers: Number of parallel workers (default: 10)
             export_csv: CSV filename for export (optional)
+            compare_planned_hours: Target planned hours for proportional scaling comparison (optional)
 
         Returns:
             Dictionary with work items, KPIs, and query info
@@ -1357,7 +1359,8 @@ class WorkItemOperations(AzureDevOps):
         # Export to CSV if requested
         if export_csv:
             base_filename = export_csv.replace('.csv', '')
-            self.export_enhanced_work_items_to_csv(work_items, kpis, base_filename)
+            self.export_enhanced_work_items_to_csv(work_items, kpis, base_filename,
+                                                    planned_hours=compare_planned_hours)
 
         return result
 
@@ -1497,6 +1500,13 @@ class WorkItemOperations(AzureDevOps):
 
         for item in work_items:
             try:
+                # Warn on suspiciously high estimates
+                original_estimate = item.get('original_estimate')
+                if original_estimate is not None and original_estimate > 40:
+                    print(f"   ⚠️  WARNING: Work item #{item.get('id')} \"{item.get('title', 'Unknown')[:60]}\" "
+                          f"assigned to {item.get('assigned_to', 'Unknown')} has {original_estimate:.1f} "
+                          f"estimated hours — verify estimate")
+
                 if not self.config_loader.should_include_work_item_with_history(item, item.get("revisions", [])):
                     continue
 
@@ -2216,7 +2226,8 @@ class WorkItemOperations(AzureDevOps):
     def export_enhanced_work_items_to_csv(self, 
                                         work_items: List[Dict],
                                         kpis: Dict,
-                                        base_filename: str = "work_items_export") -> None:
+                                        base_filename: str = "work_items_export",
+                                        planned_hours: Optional[float] = None) -> None:
         """
         Export enhanced work items data and per-developer metrics to CSV files.
         
@@ -2224,6 +2235,7 @@ class WorkItemOperations(AzureDevOps):
             work_items: List of work items with enhanced efficiency data
             kpis: KPI data with per-developer metrics
             base_filename: Base filename for exports (without extension)
+            planned_hours: Expected planned hours per developer; adds estimation discrepancy columns when set
         """
         if not work_items:
             print("No work items to export. Creating empty CSV with headers.")
@@ -2290,22 +2302,27 @@ class WorkItemOperations(AzureDevOps):
             developer_metrics = kpis.get('developer_metrics', {})
             
             if developer_metrics:
+                fieldnames = [
+                    'Developer', 'Total Work Items', 'Completed Items', 'Items With Active Time',
+                    'Sample Confidence %', 'Completion Rate %', 'On-Time Delivery %',
+                    'Average Efficiency %', 'Average Delivery Score', 'Overall Developer Score',
+                    'Total Active Hours', 'Total Estimated Hours', 'Avg Days Ahead/Behind',
+                    'Reopened Items Handled', 'Reopened Rate %', 'Work Item Types', 'Projects Count',
+                    'Early Deliveries', 'On-Time Deliveries', 'Late 1-3 Days', 'Late 4-7 Days',
+                    'Late 8-14 Days', 'Late 15+ Days'
+                ]
+                if planned_hours is not None:
+                    fieldnames.extend([
+                        'Planned Hours Target', 'Estimation Discrepancy %', 'Estimation Reliability'
+                    ])
+
                 with open(summary_filename, 'w', newline='', encoding='utf-8') as csvfile:
-                    fieldnames = [
-                        'Developer', 'Total Work Items', 'Completed Items', 'Items With Active Time',
-                        'Sample Confidence %', 'Completion Rate %', 'On-Time Delivery %',
-                        'Average Efficiency %', 'Average Delivery Score', 'Overall Developer Score',
-                        'Total Active Hours', 'Total Estimated Hours', 'Avg Days Ahead/Behind',
-                        'Reopened Items Handled', 'Reopened Rate %', 'Work Item Types', 'Projects Count',
-                        'Early Deliveries', 'On-Time Deliveries', 'Late 1-3 Days', 'Late 4-7 Days',
-                        'Late 8-14 Days', 'Late 15+ Days'
-                    ]
                     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                     writer.writeheader()
 
                     for developer, metrics in developer_metrics.items():
                         timing = metrics.get('delivery_timing_breakdown', {})
-                        writer.writerow({
+                        row = {
                             'Developer': developer,
                             'Total Work Items': metrics.get('total_work_items', 0),
                             'Completed Items': metrics.get('completed_items', 0),
@@ -2329,7 +2346,26 @@ class WorkItemOperations(AzureDevOps):
                             'Late 4-7 Days': timing.get('late_4_7', 0),
                             'Late 8-14 Days': timing.get('late_8_14', 0),
                             'Late 15+ Days': timing.get('late_15_plus', 0)
-                        })
+                        }
+
+                        if planned_hours is not None:
+                            total_est = metrics.get('total_estimated_hours', 0)
+                            if planned_hours > 0:
+                                discrepancy_pct = round(((total_est - planned_hours) / planned_hours) * 100, 1)
+                            else:
+                                discrepancy_pct = 0
+                            abs_disc = abs(discrepancy_pct)
+                            if abs_disc <= 15:
+                                reliability = 'Good'
+                            elif abs_disc <= 40:
+                                reliability = 'Review'
+                            else:
+                                reliability = 'Unreliable'
+                            row['Planned Hours Target'] = planned_hours
+                            row['Estimation Discrepancy %'] = discrepancy_pct
+                            row['Estimation Reliability'] = reliability
+
+                        writer.writerow(row)
                 
                 print(f"Successfully exported developer summary to {summary_filename}")
             

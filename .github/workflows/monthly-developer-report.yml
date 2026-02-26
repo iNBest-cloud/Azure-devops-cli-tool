@@ -21,6 +21,11 @@ on:
         required: false
         type: string
         default: ""
+      planned_hours:
+        description: "Expected planned hours per developer (adds estimation discrepancy to summary, leave empty to skip)"
+        required: false
+        type: string
+        default: ""
 
 jobs:
   generate-report:
@@ -97,6 +102,11 @@ jobs:
           # Add assigned_to parameter
           if [ -n "${DEVELOPERS}" ]; then
             CMD="${CMD} --assigned-to \"${DEVELOPERS}\""
+          fi
+
+          # Add planned hours for estimation discrepancy if provided
+          if [ -n "${{ inputs.planned_hours }}" ]; then
+            CMD="${CMD} --planned-hours ${{ inputs.planned_hours }}"
           fi
 
           # Execute the command
