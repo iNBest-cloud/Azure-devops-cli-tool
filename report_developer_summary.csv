@@ -1,0 +1,21 @@
+Developer,Total Work Items,Completed Items,Items With Active Time,Sample Confidence %,Completion Rate %,On-Time Delivery %,Average Efficiency %,Average Delivery Score,Overall Developer Score,Total Active Hours,Total Estimated Hours,Avg Days Ahead/Behind,Reopened Items Handled,Reopened Rate %,Work Item Types,Projects Count,Early Deliveries,On-Time Deliveries,Late 1-3 Days,Late 4-7 Days,Late 8-14 Days,Late 15+ Days,Planned Hours Target,Estimation Discrepancy %,Estimation Reliability
+fernando.agredano@inbest.cloud,40,39,34,85.0,97.5,22.5,56.99,93.0,77.62,124.9,172.0,1.49,0,0.0,1,3,4,5,16,15,0,0,155.0,11.0,Good
+carlos.vazquez@inbest.cloud,39,16,1,2.56,41.03,61.54,9.69,59.1,44.28,21.6,223.4,6.04,0,0.0,1,3,1,23,1,3,4,7,155.0,44.1,Unreliable
+osvaldo.deluna@inbest.cloud,56,55,4,7.14,98.21,7.14,19.24,89.55,65.03,6.83,104.0,5.63,0,0.0,1,6,0,4,5,38,6,3,155.0,-32.9,Review
+damian.gaspar@inbest.cloud,43,42,8,18.6,97.67,23.26,38.48,94.65,73.92,49.53,147.92,2.62,1,2.33,1,4,5,5,21,3,7,2,155.0,-4.6,Good
+diego.lopez@inbest.cloud,34,34,5,14.71,100.0,23.53,51.83,89.12,74.87,29.29,105.25,9.89,1,2.94,1,5,8,0,2,6,6,12,155.0,-32.1,Review
+alvaro.torres@inbest.cloud,32,29,16,50.0,90.62,31.25,68.74,94.38,81.09,64.97,113.39,3.65,0,0.0,1,6,4,6,3,12,6,1,155.0,-26.8,Review
+andres.escobedo@inbest.cloud,19,19,11,57.89,100.0,10.53,68.8,93.68,80.09,44.57,107.2,3.02,0,0.0,1,4,2,0,6,10,0,1,155.0,-30.8,Review
+pablo.ruiz@inbest.cloud,34,11,3,8.82,32.35,82.35,30.43,46.03,43.71,57.82,178.0,0.01,1,2.94,1,5,5,23,3,3,0,0,155.0,14.8,Good
+emmanuel.perez@inbest.cloud,38,17,12,31.58,44.74,78.95,92.62,53.68,64.6,94.46,181.8,2.02,1,2.63,1,3,5,25,1,5,0,2,155.0,17.3,Review
+uriel.cortes@inbest.cloud,67,64,10,14.93,95.52,7.46,27.12,80.45,62.08,52.2,143.75,11.11,1,1.49,1,4,2,3,0,24,16,22,155.0,-7.3,Good
+alejandro.valenzuela@inbest.cloud,97,84,8,8.25,86.6,25.77,16.29,86.86,63.07,41.3,180.52,3.76,0,0.0,1,5,11,14,20,36,16,0,155.0,16.5,Review
+gerardo.melgoza@inbest.cloud,61,61,32,54.24,100.0,8.47,26.2,88.22,66.51,59.0,129.1,6.99,0,0.0,1,5,0,5,11,23,13,7,155.0,-16.7,Review
+fernando.hernandez@inbest.cloud,3,0,0,0,0.0,100.0,0,66.67,43.33,0,25.0,0.0,0,0.0,1,1,0,3,0,0,0,0,155.0,-83.9,Unreliable
+hans.izarraraz@inbest.cloud,49,10,8,16.33,20.41,81.63,3.62,24.69,24.48,0.89,148.5,1.17,1,2.04,1,5,1,39,0,6,2,1,155.0,-4.2,Good
+sebastian.rojas@inbest.cloud,2,1,0,0,50.0,50.0,0,45.0,35.0,0,9.0,3.25,0,0.0,1,1,0,1,0,1,0,0,155.0,-94.2,Unreliable
+daniel.cayola@inbest.cloud,24,22,1,4.17,91.67,37.5,17.5,97.92,70.83,8.45,80.59,2.72,0,0.0,1,8,6,3,4,7,2,2,155.0,-48.0,Unreliable
+ximena.segura@inbest.cloud,13,11,7,53.85,84.62,23.08,71.41,87.69,76.7,39.29,53.04,1.88,0,0.0,1,6,1,2,5,4,1,0,155.0,-65.8,Unreliable
+cristian.soria@inbest.cloud,2,0,0,0,0.0,100.0,0,50.0,35.0,0,9.0,0.0,0,0.0,1,1,0,2,0,0,0,0,155.0,-94.2,Unreliable
+fernando.alcaraz@inbest.cloud,48,44,28,58.33,91.67,68.75,124.0,94.79,99.02,83.12,126.93,-0.46,0,0.0,1,4,23,10,12,3,0,0,155.0,-18.1,Review
+daniel.reyes@inbest.cloud,49,49,2,4.08,100.0,12.24,8.71,90.51,63.66,11.56,114.15,6.72,0,0.0,1,3,6,0,3,21,18,1,155.0,-26.4,Review

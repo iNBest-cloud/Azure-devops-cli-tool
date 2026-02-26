@@ -1,0 +1,751 @@
+ID,Title,Project Name,Assigned To,State,Work Item Type,Start Date,Target Date,Closed Date,Estimated Hours,Active Time (Hours),Blocked Time (Hours),Efficiency %,Delivery Score,Days Ahead/Behind Target,Completion Bonus,Timing Bonus,Was Reopened,Active After Reopen
+46328,Daylis,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:39:32.693Z,0.4,0.48,0,83.33,90.0,3.4,0.08,0.0,False,0
+46329,Seguimiento TL General/Horas de descarga,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:39:24.36Z,1.0,1.2,0,83.33,90.0,3.4,0.2,0.0,False,0
+46330,Checkpoint,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:39:19.93Z,0.2,0.24,0,83.33,90.0,3.4,0.04,0.0,False,0
+46331,Certificacion,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:39:16.03Z,2.0,2.4,0,83.33,90.0,3.4,0.4,0.0,False,0
+46332,Logueo de horas,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:39:09.94Z,0.4,0.48,0,83.33,90.0,3.4,0.08,0.0,False,0
+48829,Correcciones,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-02-05T21:45:15.143Z,4.0,0,0,0,70.0,34.7,0.8,0.0,False,0
+48833,Entrega de material de capacitaci�n,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2026-02-03T14:33:00.923Z,5.0,0,0,0,70.0,29.4,1.0,0.0,False,0
+48834,Capacitaci�n de usuario clave,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-06T06:00:00,2026-02-03T14:23:09.407Z,7.0,0,0,0,70.0,28.3,1.4,0.0,False,0
+48855,Módulo BD Padr�n y licencias,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-06T06:00:00,2026-01-09T06:00:00,2026-01-23T17:25:14.787Z,18.0,0,0,0,70.0,14.5,3.6,0.0,False,0
+48856,M�dulo BD Mercados,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-14T06:00:00,2026-01-23T17:25:14.787Z,18.0,0,0,0,85.0,9.5,3.6,0.0,False,0
+48857,M�dulo BD Multas y reglamentos,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-19T06:00:00,2026-01-23T17:25:14.787Z,18.0,0,0,0,90.0,4.5,3.6,0.0,False,0
+48858,M�dulo BD Estacionamientos,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-14T06:00:00,2026-01-23T17:25:14.787Z,18.0,0,0,0,85.0,9.5,3.6,0.0,False,0
+48859,M�dulo BD Aseo p�blico,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-19T06:00:00,2026-01-23T17:25:14.787Z,18.0,0,0,0,90.0,4.5,3.6,0.0,False,0
+48860,M�dulo BD Cementerios,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-22T06:00:00,2026-01-23T17:25:14.787Z,18.0,21.6,0,83.33,95.0,1.5,3.6,0.0,False,0
+48861,Validaci�n y ajuste de conexi�n con m�dulos MCP,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-23T06:00:00,2026-02-05T21:48:41.58Z,9.0,0,0,0,85.0,13.7,1.8,0.0,False,0
+48862,Gestionar accesos a ambiente QA,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Stopper,Unknown,2026-01-23T06:00:00,2026-01-26T06:00:00,,6.4,0,0,0,100.0,0,0,0.0,False,0
+48865,Ejecuci�n de plan de pruebas (otorgado por cliente),Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Stopper,Unknown,2026-01-26T06:00:00,2026-01-27T06:00:00,,5.0,0,0,0,100.0,0,0,0.0,False,0
+48866,Pruebas funcionales de m�dulos integrados,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Stopper,Unknown,2026-01-27T06:00:00,2026-01-28T06:00:00,,7.0,0,0,0,100.0,0,0,0.0,False,0
+48867,Pruebas de usabilidad y validaci�n de idioma,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Stopper,Unknown,2026-01-28T06:00:00,2026-01-29T06:00:00,,5.0,0,0,0,100.0,0,0,0.0,False,0
+48868,Pruebas y ajustes de rendimiento y consistencia,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Stopper,Unknown,2026-01-29T06:00:00,2026-01-30T06:00:00,,7.0,0,0,0,100.0,0,0,0.0,False,0
+48869,Ajustes finales,Municipio GDL Asistente Virtual,carlos.vazquez@inbest.cloud,Stopper,Unknown,2026-01-30T06:00:00,2026-02-02T06:00:00,,3.0,0,0,0,100.0,0,0,0.0,False,0
+48896,Seguimiento TL,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:09:59.19Z,3.0,0,0,0,90.0,4.5,0.6,0.0,False,0
+48897,Weeklys,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:09:53.873Z,1.0,0,0,0,90.0,4.5,0.2,0.0,False,0
+48898,Seguimiento TL,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-27T15:53:46.253Z,3.0,0,0,0,85.0,11.4,0.6,0.0,False,0
+48899,Weeklys,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-27T15:54:20.103Z,1.0,0,0,0,85.0,11.4,0.2,0.0,False,0
+48900,Seguimiento TL,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:55:40.707Z,3.0,0,0,0,90.0,4.4,0.6,0.0,False,0
+48901,Weeklys,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:55:11.443Z,1.0,0,0,0,90.0,4.4,0.2,0.0,False,0
+48902,Seguimiento TL,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:58:12.35Z,3.0,0,0,0,90.0,6.6,0.6,0.0,False,0
+48903,Weeklys,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:58:31.367Z,1.0,0,0,0,90.0,6.6,0.2,0.0,False,0
+48905,Weeklys,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-05T21:50:25.537Z,1.0,0,0,0,85.0,13.7,0.2,0.0,False,0
+48906,Seguimiento TL,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T21:50:25.537Z,3.0,0,0,0,90.0,6.7,0.6,0.0,False,0
+48907,Weeklys,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T21:50:25.537Z,1.0,0,0,0,90.0,6.7,0.2,0.0,False,0
+49594,Integrar cambios y actualizar ambiente QA,GML - JAC Cloud,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-08T06:00:00,2026-01-27T17:13:17.397Z,3.0,0,0,0,70.0,19.5,0.6,0.0,False,0
+49598,Correcciones,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-15T06:00:00,2026-01-30T18:49:01.027Z,4.0,0,0,0,70.0,15.5,0.8,0.0,False,0
+49601,Documentación técnica y de usuario,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-29T22:07:16.01Z,16.0,15.19,0,105.33,110.0,-1.3,3.2,0.33,False,0
+52502,Formulario características destacadas,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2025-12-30T06:00:00,2026-01-02T06:00:00,2026-01-14T22:46:59.757Z,1.5,0,0,0,85.0,12.7,0.3,0.0,False,0
+52503,Formulario dimensiones,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-02T06:00:00,2026-01-05T06:00:00,2026-01-14T22:47:06.56Z,5.0,0,0,0,85.0,9.7,1.0,0.0,False,0
+52504,Formulario sección 4 imágenes,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2026-01-14T22:47:13.8Z,4.0,0,0,0,85.0,9.7,0.8,0.0,False,0
+52505,Dashboard colores reutilizables,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-07T06:00:00,2026-01-09T15:54:50.347Z,5.0,0,0,0,95.0,2.4,1.0,0.0,False,0
+52506,Formulario colores reutilizables,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-14T16:22:16.007Z,4.0,0,0,0,85.0,7.4,0.8,0.0,False,0
+52507,Formulario colores en vehículo,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-08T06:00:00,2026-01-16T18:17:23.523Z,4.0,4.8,0,83.33,85.0,8.5,0.8,0.0,False,0
+52509,Creación de crud de catalogo vs iconos,JAC Fichas Tecnicas,diego.lopez@inbest.cloud,Closed,Unknown,2025-12-30T06:00:00,2026-01-02T06:00:00,2026-01-12T17:13:04.113Z,2.5,3.0,0,83.33,85.0,10.5,0.5,0.0,False,0
+52510,Refactorizar creación de ficha con catálogos de colores e íconos,JAC Fichas Tecnicas,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-12T17:13:00,2026-01-16T06:00:00,2026-01-14T17:13:43.677Z,4.0,4.8,0,83.33,110.0,-1.5,0.8,0.38,False,0
+52512,Suite de pruebas (backend),JAC Fichas Tecnicas,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-12T17:14:00,2026-01-16T06:00:00,2026-01-14T17:13:51.193Z,16.0,16.99,0,94.17,110.0,-1.5,3.2,0.38,False,0
+52513,Suite de pruebas (frontend),JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-14T06:00:00,2026-01-19T15:22:09.083Z,16.0,19.2,0,83.33,90.0,5.4,3.2,0.0,False,0
+52523,Corrección de errores frontend,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-15T06:00:00,2026-01-16T06:00:00,2026-01-30T16:08:14.577Z,5.0,0,0,0,70.0,14.4,1.0,0.0,False,0
+52524,Corrección de errores backend,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,New,Unknown,2026-01-15T06:00:00,2026-01-16T06:00:00,,5.0,0,0,0,100.0,0,0,0.0,False,0
+52528,Despliegue del sistema,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-19T06:00:00,2026-01-30T18:49:25.33Z,3.0,0,0,0,85.0,11.5,0.6,0.0,False,0
+52529,Documentación técnica y manual de usuario,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Pause,Unknown,2026-01-19T06:00:00,2026-01-22T06:00:00,,13.0,0.0,0,0,100.0,0,0,0.0,False,0
+53155,Configuracion en Purview para recursos de ambiente,Unitrade-POC Data,alvaro.torres@inbest.cloud,Closed,Unknown,2025-12-26T06:00:00,2026-01-05T06:00:00,2026-01-08T00:38:29.84Z,11.79,14.14,0,83.33,95.0,2.8,2.36,0.0,False,0
+53309,Checkpoint,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-12T15:22:22.64Z,0.4,0,0,0,85.0,10.4,0.08,0.0,False,0
+53314,Certificaciones,Data Analytics Hub,alvaro.torres@inbest.cloud,Doing,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,5.0,0,0,0,100.0,0,0,0.0,False,0
+53315,Checkpoint,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-05T23:35:23.187Z,1.0,0.04,0,150.0,120.0,-3.3,0.2,1.63,False,0
+53317,Seguimiento TL General/Horas de descarga,Data Analytics Hub,alvaro.torres@inbest.cloud,Doing,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,2.0,0,0,0,100.0,0,0,0.0,False,0
+53319,Certificaciones,Data Analytics Hub,alvaro.torres@inbest.cloud,Doing,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,5.0,0,0,0,100.0,0,0,0.0,False,0
+53320,Checkpoint,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-13T00:13:48.577Z,1.0,0.03,0,150.0,120.0,-3.2,0.2,1.62,False,0
+53322,Seguimiento TL General/Horas de descarga,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T20:30:35.907Z,2.0,2.4,0,83.33,90.0,3.6,0.4,0.0,False,0
+53324,Certificaciones,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-26T17:27:14.78Z,5.0,6.0,0,83.33,90.0,3.5,1.0,0.0,False,0
+53325,Checkpoint,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-20T00:49:24.847Z,1.0,1.2,0,83.33,120.0,-3.2,0.2,1.61,False,0
+53327,Seguimiento TL General/Horas de descarga,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-26T17:27:31.82Z,2.0,2.4,0,83.33,90.0,3.5,0.4,0.0,False,0
+53329,Certificaciones,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:12:05.11Z,5.0,6.0,0,83.33,90.0,4.5,1.0,0.0,False,0
+53330,Checkpoint,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-26T17:25:59.623Z,1.0,0.01,0,150.0,120.0,-3.5,0.2,1.76,False,0
+53332,Seguimiento TL General/Horas de descarga,Data Analytics Hub,alvaro.torres@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:09:37.42Z,2.0,2.4,0,83.33,90.0,4.5,0.4,0.0,False,0
+53444,Certificaciones,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-06T21:49:18.157Z,2.0,0,0,0,90.0,4.7,0.4,0.0,False,0
+53445,Checkpoint,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-06T21:49:24.83Z,0.4,0,0,0,90.0,4.7,0.08,0.0,False,0
+53447,Seguimiento TL General/Horas de descarga,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-06T21:49:36.1Z,0.8,0,0,0,90.0,4.7,0.16,0.0,False,0
+53450,Certificaciones,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-23T19:43:48.18Z,5.0,0,0,0,70.0,14.6,1.0,0.0,False,0
+53451,Checkpoint,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-05T18:08:49.157Z,1.5,1.36,0,110.29,120.0,-3.5,0.3,1.75,False,0
+53455,Certificaciones,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-20T00:17:42.753Z,5.0,0,0,0,90.0,3.8,1.0,0.0,False,0
+53456,Checkpoint,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T21:59:38.853Z,1.0,1.2,0,83.33,95.0,0.7,0.2,0.0,False,0
+53460,Certificaciones,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T19:41:49.43Z,5.0,6.0,0,83.33,95.0,0.6,1.0,0.0,False,0
+53461,Checkpoint,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-20T00:16:53.62Z,1.0,1.2,0,83.33,120.0,-3.2,0.2,1.62,False,0
+53465,Certificaciones,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:00:37.337Z,5.0,0.0,0,0,90.0,4.5,1.0,0.0,False,0
+53466,Checkpoint,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T18:35:34.263Z,2.0,0.0,0,0,90.0,4.5,0.4,0.0,False,0
+53468,Seguimiento TL General/Horas de descarga,Data Analytics Hub,andres.escobedo@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T18:28:03.62Z,2.0,0.0,0,0,90.0,4.5,0.4,0.0,False,0
+53580,Certificaciones,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+53581,Checkpoint,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,,0.4,0,0,0,0,0,0,0,False,0
+53583,Seguimiento TL General/Horas de descarga,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,,0.8,0,0,0,0,0,0,0,False,0
+53586,Certificaciones,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+53587,Checkpoint,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+53589,Seguimiento TL General/Horas de descarga,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+53591,Certificaciones,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+53592,Checkpoint,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+53594,Seguimiento TL General/Horas de descarga,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+53596,Certificaciones,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+53597,Checkpoint,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+53599,Seguimiento TL General/Horas de descarga,Data Analytics Hub,pablo.ruiz@inbest.cloud,Pause,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,2.0,2.4,0,83.33,100.0,0,0,0.0,True,18.19
+53601,Certificaciones,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+53602,Checkpoint,Data Analytics Hub,pablo.ruiz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+53604,Seguimiento TL General/Horas de descarga,Data Analytics Hub,pablo.ruiz@inbest.cloud,Pause,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,2.0,2.4,0,83.33,100.0,0,0,0.0,False,0
+53750,Dailys,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:00:16.243Z,1.0,0,0,0,90.0,4.5,0.2,0.0,False,0
+53751,Seguimiento TL General,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:06:31.24Z,2.5,0,0,0,90.0,4.5,0.5,0.0,False,0
+53752,Checkpoint,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:02:07.447Z,0.5,0,0,0,90.0,4.5,0.1,0.0,False,0
+53753,Certificacion,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:00:28.19Z,5.0,0,0,0,90.0,4.5,1.0,0.0,False,0
+53754,Logueo de horas,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T19:01:07.983Z,1.0,0,0,0,90.0,4.5,0.2,0.0,False,0
+53756,Dailys,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T20:13:42.987Z,1.0,0,0,0,95.0,0.6,0.2,0.0,False,0
+53757,Seguimiento TL General,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T20:16:50.213Z,2.5,0,0,0,95.0,0.6,0.5,0.0,False,0
+53758,Checkpoint,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T20:14:26.51Z,0.5,0,0,0,95.0,0.6,0.1,0.0,False,0
+53759,Certificacion,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T20:23:35.713Z,5.0,0,0,0,95.0,0.6,1.0,0.0,False,0
+53760,Logueo de horas,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T20:21:47.577Z,1.0,0,0,0,95.0,0.6,0.2,0.0,False,0
+53762,Dailys,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:48:44.303Z,1.0,0,0,0,90.0,4.4,0.2,0.0,False,0
+53763,Seguimiento TL General,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:47:10.58Z,2.5,0,0,0,90.0,4.4,0.5,0.0,False,0
+53764,Checkpoint,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:46:42.77Z,0.5,0,0,0,90.0,4.4,0.1,0.0,False,0
+53765,Certificacion,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:45:51.68Z,5.0,0,0,0,90.0,4.4,1.0,0.0,False,0
+53766,Logueo de horas,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T15:45:41.923Z,1.0,0,0,0,90.0,4.4,0.2,0.0,False,0
+53768,Dailys,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:51:23.113Z,1.0,0,0,0,90.0,6.6,0.2,0.0,False,0
+53769,Seguimiento TL General,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:53:08.907Z,2.5,0,0,0,90.0,6.6,0.5,0.0,False,0
+53770,Checkpoint,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:53:48.543Z,0.5,0,0,0,90.0,6.6,0.1,0.0,False,0
+53771,Certificacion,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:54:16.16Z,5.0,0,0,0,90.0,6.6,1.0,0.0,False,0
+53772,Logueo de horas,Development Hub,osvaldo.deluna@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:54:45.37Z,1.0,0,0,0,90.0,6.6,0.2,0.0,False,0
+53881,Dailys,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-02-03T17:35:19.917Z,1.0,0,0,0,70.0,25.5,0.2,0.0,False,0
+53882,Seguimiento TL General,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-02-03T17:36:11.533Z,2.5,0,0,0,70.0,25.5,0.5,0.0,False,0
+53883,Checkpoint,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-02-03T17:37:03.183Z,0.5,0,0,0,70.0,25.5,0.1,0.0,False,0
+53884,Certificacion,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-02-03T17:37:46.947Z,5.0,0,0,0,70.0,25.5,1.0,0.0,False,0
+53885,Logueo de horas,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-02-03T17:39:33.743Z,1.0,0,0,0,70.0,25.5,0.2,0.0,False,0
+53887,Dailys,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-02-03T17:41:10.813Z,1.0,0,0,0,70.0,18.5,0.2,0.0,False,0
+53888,Seguimiento TL General,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-02-03T17:42:31.583Z,2.5,0,0,0,70.0,18.5,0.5,0.0,False,0
+53889,Checkpoint,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-02-03T17:43:16.1Z,0.5,0,0,0,70.0,18.5,0.1,0.0,False,0
+53890,Certificacion,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-02-03T17:44:49.963Z,5.0,0,0,0,70.0,18.5,1.0,0.0,False,0
+53891,Logueo de horas,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-02-03T17:45:33.497Z,1.0,0,0,0,70.0,18.5,0.2,0.0,False,0
+53893,Dailys,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T17:46:30.8Z,1.0,0,0,0,85.0,11.5,0.2,0.0,False,0
+53894,Seguimiento TL General,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T17:47:35.043Z,2.5,0,0,0,85.0,11.5,0.5,0.0,False,0
+53895,Checkpoint,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T17:48:55.497Z,0.5,0,0,0,85.0,11.5,0.1,0.0,False,0
+53896,Certificacion,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T17:51:30.14Z,5.0,0,0,0,85.0,11.5,1.0,0.0,False,0
+53897,Logueo de horas,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T17:51:52.997Z,1.0,0,0,0,85.0,11.5,0.2,0.0,False,0
+53899,Dailys,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:55:25.32Z,1.0,0,0,0,90.0,4.5,0.2,0.0,False,0
+53900,Seguimiento TL General,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:56:38.933Z,2.5,0,0,0,90.0,4.5,0.5,0.0,False,0
+53901,Checkpoint,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:57:10.923Z,0.5,0,0,0,90.0,4.5,0.1,0.0,False,0
+53902,Certificacion,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:59:32.263Z,5.0,0,0,0,90.0,4.5,1.0,0.0,False,0
+53903,Logueo de horas,Development Hub,diego.lopez@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:59:59.347Z,1.0,0,0,0,90.0,4.5,0.2,0.0,False,0
+54012,Dailys,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54013,Seguimiento TL General,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54014,Checkpoint,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54015,Certificacion,Development Hub,carlos.vazquez@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-02-03T14:24:36.217Z,5.0,0,0,0,70.0,25.4,1.0,0.0,False,0
+54016,Logueo de horas,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54018,Dailys,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54019,Seguimiento TL General,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54020,Checkpoint,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54021,Certificacion,Development Hub,carlos.vazquez@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-02-03T14:25:01.81Z,5.0,0,0,0,70.0,18.4,1.0,0.0,False,0
+54022,Logueo de horas,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54024,Dailys,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54025,Seguimiento TL General,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54026,Checkpoint,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54027,Certificacion,Development Hub,carlos.vazquez@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T14:28:49.543Z,5.0,0,0,0,85.0,11.4,1.0,0.0,False,0
+54028,Logueo de horas,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54030,Dailys,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54031,Seguimiento TL General,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54032,Checkpoint,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54033,Certificacion,Development Hub,carlos.vazquez@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T14:31:39.55Z,5.0,0,0,0,90.0,4.4,1.0,0.0,False,0
+54034,Logueo de horas,Development Hub,carlos.vazquez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54143,Dailys,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T15:07:16.1Z,1.0,0,0,0,95.0,0.4,0.2,0.0,False,0
+54144,Seguimiento TL General,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T15:44:19.193Z,2.5,0,0,0,95.0,0.4,0.5,0.0,False,0
+54145,Checkpoint,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T15:47:12.57Z,0.5,0,0,0,95.0,0.4,0.1,0.0,False,0
+54146,Certificacion,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T15:48:41.197Z,5.0,0,0,0,95.0,0.4,1.0,0.0,False,0
+54147,Logueo de horas,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T15:49:51.87Z,1.0,0,0,0,95.0,0.4,0.2,0.0,False,0
+54149,Dailys,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T18:38:52.28Z,1.0,0,0,0,95.0,0.5,0.2,0.0,False,0
+54150,Seguimiento TL General,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T18:44:36.917Z,2.5,0,0,0,95.0,0.5,0.5,0.0,False,0
+54151,Checkpoint,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T18:45:45.093Z,0.5,0,0,0,95.0,0.5,0.1,0.0,False,0
+54152,Certificacion,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T18:48:15.027Z,5.0,0,0,0,95.0,0.5,1.0,0.0,False,0
+54153,Logueo de horas,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T18:49:17.75Z,1.0,0,0,0,95.0,0.5,0.2,0.0,False,0
+54155,Dailys,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T15:26:32.867Z,1.0,0.0,0,0,95.0,0.4,0.2,0.0,False,0
+54156,Seguimiento TL General,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T15:28:24.543Z,2.5,0,0,0,95.0,0.4,0.5,0.0,False,0
+54157,Checkpoint,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T15:33:09.41Z,0.5,0,0,0,95.0,0.4,0.1,0.0,False,0
+54158,Certificacion,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T15:34:44.65Z,5.0,0,0,0,95.0,0.4,1.0,0.0,False,0
+54159,Logueo de horas,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-30T18:49:39.87Z,1.0,1.2,0,83.33,85.0,7.5,0.2,0.0,True,43.21
+54161,Dailys,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T22:07:39.65Z,1.0,0,0,0,100.0,-0.3,0.2,0.0,False,0
+54162,Seguimiento TL General,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T22:08:30.797Z,2.5,0,0,0,100.0,-0.3,0.5,0.0,False,0
+54163,Checkpoint,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T22:09:09.633Z,0.5,0,0,0,100.0,-0.3,0.1,0.0,False,0
+54164,Certificacion,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T22:09:34.37Z,5.0,0,0,0,100.0,-0.3,1.0,0.0,False,0
+54165,Logueo de horas,Development Hub,damian.gaspar@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T17:39:16.7Z,1.0,1.2,0,83.33,90.0,4.5,0.2,0.0,False,0
+54274,Dailys,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54275,Seguimiento TL General,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54276,Checkpoint,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54277,Certificacion,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+54278,Logueo de horas,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54280,Dailys,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54281,Seguimiento TL General,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54282,Checkpoint,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54283,Certificacion,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+54284,Logueo de horas,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54286,Dailys,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54287,Seguimiento TL General,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54288,Checkpoint,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54289,Certificacion,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+54290,Logueo de horas,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54292,Dailys,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54293,Seguimiento TL General,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,2.5,0,0,0,100.0,0,0,0.0,False,0
+54294,Checkpoint,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+54295,Certificacion,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,5.0,0,0,0,0,0,0,0,False,0
+54296,Logueo de horas,Development Hub,emmanuel.perez@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+54536,Dailys,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T16:03:03.797Z,1.0,1.2,0,83.33,90.0,3.4,0.2,0.0,False,0
+54537,Seguimiento TL General,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T16:03:08.97Z,2.5,3.0,0,83.33,90.0,3.4,0.5,0.0,False,0
+54538,Checkpoint,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T16:03:18.51Z,0.5,0.44,0,113.64,90.0,3.4,0.1,0.0,False,0
+54539,Certificacion,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T16:03:23.173Z,5.0,0.44,0,150.0,90.0,3.4,1.0,0.0,False,0
+54540,Logueo de horas,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T16:03:30.78Z,1.0,0.44,0,150.0,90.0,3.4,0.2,0.0,False,0
+54542,Dailys,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T16:18:37.763Z,1.0,1.2,0,83.33,95.0,0.4,0.2,0.0,False,0
+54543,Seguimiento TL General,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T16:18:32.437Z,3.5,4.2,0,83.33,95.0,0.4,0.7,0.0,False,0
+54544,Checkpoint,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T01:28:29.52Z,0.5,0.0,0,0,95.0,2.8,0.1,0.0,False,0
+54545,Certificacion,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-18T15:51:32.027Z,9.0,8.0,0,112.5,95.0,2.4,1.8,0.0,False,0
+54546,Logueo de horas,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-18T15:51:23.02Z,1.0,1.2,0,83.33,95.0,2.4,0.2,0.0,False,0
+54548,Dailys,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T15:57:10.743Z,1.0,1.2,0,83.33,95.0,0.4,0.2,0.0,False,0
+54549,Seguimiento TL General,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-26T05:47:53.763Z,2.5,3.0,0,83.33,95.0,3.0,0.5,0.0,False,0
+54550,Checkpoint,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-26T18:06:18.457Z,0.5,0.6,0,83.33,90.0,3.5,0.1,0.0,False,0
+54551,Certificacion,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T00:31:16.857Z,5.0,6.0,0,83.33,90.0,3.8,1.0,0.0,False,0
+54552,Logueo de horas,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-26T18:06:22.687Z,1.0,1.2,0,83.33,90.0,3.5,0.2,0.0,False,0
+54554,Dailys,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-31T00:54:06.41Z,1.0,1.2,0,83.33,95.0,0.8,0.2,0.0,False,0
+54555,Seguimiento TL General,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-31T00:54:00.88Z,2.5,3.0,0,83.33,95.0,0.8,0.5,0.0,False,0
+54556,Checkpoint,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-31T00:53:57.337Z,0.5,0.6,0,83.33,95.0,0.8,0.1,0.0,False,0
+54557,Certificacion,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-31T00:53:52.973Z,5.0,3.14,0,150.0,95.0,0.8,1.0,0.0,False,0
+54558,Logueo de horas,Development Hub,fernando.agredano@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-31T00:53:47.157Z,1.0,1.2,0,83.33,95.0,0.8,0.2,0.0,False,0
+55338,CRM Ventas - [JSSF-826] CRM Ventas | Agregar catálogo 2026 - Mesa de soporte de iNBest,GML- Soporte,uriel.cortes@inbest.cloud,New,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,,3.2,0,0,0,0,0,0,0,False,0
+55357,Integrar nuevo registro con backend,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-05T06:00:00,2026-01-05T17:14:52.477Z,0.75,0.0,0,0,95.0,0.5,0.15,0.0,False,0
+55358,Asegurar restricción de acceso a aplicación para usuarios no validados,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2025-12-30T21:53:49.643Z,1.0,0,0,0,130.0,-5.3,0.2,5.34,False,0
+55362,Refactorizar tabla de listado de usuarios,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-07T06:00:00,2026-01-08T18:41:02.5Z,3.5,4.2,0,83.33,95.0,1.5,0.7,0.0,False,0
+55366,Agregar endpoint para rechazar solicitud de cuenta,GML - JAC Cloud,diego.lopez@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-05T06:00:00,2026-01-02T15:11:09.9Z,0.75,0.9,0,83.33,110.0,-2.6,0.15,0.65,False,0
+55367,Asegurar acceso a aplicación para usuarios validados,GML - JAC Cloud,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2025-12-29T17:25:47.103Z,1.5,0.0,0,0,130.0,-6.5,0.3,6.52,False,0
+55368,Asegurar envío de notificación al aceptar/rechazar solicitud de cuenta,GML - JAC Cloud,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2025-12-24T16:07:38.457Z,1.5,0.0,0,0,130.0,-11.6,0.3,11.58,False,0
+55369,Integrar con backend la aceptación de solicitud de cuenta,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-05T17:48:24.93Z,1.5,0.53,0,150.0,110.0,-1.5,0.3,0.38,False,0
+55370,Integrar con backend el rechazo de solicitud de cuenta,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-05T17:48:30.587Z,1.5,0,0,0,110.0,-1.5,0.3,0.38,False,0
+55371,Asegurar acceso a aplicación para usuarios validados,GML - JAC Cloud,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-08T06:00:00,2026-01-05T17:48:41.98Z,1.5,0,0,0,110.0,-2.5,0.3,0.63,False,0
+55768,Weekly Checkpoint - Semana 05-09 Ene 2026,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+55769,Weekly Checkpoint - Semana 05-09 Ene 2026,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,New,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+55771,Weekly Checkpoint - Semana 12-16 Ene 2026,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+55772,Weekly Checkpoint - Semana 12-16 Ene 2026,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-21T22:41:54.037Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+55781,Crear cita,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2025-12-26T06:00:00,2026-01-02T06:00:00,2026-01-06T22:07:46.98Z,2.67,0,0,0,90.0,4.7,0.53,0.0,False,0
+55782,Modificar cita,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2025-12-26T06:00:00,2026-01-02T06:00:00,2026-01-06T22:12:18.867Z,2.67,0,0,0,90.0,4.7,0.53,0.0,False,0
+55783,Recepción de cita,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2025-12-26T06:00:00,2026-01-02T06:00:00,2026-01-06T22:12:51.79Z,1.33,0,0,0,90.0,4.7,0.27,0.0,False,0
+55785,Recepción sin cita,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-24T06:00:00,2026-01-30T18:44:05.537Z,2.0,2.4,0,83.33,90.0,6.5,0.4,0.0,False,0
+55786,Walkaround,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-24T06:00:00,2026-02-06T17:32:44.863Z,10.0,12.0,0,83.33,85.0,13.5,2.0,0.0,False,0
+55787,Cotización,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-24T06:00:00,2026-01-21T16:12:11.423Z,10.0,12.0,0,83.33,110.0,-2.6,2.0,0.64,False,0
+55788,Modificación de datos,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-24T06:00:00,2026-02-06T17:32:07.873Z,4.0,4.8,0,83.33,85.0,13.5,0.8,0.0,False,0
+55790,Hoja de inspección,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-21T02:07:32.63Z,10.0,10.98,0,91.07,90.0,4.8,2.0,0.0,False,0
+55796,Seguimiento TL 29Dic-02 Ene,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,New,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,,0.4,0,0,0,0,0,0,0,False,0
+55797,Seguimiento TL 29Dic-02 Ene,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-07T21:29:15.573Z,0.4,0,0,0,90.0,5.6,0.08,0.0,False,0
+55798,Seguimiento TL 05-09 Ene,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+55799,Seguimiento TL 05-09 Ene,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-21T23:36:50.153Z,1.0,0,0,0,85.0,12.7,0.2,0.0,False,0
+55800,Seguimiento TL 12-16 Ene,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+55801,Seguimiento TL 12-16 Ene,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-21T23:39:26.38Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+55816,Seguimiento TL,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:39:32.49Z,0.8,0,0,0,90.0,3.4,0.16,0.0,False,0
+55817,Weekly,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:35:53.883Z,0.2,0,0,0,90.0,3.4,0.04,0.0,False,0
+55856,Seguimiento TL,GML - JAC Cloud,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:37:32.55Z,0.8,0,0,0,90.0,3.4,0.16,0.0,False,0
+55857,Weekly,GML - JAC Cloud,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T16:28:15.513Z,0.2,0,0,0,90.0,3.4,0.04,0.0,False,0
+56593,Seguimiento TL,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:33:05.56Z,0.8,0,0,0,90.0,3.4,0.16,0.0,False,0
+56594,Weekly,Municipio GDL Asistente Virtual,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T15:33:58.753Z,0.2,0,0,0,90.0,3.4,0.04,0.0,False,0
+57036,Desgloce por anomalía en cedula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T18:30:21.833Z,4.8,5.76,0,83.33,90.0,3.5,0.96,0.0,False,0
+57901,Cross-region replication Dev,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2025-12-22T06:00:00,2026-01-05T06:00:00,2025-12-29T15:40:45.927Z,2.05,0,0,0,130.0,-6.6,0.41,6.6,False,0
+57903,Encendido de versionamiento Prod,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-05T19:13:08.683Z,0.75,0,0,0,120.0,-3.4,0.15,1.72,False,0
+57904,Bucket S3 Prod en región secundaria,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-05T19:14:08.607Z,0.75,0,0,0,120.0,-3.4,0.15,1.72,False,0
+57905,Batch replication Prod,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-05T19:14:21.29Z,3.0,0,0,0,120.0,-3.4,0.6,1.72,False,0
+57906,Cross-region replication Prod,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-05T19:14:32.2Z,7.5,0,0,0,120.0,-3.4,1.5,1.72,False,0
+57909,Despliegue Jobs Dev,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-30T06:00:00,2026-01-30T21:17:14.843Z,60.0,53.02,0,113.16,95.0,0.6,12.0,0.0,False,0
+57911,Despliegue layers de Lambda Dev,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-07T06:00:00,2026-01-14T00:47:06.937Z,3.0,0,0,0,90.0,6.8,0.6,0.0,False,0
+57912,Despliegue funciones Lambda Dev,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-13T06:00:00,2026-01-14T00:47:46.48Z,15.25,0,0,0,95.0,0.8,3.05,0.0,False,0
+57914,Despliegue de maquinas de estado Dev,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-27T06:00:00,2026-01-30T06:00:00,,10.5,0,0,0,100.0,0,0,0.0,False,0
+57947,Vacaciones desembrinas,People - HR - Activities Hub,fernando.hernandez@inbest.cloud,New,Unknown,2025-12-23T06:00:00,2026-01-02T06:00:00,,16.0,0,0,0,100.0,0,0,0.0,False,0
+57948,Vacaciones desembrinas,People - HR - Activities Hub,alvaro.torres@inbest.cloud,Closed,Unknown,2025-12-23T06:00:00,2026-01-02T06:00:00,2026-01-05T23:51:59.327Z,16.0,0,0,0,90.0,3.7,3.2,0.0,False,0
+57949,Vacaciones desembrinas,People - HR - Activities Hub,andres.escobedo@inbest.cloud,Closed,Unknown,2025-12-23T06:00:00,2026-01-02T06:00:00,2026-01-05T23:59:16.097Z,16.0,0.02,0,150.0,90.0,3.7,3.2,0.0,False,0
+57950,Vacaciones desembrinas,People - HR - Activities Hub,pablo.ruiz@inbest.cloud,Closed,Unknown,2025-12-23T06:00:00,2026-01-02T06:00:00,2026-01-06T17:31:24.15Z,16.0,0,0,0,90.0,4.5,3.2,0.0,False,0
+58003,31 Dic y 01 Ene,People - HR - Activities Hub,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-03T04:48:00.643Z,8.0,0,0,0,95.0,2.0,1.6,0.0,False,0
+58005,31 Dic y 01 Ene,People - HR - Activities Hub,hans.izarraraz@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T15:21:10.803Z,8.0,0.0,0,0,90.0,4.4,1.6,0.0,False,0
+58006,31 Dic y 01 Ene,People - HR - Activities Hub,sebastian.rojas@inbest.cloud,Resolved,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-07T17:18:59.183Z,8.0,0,0,0,90.0,6.5,1.6,0.0,False,0
+58007,31 Dic y 01 Ene,People - HR - Activities Hub,fernando.hernandez@inbest.cloud,New,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,,8.0,0,0,0,100.0,0,0,0.0,False,0
+58008,31 Dic y 01 Ene,People - HR - Activities Hub,alvaro.torres@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T23:46:46.567Z,8.0,0,0,0,90.0,4.7,1.6,0.0,False,0
+58009,31 Dic y 01 Ene,People - HR - Activities Hub,andres.escobedo@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-06T00:00:00.203Z,8.0,0.01,0,150.0,90.0,4.8,1.6,0.0,False,0
+58010,31 Dic y 01 Ene,People - HR - Activities Hub,pablo.ruiz@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-06T16:02:25.013Z,8.0,0,0,0,90.0,5.4,1.6,0.0,False,0
+58012,31 Dic y 01 Ene,People - HR - Activities Hub,carlos.vazquez@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2025-12-30T15:21:12.33Z,8.0,0,0,0,110.0,-1.6,1.6,0.4,False,0
+58013,31 Dic y 01 Ene,People - HR - Activities Hub,daniel.cayola@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2025-12-26T19:41:57.157Z,8.0,0,0,0,130.0,-5.4,1.6,5.43,False,0
+58032,31 Dic y 01 Ene,People - HR - Activities Hub,uriel.cortes@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T22:06:04.147Z,8.0,0,0,0,90.0,4.7,1.6,0.0,False,0
+58034,31 Dic y 01 Ene,People - HR - Activities Hub,diego.lopez@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-02-03T18:21:32.747Z,8.0,0,0,0,70.0,33.5,1.6,0.0,False,0
+58035,31 Dic y 01 Ene,People - HR - Activities Hub,emmanuel.perez@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-02-03T17:54:09.543Z,8.0,0,0,0,70.0,33.5,1.6,0.0,False,0
+58039,31 Dic y 01 Ene,People - HR - Activities Hub,osvaldo.deluna@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T15:44:23.793Z,8.0,0,0,0,90.0,4.4,1.6,0.0,False,0
+58040,31 Dic y 01 Ene,People - HR - Activities Hub,gerardo.melgoza@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-16T18:22:35.583Z,0,0,0,0,0,0,0,0,False,0
+58041,31 Dic y 01 Ene,People - HR - Activities Hub,ximena.segura@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T15:35:28.21Z,8.0,8.0,0,100.0,90.0,4.4,1.6,0.0,False,0
+58042,31 Dic y 01 Ene,People - HR - Activities Hub,damian.gaspar@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-02T21:04:13.09Z,8.0,0,0,0,95.0,1.6,1.6,0.0,False,0
+58043,31 Dic y 01 Ene,People - HR - Activities Hub,cristian.soria@inbest.cloud,New,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,,8.0,0,0,0,100.0,0,0,0.0,False,0
+58046,31 Dic y 01 Ene,People - HR - Activities Hub,fernando.alcaraz@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T14:46:02.813Z,8.0,0,0,0,90.0,4.4,1.6,0.0,False,0
+58052,31 Dic y 01 Ene,People - HR - Activities Hub,daniel.reyes@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T16:26:10.47Z,8.0,0,0,0,90.0,4.4,1.6,0.0,False,0
+58053,31 Dic y 01 Ene,People - HR - Activities Hub,fernando.agredano@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-01-05T15:39:04.643Z,8.0,9.6,0,83.33,90.0,4.4,1.6,0.0,False,0
+58156,Post Venta - [JSSF-751] subir el peso permitido para la carga de videos en evidencias - Mesa de soporte de iNBest,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-05T17:54:38.39Z,4.8,0,0,0,90.0,3.5,0.96,0.0,False,0
+58157,Logueo de horas,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T06:00:00,2026-01-06T17:24:20.413Z,0.4,0,0,0,90.0,4.5,0.08,0.0,False,0
+58158,Seguimiento semanal,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T14:58:00,2026-01-05T16:21:11.333Z,0.2,0,0,0,90.0,3.1,0.04,0.0,False,0
+58159,Seguimiento TL General,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T14:58:00,2026-01-05T16:22:41.43Z,0.4,0,0,0,90.0,3.1,0.08,0.0,False,0
+58160,Daily,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T14:59:00,2026-01-05T16:23:19.91Z,0.4,0,0,0,90.0,3.1,0.08,0.0,False,0
+58161,Certificación,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T14:59:00,2026-01-05T16:23:52.98Z,2.0,0,0,0,90.0,3.1,0.4,0.0,False,0
+58162,SF - Presentación Interna,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T14:59:00,2026-01-05T16:23:57.423Z,0.4,0,0,0,90.0,3.1,0.08,0.0,False,0
+58192,Definición de modelo de paramaetros para comisiones en Cédula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T17:53:04.047Z,4.0,4.8,0,83.33,90.0,3.5,0.8,0.0,False,0
+58194,Calculo de comisiones en Cédula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T17:55:16.823Z,8.0,9.6,0,83.33,90.0,3.5,1.6,0.0,False,0
+58195,Pantalla de home,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-08T16:37:02.897Z,12.0,14.4,0,83.33,100.0,-0.6,2.4,0.0,False,0
+58196,Ajuste de toolbar para decena y versión,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T17:02:37.803Z,14.0,9.42,0,148.62,95.0,0.5,2.8,0.0,False,0
+58197,Ajuste de enpoint para obtener conciliación por decena,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T01:57:03.087Z,12.0,14.4,0,83.33,100.0,-0.2,2.4,0.0,False,0
+58198,Aplicación de filtros de decena en Mis en Sus,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T15:45:17.08Z,12.0,14.4,0,83.33,95.0,0.4,2.4,0.0,False,0
+58199,Aplicar filtros desde de decena dashboard principal,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-20T15:17:45.09Z,8.0,7.12,0,112.36,110.0,-2.6,1.6,0.65,False,0
+58200,Ajuste de enpoint para obtener conciliación por versión,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-09T01:57:54.93Z,12.0,14.4,0,83.33,100.0,-0.2,2.4,0.0,False,0
+58201,Aplicación de filtros de versión en Mis en Sus,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T15:45:09.557Z,12.0,8.14,0,147.42,95.0,0.4,2.4,0.0,False,0
+58202,Aplicar filtros desde de versión dashboard principal,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-20T15:17:40.233Z,8.0,7.13,0,112.2,110.0,-2.6,1.6,0.65,False,0
+58203,Ajustes visuales en ficha tecnica,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Resolved,Unknown,2025-12-31T17:24:00,2026-01-02T06:00:00,2026-01-02T16:12:48.623Z,2.67,0,0,0,95.0,0.4,0.53,0.0,False,0
+58212,Logueo de horas,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:00:00,2026-01-05T16:55:30.18Z,0.4,0,0,0,90.0,3.1,0.08,0.0,False,0
+58213,Seguimiento semanal,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:01:00,2026-01-05T17:25:38.177Z,0.2,0,0,0,90.0,3.1,0.04,0.0,False,0
+58214,Seguimiento TL General,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:01:00,2026-01-05T17:29:11.003Z,0.4,0,0,0,90.0,3.1,0.08,0.0,False,0
+58215,Daily,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:01:00,2026-01-05T16:44:51.997Z,0.4,0,0,0,90.0,3.1,0.08,0.0,False,0
+58216,SF - Presentación Interna,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:01:00,2026-01-07T18:55:16.133Z,0,0,0,0,0,0,0,0,False,0
+58217,Certificación/Curso,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:01:00,2026-01-05T16:01:49.213Z,2.0,0,0,0,90.0,3.0,0.4,0.0,False,0
+58219,Logueo de horas,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:02:00,2026-01-03T03:25:33.227Z,0.4,0,0,0,95.0,0.5,0.08,0.0,False,0
+58220,Seguimiento semanal,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:03:00,2026-01-03T03:26:04.683Z,0.2,0,0,0,95.0,0.5,0.04,0.0,False,0
+58221,Seguimiento TL General,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:03:00,2026-01-03T03:26:36.033Z,1.6,0,0,0,95.0,0.5,0.32,0.0,False,0
+58222,Daily,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:03:00,2026-01-03T03:23:38.22Z,0.4,0,0,0,95.0,0.5,0.08,0.0,False,0
+58223,Estimaciones,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:03:00,2026-01-03T03:25:15.97Z,0.8,0,0,0,95.0,0.5,0.16,0.0,False,0
+58224,Weekly TL,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:03:00,2026-01-03T03:27:37.693Z,0.4,0,0,0,95.0,0.5,0.08,0.0,False,0
+58225,Certificación,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:03:00,2026-01-03T03:23:28.017Z,1.6,0,0,0,95.0,0.5,0.32,0.0,False,0
+58226,SF - Presentación Interna,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2025-12-29T06:00:00,2026-01-02T15:04:00,2026-01-03T03:27:33.28Z,0.4,0,0,0,95.0,0.5,0.08,0.0,False,0
+58230,CRM Ventas - [JSSF-740] Revisar integración con Sales Force de Grupo Zapata - Mesa de soporte de iNBest,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T15:11:00,2026-01-05T16:38:47.843Z,0.6,0,0,0,90.0,3.1,0.12,0.0,False,0
+58235,Ajustes adicionales en maqueta,Easytrip - Finanzas-Automatización,daniel.cayola@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-02T18:08:00,2026-01-05T15:55:31.773Z,0.8,0,0,0,95.0,2.9,0.16,0.0,False,0
+59677,Diseño Onboarding Figma,Onboarding - RH -UXUI,daniel.cayola@inbest.cloud,Closed,Unknown,2025-12-29T06:00:00,2026-01-31T06:00:00,2026-01-28T17:06:23.8Z,7.04,8.45,0,83.33,110.0,-2.5,1.41,0.63,False,0
+59937,Solicitud de adición de consolas en quicksight,Data Proyectos internos,pablo.ruiz@inbest.cloud,Pause,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,,3.0,0,0,0,100.0,0,0,0.0,False,0
+59940,Seguimiento TL,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-13T18:49:09.46Z,2.0,0,0,0,90.0,4.5,0.4,0.0,False,0
+59941,Weekly,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T16:05:56.67Z,0.5,0,0,0,90.0,3.4,0.1,0.0,False,0
+59943,Seguimiento TL,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-27T16:18:12.22Z,2.0,0,0,0,85.0,11.4,0.4,0.0,False,0
+59944,Weekly,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-27T16:15:45.713Z,0.5,0,0,0,85.0,11.4,0.1,0.0,False,0
+59946,Seguimiento TL,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T16:15:07.803Z,2.0,0,0,0,90.0,4.4,0.4,0.0,False,0
+59947,Weekly,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-27T16:13:44.303Z,0.5,0,0,0,90.0,4.4,0.1,0.0,False,0
+59949,Seguimiento TL,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:42:10.51Z,2.0,0,0,0,90.0,6.6,0.4,0.0,False,0
+59950,Weekly,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T20:44:36.193Z,0.5,0,0,0,90.0,6.6,0.1,0.0,False,0
+60362,Desarrollo Tablero,Texas Voters,andres.escobedo@inbest.cloud,Closed,Unknown,2026-01-05T17:01:00,2026-01-09T06:00:00,2026-01-12T16:46:26.217Z,30.0,15.31,0,150.0,90.0,3.4,6.0,0.0,False,0
+60386,GML - Intelisis,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-19T21:26:50.223Z,0.5,0,0,0,85.0,12.6,0.1,0.0,False,0
+60387,GML - Adview,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-19T21:36:00.573Z,0.5,0.6,0,83.33,85.0,12.7,0.1,0.0,False,0
+60394,Checkpoint interno 01 - 05 Enero 2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-01T06:00:00,2026-01-05T06:00:00,,1.0,0,0,0,100.0,0,0,0.0,False,0
+60395,Checkpoint interno 01 - 05 Enero 2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-01T06:00:00,2026-01-05T06:00:00,2026-01-20T00:01:38.04Z,1.0,0.81,0,123.46,70.0,14.8,0.2,0.0,False,0
+60396,Checkpoint interno 01 - 05 Enero 2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-01T06:00:00,2026-01-05T06:00:00,2026-01-19T21:35:43.897Z,1.0,1.2,0,83.33,70.0,14.6,0.2,0.0,False,0
+60397,Checkpoint interno 12 - 16 Enero 2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T17:36:49.343Z,1.0,0.01,0,150.0,90.0,3.5,0.2,0.0,False,0
+60398,Checkpoint interno 06 - 09 Enero 2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-06T06:00:00,2026-01-09T06:00:00,2026-01-12T18:05:47.57Z,1.0,0,0,0,90.0,3.5,0.2,0.0,False,0
+60399,Checkpoint interno 01 - 05 Enero 2026 (Daniel),GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-01T06:00:00,2026-01-05T06:00:00,2026-01-19T22:28:22.21Z,1.0,0,0,0,70.0,14.7,0.2,0.0,False,0
+60401,Checkpoint interno 19 - 23 Enero 2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,1.0,0,0,0,100.0,0,0,0.0,False,0
+60402,Checkpoint interno 12 - 16 Enero 2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-20T00:02:23.653Z,1.0,0.01,0,150.0,90.0,3.8,0.2,0.0,False,0
+60403,Checkpoint interno 12 - 16 Enero 2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T21:35:38.507Z,1.0,1.2,0,83.33,90.0,3.6,0.2,0.0,False,0
+60405,Checkpoint interno 01 - 05 Enero 2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-01T06:00:00,2026-01-05T06:00:00,2026-01-12T18:06:07.037Z,1.0,0,0,0,85.0,7.5,0.2,0.0,False,0
+60408,Checkpoint interno 26 - 30 Enero 2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,100.0,0,0,0.0,False,0
+60409,Checkpoint interno 26 - 30 Enero 2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,New,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,100.0,0,0,0.0,False,0
+60410,Checkpoint interno 19 - 23 Enero 2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-19T21:43:00.59Z,1.0,1.2,0,83.33,120.0,-3.3,0.2,1.67,False,0
+60411,Checkpoint interno 26 - 30 Enero 2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:39:48.337Z,1.0,1.2,0,83.33,90.0,5.7,0.2,0.0,False,0
+60412,Checkpoint interno 26 - 30 Enero 2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-03T21:27:15.313Z,1.0,0,0,0,90.0,4.6,0.2,0.0,False,0
+60413,Checkpoint interno 12 - 16 Enero 2026 (Daniel),GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T22:29:12.793Z,1.0,0,0,0,90.0,3.7,0.2,0.0,False,0
+60416,Weekly Checkpoint JAC - 09Ene2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-09T06:00:00,2026-01-19T21:29:20.063Z,1.0,0,0,0,85.0,10.6,0.2,0.0,False,0
+60417,Weekly Checkpoint JAC - 09Ene2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-09T06:00:00,2026-01-20T00:20:41.993Z,1.0,0.01,0,150.0,85.0,10.8,0.2,0.0,False,0
+60418,Weekly Checkpoint JAC - 09Ene2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-09T06:00:00,2026-01-19T21:35:54.983Z,1.0,1.2,0,83.33,85.0,10.6,0.2,0.0,False,0
+60419,Weekly Checkpoint JAC - 09Ene2026 (Daniel),GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-09T06:00:00,2026-01-19T22:27:22.073Z,1.0,0,0,0,85.0,10.7,0.2,0.0,False,0
+60420,Weekly Checkpoint JAC - 09Ene2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-09T06:00:00,2026-01-19T17:39:23.67Z,1.0,0.01,0,150.0,85.0,10.5,0.2,0.0,False,0
+60421,Weekly Checkpoint JAC - 09Ene2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-09T06:00:00,2026-01-09T06:00:00,2026-01-12T18:06:21.023Z,1.0,0,0,0,90.0,3.5,0.2,0.0,False,0
+60423,Weekly Checkpoint JAC - 16Ene2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T17:04:35.867Z,1.0,0,0,0,90.0,3.5,0.2,0.0,False,0
+60424,Weekly Checkpoint JAC - 16Ene2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,Active,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,100.0,0,0,0.0,False,0
+60425,Weekly Checkpoint JAC - 16Ene2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T21:35:50.5Z,1.0,1.2,0,83.33,90.0,3.6,0.2,0.0,False,0
+60426,Weekly Checkpoint JAC - 16Ene2026 (Daniel),GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T22:30:10.09Z,1.0,0,0,0,90.0,3.7,0.2,0.0,False,0
+60427,Weekly Checkpoint JAC - 16Ene2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T17:40:12.837Z,1.0,0.01,0,150.0,90.0,3.5,0.2,0.0,False,0
+60428,Weekly Checkpoint JAC - 16Ene2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-02-13T16:39:01.46Z,1.0,0,0,0,70.0,28.4,0.2,0.0,False,0
+60430,Weekly Checkpoint JAC - 23Ene2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-23T06:00:00,2026-01-23T18:26:44.2Z,1.0,0,0,0,95.0,0.5,0.2,0.0,False,0
+60432,Weekly Checkpoint JAC - 23Ene2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-23T06:00:00,2026-02-04T22:35:04.767Z,1.0,0,0,0,85.0,12.7,0.2,0.0,False,0
+60433,Weekly Checkpoint JAC - 23Ene2026 (Daniel),GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-23T06:00:00,2026-02-05T16:05:40.753Z,1.0,0,0,0,85.0,13.4,0.2,0.0,False,0
+60434,Weekly Checkpoint JAC - 23Ene2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-23T06:00:00,2026-02-04T22:40:17.81Z,1.0,0,0,0,85.0,12.7,0.2,0.0,False,0
+60435,Weekly Checkpoint JAC - 23Ene2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-23T06:00:00,2026-02-13T16:39:04.69Z,1.0,0,0,0,70.0,21.4,0.2,0.0,False,0
+60437,Weekly Checkpoint JAC - 30Ene2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,2026-02-04T22:15:50.02Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+60438,Weekly Checkpoint JAC - 30Ene2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,New,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60439,Weekly Checkpoint JAC - 30Ene2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,2026-02-04T23:15:18.22Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+60440,Weekly Checkpoint JAC - 30Ene2026 (Daniel),GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,2026-02-05T16:06:01.167Z,1.0,0,0,0,90.0,6.4,0.2,0.0,False,0
+60441,Weekly Checkpoint JAC - 30Ene2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,2026-02-04T22:40:58.637Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+60442,Weekly Checkpoint JAC - 30Ene2026 (Daniel),GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,2026-02-03T21:28:12.537Z,1.0,0,0,0,90.0,4.6,0.2,0.0,False,0
+60444,Sitio Web - [JSSF-847] Cambio de Banner en Landing Page de Home - Mesa de soporte de iNBest,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-06T06:00:00,2026-01-06T06:00:00,2026-01-19T22:23:41.8Z,1.0,0,0,0,85.0,13.7,0.2,0.0,False,0
+60445,Sitio Web - [JSSF-854] Dar de baja JAC 6 - Mesa de soporte de iNBest,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-07T19:13:00,2026-01-07T19:13:00,2026-01-19T22:25:00.937Z,1.0,0,0,0,85.0,12.1,0.2,0.0,False,0
+60446,GML - Adview,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-19T21:26:07.593Z,0.5,0,0,0,85.0,12.6,0.1,0.0,False,0
+60479,Preparación de sesión módulo 4,Pegaduro - Póliza acompañamiento IA,andres.escobedo@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-13T06:00:00,2026-01-14T21:44:30.587Z,10.0,12.0,0,83.33,95.0,1.7,2.0,0.0,False,0
+60508,Logueo de horas,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60509,Seguimiento semanal,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+60510,Seguimiento TL General,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,4.0,0,0,0,0,0,0,0,False,0
+60511,Daily,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60512,Estimaciones PreSales,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,3.0,0,0,0,0,0,0,0,False,0
+60513,Weekly TL,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60514,Certificación,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+60515,SF - Presentación Interna,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60516,Carga de KPIs,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60518,Logueo de horas,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60519,Seguimiento semanal,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+60520,Seguimiento TL General,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,4.0,0,0,0,0,0,0,0,False,0
+60521,Daily,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60522,Estimaciones PreSales,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,3.0,0,0,0,0,0,0,0,False,0
+60523,Weekly TL,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60524,Certificación,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+60525,SF - Presentación Interna,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60527,Logueo de horas,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60528,Seguimiento semanal,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+60529,Seguimiento TL General,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,4.0,0,0,0,0,0,0,0,False,0
+60530,Daily,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60531,Estimaciones PreSales,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,3.0,0,0,0,0,0,0,0,False,0
+60532,Weekly TL,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60533,Certificación,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+60534,SF - Presentación Interna,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60536,Logueo de horas,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60537,Seguimiento semanal,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+60538,Seguimiento TL General,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,4.0,0,0,0,0,0,0,0,False,0
+60539,Daily,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60540,Estimaciones PreSales,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,3.0,0,0,0,0,0,0,0,False,0
+60541,Weekly TL,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60542,Certificación,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+60543,SF - Presentación Interna,Development Hub,hans.izarraraz@inbest.cloud,To Do,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+60546,Logueo de horas,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-16T18:58:28.35Z,1.0,0,0,0,90.0,5.5,0.2,0.0,False,0
+60547,Seguimiento semanal,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-16T19:23:03.163Z,0.5,0,0,0,90.0,5.6,0.1,0.0,False,0
+60548,Seguimiento TL General,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-16T19:24:47.85Z,1.0,0,0,0,90.0,5.6,0.2,0.0,False,0
+60549,Daily,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-16T19:25:21.307Z,1.0,0,0,0,90.0,5.6,0.2,0.0,False,0
+60550,Certificación,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-16T19:25:50.383Z,5.0,0,0,0,90.0,5.6,1.0,0.0,False,0
+60551,SF - Presentación Interna,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-16T19:26:52.197Z,1.0,0,0,0,90.0,5.6,0.2,0.0,False,0
+60554,Logueo de horas,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T19:29:34.8Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60555,Seguimiento semanal,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T19:31:02.627Z,0.5,0,0,0,110.0,-1.4,0.1,0.36,False,0
+60556,Seguimiento TL General,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T19:32:26.877Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60557,Daily,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T19:33:04.953Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60558,Certificación,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T19:33:43.223Z,5.0,0,0,0,110.0,-1.4,1.0,0.36,False,0
+60559,SF - Presentación Interna,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T19:34:11.64Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60561,Logueo de horas,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T15:57:33.873Z,1.0,0,0,0,85.0,11.4,0.2,0.0,False,0
+60562,Seguimiento semanal,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T15:58:14.313Z,0.5,0,0,0,85.0,11.4,0.1,0.0,False,0
+60563,Seguimiento TL General,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T15:58:45.953Z,1.0,0,0,0,85.0,11.4,0.2,0.0,False,0
+60564,Daily,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T15:59:10.717Z,1.0,0,0,0,85.0,11.4,0.2,0.0,False,0
+60565,Certificación,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T15:59:51.523Z,5.0,0,0,0,85.0,11.4,1.0,0.0,False,0
+60566,SF - Presentación Interna,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T16:00:03.21Z,1.0,0,0,0,85.0,11.4,0.2,0.0,False,0
+60568,Logueo de horas,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T16:00:36.03Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60569,Seguimiento semanal,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T16:01:48.643Z,0.5,0,0,0,90.0,5.4,0.1,0.0,False,0
+60570,Seguimiento TL General,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T16:02:57.337Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60571,Daily,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T16:04:08.847Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60572,Certificación,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T16:04:43.163Z,5.0,0,0,0,90.0,5.4,1.0,0.0,False,0
+60573,SF - Presentación Interna,Development Hub,daniel.reyes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T16:05:09.097Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60576,Logueo de horas,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:17:18.497Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60577,Seguimiento semanal,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:28:49.123Z,0.5,0,0,0,110.0,-1.4,0.1,0.36,False,0
+60578,Seguimiento TL General,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:21:45.793Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60579,Daily,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:20:09.307Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60580,Certificación,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:32:23.983Z,2.0,0,0,0,110.0,-1.4,0.4,0.36,False,0
+60581,SF - Presentación Interna,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:14:38.617Z,1.0,0,0,0,110.0,-1.4,0.2,0.36,False,0
+60582,Llenar KPIs del mes - PROFIT,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-09T19:21:00.397Z,1.0,0.09,0,150.0,110.0,-1.4,0.2,0.36,False,0
+60584,Logueo de horas,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T17:46:34.357Z,1.0,1.2,0,83.33,110.0,-1.5,0.2,0.38,False,0
+60585,Seguimiento semanal,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T17:47:09.363Z,0.5,0.6,0,83.33,110.0,-1.5,0.1,0.38,False,0
+60586,Seguimiento TL General,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T17:37:52.997Z,1.0,1.2,0,83.33,110.0,-1.5,0.2,0.38,False,0
+60587,Daily,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T17:42:34.26Z,1.0,1.2,0,83.33,110.0,-1.5,0.2,0.38,False,0
+60588,Certificación,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T17:51:35.78Z,2.0,2.4,0,83.33,110.0,-1.5,0.4,0.38,False,0
+60589,SF - Presentación Interna,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-16T17:37:58.267Z,1.0,1.2,0,83.33,110.0,-1.5,0.2,0.38,False,0
+60591,Logueo de horas,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T14:36:39.48Z,1.0,1.2,0,83.33,110.0,-1.6,0.2,0.41,False,0
+60592,Seguimiento semanal,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T14:36:30.607Z,0.5,0.6,0,83.33,110.0,-1.6,0.1,0.41,False,0
+60593,Seguimiento TL General,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T14:36:18.817Z,1.0,1.2,0,83.33,110.0,-1.6,0.2,0.41,False,0
+60594,Daily,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T14:35:55.933Z,1.0,1.2,0,83.33,110.0,-1.6,0.2,0.41,False,0
+60595,Certificación,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T14:35:02.277Z,2.0,2.4,0,83.33,110.0,-1.6,0.4,0.41,False,0
+60596,SF - Presentación Interna,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T14:35:48.757Z,1.0,1.2,0,83.33,110.0,-1.6,0.2,0.41,False,0
+60598,Logueo de horas,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:43:43.36Z,1.0,1.2,0,83.33,100.0,-0.5,0.2,0.0,False,0
+60599,Seguimiento semanal,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:48:06.997Z,0.5,0.6,0,83.33,100.0,-0.5,0.1,0.0,False,0
+60600,Seguimiento TL General,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T14:13:32.967Z,1.0,1.2,0,83.33,100.0,-0.7,0.2,0.0,False,0
+60601,Daily,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:43:29.667Z,1.0,1.2,0,83.33,100.0,-0.5,0.2,0.0,False,0
+60602,Certificación,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T14:15:50.047Z,2.0,2.4,0,83.33,100.0,-0.7,0.4,0.0,False,0
+60603,SF - Presentación Interna,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:42:30.123Z,1.0,1.2,0,83.33,100.0,-0.5,0.2,0.0,False,0
+60624,CRM - [JSSF-773] Detonar mensaje para perfilamiento de leads | Mandar leads calientes y tibios | Leads fríos mandar a congelados - Mesa de soporte de iNBest,GML- Soporte,uriel.cortes@inbest.cloud,Pause,Unknown,2026-01-08T18:08:00,2026-01-13T06:00:00,,20.0,24.0,0,83.33,100.0,0,0,0.0,False,0
+60634,Logueo de horas,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:12:39.287Z,1.0,0,0,0,85.0,12.5,0.2,0.0,False,0
+60635,Seguimiento semanal,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:13:41.677Z,0.5,0,0,0,85.0,12.5,0.1,0.0,False,0
+60636,Seguimiento TL General,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:13:46.763Z,4.0,0,0,0,85.0,12.5,0.8,0.0,False,0
+60637,Daily,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:10:28.113Z,1.0,0,0,0,85.0,12.5,0.2,0.0,False,0
+60638,Estimaciones,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:12:34.253Z,2.0,0,0,0,85.0,12.5,0.4,0.0,False,0
+60639,Weekly TL,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:13:56.847Z,1.0,0,0,0,85.0,12.5,0.2,0.0,False,0
+60640,Certificación,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:10:21.57Z,2.0,0,0,0,85.0,12.5,0.4,0.0,False,0
+60641,SF - Presentación Interna,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-23T18:13:51.53Z,1.0,0,0,0,85.0,12.5,0.2,0.0,False,0
+60643,Logueo de horas,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:33:30.98Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60644,Seguimiento semanal,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:38:02.383Z,0.5,0,0,0,90.0,5.4,0.1,0.0,False,0
+60645,Seguimiento TL General,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:45:16.457Z,4.0,0,0,0,90.0,5.4,0.8,0.0,False,0
+60646,Daily,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:19:09.787Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60647,Estimaciones,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:33:22.327Z,2.0,0,0,0,90.0,5.4,0.4,0.0,False,0
+60648,Weekly TL,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:38:51.233Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60649,Certificación,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:18:44.997Z,2.0,0,0,0,90.0,5.4,0.4,0.0,False,0
+60650,SF - Presentación Interna,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-23T16:40:35.963Z,1.0,0,0,0,90.0,5.4,0.2,0.0,False,0
+60652,Logueo de horas,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T16:00:49.37Z,1.0,0,0,0,110.0,-1.6,0.2,0.4,False,0
+60653,Seguimiento semanal,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T18:24:45.14Z,0.5,0,0,0,110.0,-1.5,0.1,0.37,False,0
+60654,Seguimiento TL General,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T15:50:41.517Z,4.0,0,0,0,110.0,-1.6,0.8,0.4,False,0
+60655,Daily,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T15:47:27.393Z,1.0,0,0,0,110.0,-1.6,0.2,0.4,False,0
+60656,Estimaciones,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T18:22:31.477Z,2.0,0,0,0,110.0,-1.5,0.4,0.37,False,0
+60657,Weekly TL,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T15:42:18.69Z,1.0,0,0,0,110.0,-1.6,0.2,0.4,False,0
+60658,Certificación,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T18:22:19.127Z,2.0,0,0,0,110.0,-1.5,0.4,0.37,False,0
+60659,SF - Presentación Interna,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-23T15:54:27.117Z,1.0,0,0,0,110.0,-1.6,0.2,0.4,False,0
+60661,Logueo de horas,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T21:57:08.677Z,1.0,0,0,0,90.0,4.7,0.2,0.0,False,0
+60662,Seguimiento semanal,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T22:13:04.877Z,0.5,0,0,0,90.0,4.7,0.1,0.0,False,0
+60663,Seguimiento TL General,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T22:20:32.423Z,4.0,4.8,0,83.33,90.0,4.7,0.8,0.0,False,0
+60664,Daily,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T22:02:34.613Z,1.0,1.2,0,83.33,90.0,4.7,0.2,0.0,False,0
+60665,Estimaciones,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-28T01:20:35.08Z,2.0,0,0,0,120.0,-3.2,0.4,1.6,False,0
+60666,Weekly TL,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T21:52:36.61Z,1.0,0,0,0,90.0,4.7,0.2,0.0,False,0
+60667,Certificación,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-28T01:20:03.963Z,2.0,0,0,0,120.0,-3.2,0.4,1.6,False,0
+60668,SF - Presentación Interna,Development Hub,alejandro.valenzuela@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T22:02:23.53Z,1.0,0,0,0,90.0,4.7,0.2,0.0,False,0
+60671,Logueo de horas,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-02-04T23:21:50.1Z,1.0,0,0,0,70.0,24.7,0.2,0.0,False,0
+60672,Seguimiento semanal,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-02-04T23:22:59.957Z,0.5,0,0,0,70.0,24.7,0.1,0.0,False,0
+60673,Seguimiento TL General,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-02-04T23:25:46.797Z,1.0,0,0,0,70.0,24.7,0.2,0.0,False,0
+60674,Daily,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-02-04T23:30:36.857Z,1.0,0,0,0,70.0,24.7,0.2,0.0,False,0
+60675,Certificación,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-02-04T23:32:41.92Z,2.0,0,0,0,70.0,24.7,0.4,0.0,False,0
+60676,SF - Presentación Interna,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-02-04T23:35:31.017Z,1.0,0,0,0,70.0,24.7,0.2,0.0,False,0
+60678,Logueo de horas,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-02-03T18:58:34.403Z,1.0,0,0,0,70.0,16.5,0.2,0.0,False,0
+60679,Seguimiento semanal,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-02-04T23:38:59.44Z,0.5,0,0,0,70.0,17.7,0.1,0.0,False,0
+60680,Seguimiento TL General,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-02-04T23:39:55.86Z,1.0,0,0,0,70.0,17.7,0.2,0.0,False,0
+60681,Daily,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-02-03T18:21:39.43Z,1.0,0,0,0,70.0,16.5,0.2,0.0,False,0
+60682,Certificación,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-02-03T19:05:30.05Z,2.0,0,0,0,70.0,16.5,0.4,0.0,False,0
+60683,SF - Presentación Interna,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-02-03T18:32:23.17Z,1.0,0,0,0,70.0,16.5,0.2,0.0,False,0
+60685,Logueo de horas,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-03T17:58:11.77Z,1.0,0,0,0,85.0,9.5,0.2,0.0,False,0
+60686,Seguimiento semanal,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-04T23:42:35.163Z,0.5,0,0,0,85.0,10.7,0.1,0.0,False,0
+60687,Seguimiento TL General,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T01:58:26.717Z,1.0,0,0,0,85.0,10.8,0.2,0.0,False,0
+60688,Daily,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-03T18:08:55.99Z,1.0,0,0,0,85.0,9.5,0.2,0.0,False,0
+60689,Certificación,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-05T02:00:50.687Z,2.0,0,0,0,85.0,10.8,0.4,0.0,False,0
+60690,SF - Presentación Interna,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-02-03T18:14:01.287Z,1.0,0,0,0,85.0,9.5,0.2,0.0,False,0
+60692,Logueo de horas,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-03T19:17:34.17Z,1.0,0,0,0,90.0,3.6,0.2,0.0,False,0
+60693,Seguimiento semanal,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T02:03:32.68Z,0.5,0,0,0,90.0,4.8,0.1,0.0,False,0
+60694,Seguimiento TL General,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T02:03:59.12Z,1.0,0,0,0,90.0,4.8,0.2,0.0,False,0
+60695,Daily,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T02:05:34.673Z,1.0,0,0,0,90.0,4.8,0.2,0.0,False,0
+60696,Certificación,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T02:06:16.16Z,2.0,0,0,0,90.0,4.8,0.4,0.0,False,0
+60697,SF - Presentación Interna,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-05T02:06:44.65Z,1.0,0,0,0,90.0,4.8,0.2,0.0,False,0
+60700,Logueo de horas,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-19T17:19:41.873Z,1.0,0,0,0,85.0,8.5,0.2,0.0,False,0
+60701,Seguimiento semanal,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-19T17:43:32.467Z,0.5,0,0,0,85.0,8.5,0.1,0.0,False,0
+60702,Seguimiento TL General,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-19T17:20:39.823Z,1.0,0,0,0,85.0,8.5,0.2,0.0,False,0
+60703,Daily,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-19T17:28:30.553Z,1.0,0.12,0,150.0,85.0,8.5,0.2,0.0,False,0
+60704,SF - Presentación Interna,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-19T17:29:04.27Z,1.0,0,0,0,85.0,8.5,0.2,0.0,False,0
+60705,Certificación/Curso,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-11T06:00:00,2026-01-19T17:11:40.78Z,2.0,0,0,0,85.0,8.5,0.4,0.0,False,0
+60707,Logueo de horas,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-19T17:29:28.023Z,1.0,0,0,0,95.0,1.5,0.2,0.0,False,0
+60708,Seguimiento semanal,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-19T17:43:53.88Z,0.5,0,0,0,95.0,1.5,0.1,0.0,False,0
+60709,Seguimiento TL General,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-19T17:30:07.777Z,1.0,0,0,0,95.0,1.5,0.2,0.0,False,0
+60710,Daily,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-19T17:31:40.68Z,1.0,0,0,0,95.0,1.5,0.2,0.0,False,0
+60711,SF - Presentación Interna,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-19T17:36:00.137Z,1.0,0.05,0,150.0,95.0,1.5,0.2,0.0,False,0
+60712,Certificación/Curso,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-18T06:00:00,2026-01-19T17:16:23.94Z,2.0,0,0,0,95.0,1.5,0.4,0.0,False,0
+60714,Logueo de horas,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-30T18:07:05.167Z,1.0,0.01,0,150.0,90.0,5.5,0.2,0.0,False,0
+60715,Seguimiento semanal,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-30T18:10:47.12Z,0.5,0.03,0,150.0,90.0,5.5,0.1,0.0,False,0
+60716,Seguimiento TL General,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-30T18:12:16.07Z,1.0,0.02,0,150.0,90.0,5.5,0.2,0.0,False,0
+60717,Daily,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-30T18:13:21.89Z,1.0,0.01,0,150.0,90.0,5.5,0.2,0.0,False,0
+60718,SF - Presentación Interna,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-30T18:15:02.733Z,1.0,0.02,0,150.0,90.0,5.5,0.2,0.0,False,0
+60719,Certificación/Curso,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-25T06:00:00,2026-01-30T18:18:30.94Z,2.0,0.06,0,150.0,90.0,5.5,0.4,0.0,False,0
+60721,Logueo de horas,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:21:09.923Z,1.0,0.04,0,150.0,100.0,-0.5,0.2,0.0,False,0
+60722,Seguimiento semanal,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:22:51.77Z,0.5,0.02,0,150.0,100.0,-0.5,0.1,0.0,False,0
+60723,Seguimiento TL General,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:33:01.697Z,1.0,0.17,0,150.0,100.0,-0.5,0.2,0.0,False,0
+60724,Daily,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:34:34.737Z,1.0,0.02,0,150.0,100.0,-0.5,0.2,0.0,False,0
+60725,SF - Presentación Interna,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-02-04T22:35:51.2Z,1.0,1.2,0,83.33,90.0,4.7,0.2,0.0,False,0
+60726,Certificación/Curso,Development Hub,gerardo.melgoza@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-31T06:00:00,2026-01-30T18:41:04.423Z,2.0,0.1,0,150.0,100.0,-0.5,0.4,0.0,False,0
+60736,Seguimiento Actividades 5 - 9 Ene,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T06:00:00,2026-01-12T15:13:23.28Z,5.0,6.0,0,83.33,90.0,3.4,1.0,0.0,False,0
+60740,Seguimiento Actividades 12 - 16 Ene,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T17:13:27.273Z,5.0,6.0,0,83.33,90.0,3.5,1.0,0.0,False,0
+60741,Seguimiento Actividades 19 - 23 Ene,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-03T17:23:58Z,5.0,6.0,0,83.33,85.0,11.5,1.0,0.0,False,0
+60742,Seguimiento Actividades 26 - 30 Ene,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T19:08:29.16Z,5.0,3.95,0,126.58,95.0,0.5,1.0,0.0,False,0
+60769,Sitio Web - Cambio de año en Sitio Web,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-08T06:00:00,2026-01-16T18:56:34.68Z,0.25,0,0,0,85.0,8.5,0.05,0.0,False,0
+60784,Curso IxDF_User Experience: The Beginner's Guide,UX-UI Hub,ximena.segura@inbest.cloud,To Do,Unknown,2026-01-01T06:00:00,2026-03-31T06:00:00,,5.16,6.19,0,83.33,100.0,0,0,0.0,False,0
+60785,Curso-Platzi_  Curso de Diseño de Servicios,UX-UI Hub,daniel.cayola@inbest.cloud,To Do,Unknown,2026-01-01T06:00:00,2026-03-31T06:00:00,,2.75,0,0,0,100.0,0,0,0.0,False,0
+60787,Certificaciones 2026,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-01T06:00:00,2026-01-15T06:00:00,2026-01-09T16:27:21.333Z,4.0,0,0,0,130.0,-5.6,0.8,5.56,False,0
+60794,Paginación de endpoint conciliación,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-09T17:09:00,2026-01-12T06:00:00,2026-01-12T16:09:24.89Z,8.0,6.08,0,131.58,95.0,0.4,1.6,0.0,False,0
+60862,Ajustes diseño ficha tecnica,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Resolved,Unknown,2026-01-05T06:00:00,2026-01-09T17:33:00,2026-01-28T23:24:40.163Z,2.0,0,0,0,70.0,19.2,0.4,0.0,False,0
+61117,Onboarding área Preventa,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-09T18:05:00,2026-01-09T19:31:45.257Z,4.0,0,0,0,95.0,0.1,0.8,0.0,False,0
+61131,OnBoarding Preventa,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T17:45:59.61Z,4.0,4.8,0,83.33,95.0,0.5,0.8,0.0,False,0
+61152,Investigación de agente chat embebido en web,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T17:57:42.433Z,6.0,0,0,0,95.0,0.5,1.2,0.0,False,0
+61153,Crear presentación,Pegaduro - Póliza acompañamiento IA,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-14T06:00:00,2026-01-20T00:18:27.487Z,4.0,0.01,0,150.0,90.0,5.8,0.8,0.0,False,0
+61154,Estudio de la consola (hacer pruebas),Pegaduro - Póliza acompañamiento IA,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-20T00:18:53.58Z,6.0,0.0,0,0,90.0,3.8,1.2,0.0,False,0
+61155,Estudio de la consola (hacer pruebas),Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T17:39:30.303Z,6.0,0,0,0,95.0,0.5,1.2,0.0,False,0
+61156,Estudio de la consola (hacer pruebas),Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-09T18:20:00,2026-01-09T19:40:24.673Z,6.0,0,0,0,95.0,0.1,1.2,0.0,False,0
+61157,Creación de la presentación módulo 3,Pegaduro - Póliza acompañamiento IA,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-08T06:00:00,2026-01-20T00:19:57.277Z,4.0,0.01,0,150.0,85.0,11.8,0.8,0.0,False,0
+61158,CRM Ventas - Maquetado Calendly,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T18:07:26.73Z,16.0,19.2,0,83.33,95.0,0.5,3.2,0.0,False,0
+61163,Actividades del 12 al 16 de Enero,Texas Voters,andres.escobedo@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-16T21:59:10.327Z,10.0,4.87,0,150.0,95.0,0.7,2.0,0.0,False,0
+61190,Dia libre cumpleaños,People - HR - Activities Hub,carlos.vazquez@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-02-03T14:20:00.737Z,8.0,0,0,0,70.0,27.3,1.6,0.0,False,0
+61206,31 Dic y 01 Ene,People - HR - Activities Hub,fernando.agredano@inbest.cloud,New,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,,8.0,0,0,0,0,0,0,0,False,0
+61207,31 Dic y 01 Ene,People - HR - Activities Hub,emmanuel.perez@inbest.cloud,Closed,Unknown,2025-12-31T06:00:00,2026-01-01T06:00:00,2026-02-03T17:54:33.573Z,8.0,0,0,0,70.0,33.5,1.6,0.0,False,0
+61214,Vacaciones Hans - 19-23 enero 2026,People - HR - Activities Hub,hans.izarraraz@inbest.cloud,Active,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,,35.0,0.02,0,150.0,100.0,0,0,0.0,True,0
+61215,Vacaciones Hans - 26-29 enero 2026,People - HR - Activities Hub,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-29T06:00:00,2026-01-19T23:11:06.513Z,28.0,0.01,0,150.0,130.0,-9.3,5.6,9.28,False,0
+61217,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61219,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-20T00:17:07.303Z,1.0,0.0,0,0,90.0,6.8,0.2,0.0,False,0
+61220,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,sebastian.rojas@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61221,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,fernando.hernandez@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61222,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-14T00:50:24.57Z,1.0,1.2,0,83.33,95.0,0.8,0.2,0.0,False,0
+61223,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,andres.escobedo@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-14T00:02:03.37Z,1.0,0.8,0,125.0,95.0,0.8,0.2,0.0,False,0
+61224,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,pablo.ruiz@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-15T19:06:06.89Z,1.0,0,0,0,95.0,2.5,0.2,0.0,False,0
+61226,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,carlos.vazquez@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61227,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-12T15:53:34.243Z,1.0,0,0,0,100.0,-0.6,0.2,0.0,False,0
+61248,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-23T19:00:58.867Z,1.0,0,0,0,85.0,10.5,0.2,0.0,False,0
+61250,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-02-03T18:21:07.377Z,1.0,0,0,0,70.0,21.5,0.2,0.0,False,0
+61251,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,emmanuel.perez@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61255,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-27T15:49:50.377Z,1.0,0,0,0,70.0,14.4,0.2,0.0,False,0
+61256,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-19T17:42:20.857Z,1.0,0.01,0,150.0,90.0,6.5,0.2,0.0,False,0
+61257,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-14T00:02:16.627Z,1.0,1.02,0,98.04,95.0,0.8,0.2,0.0,False,0
+61258,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-14T21:46:52.343Z,1.0,0,0,0,95.0,1.7,0.2,0.0,False,0
+61259,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,cristian.soria@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61262,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-16T17:30:58.773Z,1.0,1.2,0,83.33,90.0,3.5,0.2,0.0,False,0
+61268,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-16T18:55:34.62Z,1.0,0,0,0,90.0,3.5,0.2,0.0,False,0
+61269,🚀 Arranquemos el 2026 con todo: (10X Club) Inteligencia artificial aplicada a licitaciones de gobierno,People - HR - Activities Hub,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-14T22:00:37.72Z,1.0,1.2,0,83.33,95.0,1.7,0.2,0.0,False,0
+61282,Diseño RH Onboarding,Onboarding - RH -UXUI,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-01T06:00:00,2026-01-17T06:00:00,2026-01-12T17:48:08.963Z,5.0,0,0,0,120.0,-4.5,1.0,2.25,False,0
+61284,Calculo de comisiones en Cédula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-12T17:47:00,2026-01-16T06:00:00,2026-01-14T16:45:02.68Z,7.0,3.18,0,150.0,110.0,-1.6,1.4,0.39,False,0
+61285,Definición de modelo de paramaetros para comisiones en Cédula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-12T17:47:00,2026-01-16T06:00:00,2026-01-14T16:45:23.273Z,3.0,3.6,0,83.33,110.0,-1.6,0.6,0.39,False,0
+61289,Checkpoint certificaciones equipo,UX-UI Hub,ximena.segura@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2026-01-12T17:55:38.9Z,2.0,0,0,0,85.0,7.5,0.4,0.0,False,0
+61295,Checkpoint certificaciones equipo - Copy,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2026-01-12T18:03:31.46Z,2.0,0,0,0,85.0,7.5,0.4,0.0,False,0
+61298,Propuesta Animacion 3d,GML - Modelos 3D,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-12T18:17:56.617Z,1.0,0,0,0,90.0,5.5,0.2,0.0,False,0
+61308,Checkpoint interno,Calculadora de Nube - iNBest,hans.izarraraz@inbest.cloud,New,Unknown,2026-01-12T18:59:00,2026-01-12T18:59:00,,0.5,0,0,0,0,0,0,0,False,0
+61309,Checkpoint interno,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-12T18:59:00,2026-01-12T18:59:00,2026-01-16T17:32:53.783Z,0.5,0,0,0,90.0,3.9,0.1,0.0,False,0
+61331,Documentación,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,New,Unknown,2026-01-06T06:00:00,2026-01-06T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+61449,Curso_ Visualización de Datos y Storytelling con Latinometrics,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-01T06:00:00,2026-01-31T06:00:00,2026-01-13T15:55:09.69Z,2.0,0,0,0,130.0,-17.6,0.4,17.59,False,0
+61527,Fallas técnicas Internet 12/01/2026,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-12T06:00:00,2026-01-13T16:11:43.87Z,2.0,0,0,0,95.0,1.4,0.4,0.0,False,0
+61939,Colección endpoints postman,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-13T18:43:00,2026-01-13T18:43:00,2026-01-16T17:36:30.307Z,2.0,0,0,0,95.0,3.0,0.4,0.0,False,0
+61967,Agregar el resto de columnas en la tabla de conciliación,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-19T17:42:00,2026-01-23T06:00:00,2026-01-20T16:51:55.15Z,8.0,9.6,0,83.33,110.0,-2.5,1.6,0.64,False,0
+61968,Agregar el resto de columnas en el archivo de conciliación,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-21T16:27:32.76Z,10.0,8.59,0,116.41,110.0,-1.6,2.0,0.39,True,8.59
+61969,Sitio Web - [JSSF-857] Sitio Web | Agregar JAC 6 PHEV en SUV´s - Mesa de soporte de iNBest,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-01-16T17:57:07.567Z,1.0,0,0,0,90.0,3.5,0.2,0.0,False,0
+61970,Sitio Web - Footer,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-12T06:00:00,2026-01-16T17:55:08.35Z,4.0,0,0,0,90.0,4.5,0.8,0.0,False,0
+61971,Sitio Web - Bloque de Cookies,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-14T16:41:00,2026-01-14T16:41:00,2026-01-16T17:53:27.01Z,8.0,7.96,0,100.5,95.0,2.1,1.6,0.0,False,0
+61972,Consultoría/Soporte CRM,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-19T17:01:43.92Z,6.0,0.32,0,150.0,90.0,3.5,1.2,0.0,False,0
+61976,Vacaciones Alvaro 16 Ene,People - HR - Activities Hub,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T17:12:27.913Z,8.0,0,0,0,90.0,3.5,1.6,0.0,False,0
+61984,módulo 4,Pegaduro - Póliza acompañamiento IA,andres.escobedo@inbest.cloud,Closed,Unknown,2026-01-14T21:32:00,2026-01-15T06:00:00,2026-01-16T21:58:17.783Z,1.5,1.8,0,83.33,95.0,1.7,0.3,0.0,False,0
+62011,Generar memoria tecnica,Unitrade-POC Data,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,2026-01-15T22:43:51.287Z,3.0,0,0,0,100.0,-0.3,0.6,0.0,False,0
+62023,Configuración Azure Service Bus,Unitrade,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-21T06:00:00,2026-01-22T06:00:00,2026-01-23T17:10:57.5Z,3.0,0,0,0,95.0,1.5,0.6,0.0,False,0
+62024,Implementar Service Bus triggers,Unitrade,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-23T06:00:00,2026-01-23T17:10:57.5Z,6.0,0,0,0,95.0,0.5,1.2,0.0,False,0
+62025,Dead Letter Queue (DLQ) handling,Unitrade,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-26T06:00:00,2026-01-23T17:10:57.5Z,4.8,0,0,0,110.0,-2.5,0.96,0.63,False,0
+62026,Event-driven architecture patterns,Unitrade,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-27T06:00:00,2026-01-23T17:10:57.5Z,7.8,0,0,0,120.0,-3.5,1.56,1.77,False,0
+62027,Monitoring de queues,Unitrade,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-27T06:00:00,2026-01-28T06:00:00,2026-01-21T17:10:07.33Z,3.0,3.6,0,83.33,130.0,-6.5,0.6,6.53,True,26.26
+62030,CRM Ventas - Integración NEO - Agregar logs a validador,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-15T19:48:00,2026-01-16T06:00:00,2026-01-19T16:51:51.027Z,4.0,0,0,0,90.0,3.5,0.8,0.0,False,0
+62077,Sitio Web - [JSSF-860] Corregir palabra en landing de gml.mx - Mesa de soporte de iNBest,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-15T22:10:00,2026-01-15T22:10:00,2026-01-16T17:53:53.04Z,0.5,0,0,0,95.0,0.8,0.1,0.0,False,0
+62078,"CRM Flotillas - [JSSF-855] CRM Flotillas, al crear una nueva empresa - Mesa de soporte de iNBest",GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-15T22:11:00,2026-01-15T22:11:00,2026-01-19T16:39:33.527Z,1.5,0,0,0,90.0,3.8,0.3,0.0,False,0
+62112,Conexión a creación de ficha,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-16T16:47:00,2026-01-16T16:47:00,2026-01-16T20:00:15.313Z,3.0,3.21,0,93.46,95.0,0.1,0.6,0.0,False,0
+62113,Ajustes visuales en pdf,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-16T16:51:00,2026-01-27T16:08:37.41Z,3.0,2.03,0,147.78,85.0,11.0,0.6,0.0,False,0
+62121,UX/UI - Modificación en maqueta - Bloque de Cookies,GML- Soporte,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-12T06:00:00,2026-01-16T17:42:27.143Z,0.5,0,0,0,90.0,4.5,0.1,0.0,False,0
+62138,Desgloce de anomalías en cédula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-16T18:09:00,2026-01-16T18:09:57.68Z,8.0,0,0,0,95.0,0.0,1.6,0.0,False,0
+62141,Sesión SEO - Bambú,GML- Soporte,hans.izarraraz@inbest.cloud,Closed,Unknown,2026-01-15T06:00:00,2026-01-15T06:00:00,2026-01-19T23:12:39.827Z,0.5,0.01,0,150.0,90.0,4.7,0.1,0.0,False,0
+62380,NEO - Validación de números internacionales,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-14T06:00:00,2026-01-19T16:53:19.867Z,0.5,0,0,0,90.0,5.5,0.1,0.0,False,0
+62383,Post Venta - [JSSF-861] Integracion intelisis Post Venta - Mesa de soporte de iNBest,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-14T06:00:00,2026-01-19T16:55:07.917Z,4.0,0,0,0,90.0,5.5,0.8,0.0,False,0
+62390,CRM Ventas - [JSSF-863] Agregar Origen Plaza Galerias a JAC CELAYA - Mesa de soporte de iNBest,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-15T06:00:00,2026-01-15T06:00:00,2026-01-19T17:02:15.537Z,0.4,0,0,0,90.0,4.5,0.08,0.0,False,0
+62399,GML - Sesión de alineación HubSpot - JAC CRM,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T17:11:39.66Z,1.0,0,0,0,90.0,3.5,0.2,0.0,False,0
+62400,GML - Sesión de alineación HubSpot - JAC CRM,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-16T06:00:00,2026-01-16T06:00:00,2026-01-19T21:42:47.42Z,1.0,1.2,0,83.33,90.0,3.7,0.2,0.0,False,0
+62404,Sitio Web - Ajustes en bloque de cookies,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-19T17:19:00,2026-01-19T17:19:00,2026-01-21T17:51:28.357Z,1.5,0,0,0,95.0,2.0,0.3,0.0,False,0
+62413,Propuesta diseño web JAC 2026- Comerciales,UX-UI Hub,ximena.segura@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-31T17:47:00,2026-02-03T21:52:03.537Z,15.0,18.0,0,83.33,90.0,3.2,3.0,0.0,False,0
+62415,Propuesta diseño web JAC 2026- Comerciales - Copy,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-12T06:00:00,2026-01-31T17:47:00,2026-01-28T17:09:06.387Z,15.0,0,0,0,120.0,-3.0,3.0,1.51,False,0
+62422,Actualización del Dashboard del Power BI Philips,Philips,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-19T17:55:00,2026-01-19T17:55:00,2026-01-23T14:44:01.353Z,0.2,0,0,0,90.0,3.9,0.04,0.0,False,0
+62423,Consultoría/Soporte CRM,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T18:00:00,2026-01-23T06:00:00,2026-01-26T16:38:45.217Z,6.0,7.2,0,83.33,90.0,3.4,1.2,0.0,False,0
+62425,Lineamiento propuesta,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-19T18:05:00,2026-01-31T06:00:00,2026-01-28T17:09:53.857Z,10.0,0,0,0,110.0,-2.5,2.0,0.63,False,0
+62426,Lineamiento propuesta - Copy,UX-UI Hub,ximena.segura@inbest.cloud,Done,Unknown,2026-01-19T18:05:00,2026-01-31T06:00:00,2026-02-04T16:56:38.923Z,10.0,2.48,0,150.0,90.0,4.5,2.0,0.0,False,0
+62427,GML - Integración HubSpot x CRM,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-06T06:00:00,2026-01-06T06:00:00,2026-01-23T18:40:18.543Z,0.5,0,0,0,70.0,17.5,0.1,0.0,False,0
+62428,GML - Integración HubSpot x CRM,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-06T06:00:00,2026-01-06T06:00:00,2026-01-19T21:27:53.52Z,0.5,0,0,0,85.0,13.6,0.1,0.0,False,0
+62430,CRM Ventas - [JSSF-856] carga masiva vin - Mesa de soporte de iNBest,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-08T06:00:00,2026-01-19T21:20:03.177Z,3.0,0,0,0,85.0,11.6,0.6,0.0,False,0
+62431,Post Venta - [JSSF-748] Historial Detallado de Actividades - Mesa de soporte de iNBest,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-08T06:00:00,2026-01-08T06:00:00,2026-01-19T21:21:10.067Z,4.0,0,0,0,85.0,11.6,0.8,0.0,False,0
+62432,Post Venta - [JSSF-745] Carga de los Servicios de Mantenimientos Automatizados y que puedan ser modificados en la Recepción - Mesa de soporte de iNBest,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-07T06:00:00,2026-01-07T06:00:00,2026-01-19T21:23:21.13Z,4.0,0,0,0,85.0,12.6,0.8,0.0,False,0
+62433,CRM Ventas - [JSSF-853] CRM Ventas | Ajuste HubSpot - Ajuste Catálogos,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-16T06:00:00,2026-02-03T18:29:10.597Z,3.0,0,0,0,70.0,18.5,0.6,0.0,False,0
+62434,CRM Ventas - [JSSF-853] CRM Ventas | Ajuste HubSpot - Ajuste de Endpoint,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-23T06:00:00,2026-02-04T23:03:35.503Z,7.0,8.4,0,83.33,85.0,12.7,1.4,0.0,True,0.0
+62447,Preventa,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T14:34:04.587Z,8.0,9.6,0,83.33,95.0,0.4,1.6,0.0,False,0
+62454,Guardar filtros en cache,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-20T16:54:56.543Z,4.0,0,0,0,110.0,-2.5,0.8,0.64,False,0
+62456,Configurar decena en tabla de transacciones,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-22T16:28:55.657Z,6.0,7.2,0,83.33,100.0,-0.6,1.2,0.0,False,0
+62520,Capacitación Módulo 5,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-19T18:13:00,2026-01-23T06:00:00,2026-01-21T21:42:12.567Z,1.0,1.2,0,83.33,110.0,-1.3,0.2,0.34,False,0
+62525,Frontend – Comparador de precios - Semana 1,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-19T18:53:00,2026-01-23T06:00:00,2026-01-23T14:42:27.087Z,16.0,18.32,0,87.34,95.0,0.4,3.2,0.0,False,0
+62526,Backend – Carga de precios formateados - Semana 1,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-20T18:55:00,2026-01-23T06:00:00,2026-01-23T14:40:07.457Z,5.0,6.0,0,83.33,95.0,0.4,1.0,0.0,False,0
+62530,Refactorizar/Resumir slides pegaduro,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-19T19:01:00,2026-01-23T06:00:00,2026-01-20T22:21:09.04Z,3.0,0,0,0,110.0,-2.3,0.6,0.58,False,0
+62532,Checkpoint Pegaduro,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-20T22:18:23.243Z,0.5,0,0,0,110.0,-2.3,0.1,0.58,False,0
+62534,Checkpoint Pegaduro,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,New,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+62535,Hacer Presentaciones Módulos 5 y 6,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,New,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,6.0,0,0,0,0,0,0,0,False,0
+62536,Capacitación Módulo 4,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,New,Unknown,2026-01-12T06:00:00,2026-01-16T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+62541,Realizacion de Backlog,Data Proyectos internos,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-26T21:14:00,2026-01-30T06:00:00,2026-01-30T00:07:04.233Z,6.0,7.2,0,83.33,100.0,-0.2,1.2,0.0,False,0
+62542,Sesion interna billing,Data Proyectos internos,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-23T06:00:00,2026-01-23T06:00:00,2026-02-03T19:00:14.303Z,1.0,0,0,0,85.0,11.5,0.2,0.0,False,0
+62543,GML - Dudas Requerimiento Encuestas en Caliente,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-20T22:02:00,2026-01-20T22:02:00,2026-01-23T15:18:24.427Z,0.5,0,0,0,95.0,2.7,0.1,0.0,False,0
+62544,GML - Dudas Requerimiento Encuestas en Caliente,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-20T22:02:00,2026-01-20T22:02:00,2026-02-03T18:11:36.75Z,0.5,0,0,0,85.0,13.8,0.1,0.0,False,0
+62546,Preventa,Development Hub,fernando.alcaraz@inbest.cloud,Done,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T18:43:23.177Z,12.0,14.4,0,83.33,95.0,0.5,2.4,0.0,False,0
+62547,Frontend – Comparador de precios - Semana 2,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-02-03T06:00:00,2026-01-30T18:45:48.877Z,1.43,1.71,0,83.33,120.0,-3.5,0.29,1.73,False,0
+62548,Backend – Carga de precios formateados - Semana 2,Calculadora de Nube - iNBest,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T18:45:53.663Z,2.0,2.4,0,83.33,95.0,0.5,0.4,0.0,False,0
+62549,CRM Ventas - [JSSF-866] CRM Ventas | ID FANPAGE - Integración Meta - Mesa de soporte de iNBest,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-20T23:40:00,2026-01-20T23:40:00,2026-01-23T15:15:20.997Z,0.5,0,0,0,95.0,2.6,0.1,0.0,False,0
+62550,"Modificación de datos: Registro de garantía, registro de refacciones",GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-20T23:59:00,2026-01-21T02:05:57.44Z,2.0,0,0,0,95.0,0.1,0.4,0.0,False,0
+62552,Documentación de anomalías,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-21T02:05:26.417Z,10.0,0,0,0,110.0,-2.2,2.0,0.54,False,0
+62556,Asignación de técnico y horario,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-26T15:09:52.493Z,4.0,0,0,0,90.0,3.4,0.8,0.0,False,0
+62560,Inmovilización de servicio,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-30T06:00:00,2026-02-04T23:12:13.3Z,3.0,0,0,0,90.0,5.7,0.6,0.0,False,0
+62562,Pausa de servicio,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-30T06:00:00,2026-02-04T22:40:32.96Z,3.0,0,0,0,90.0,5.7,0.6,0.0,False,0
+62567,Asignación de encargado de calidad y horario,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T18:44:38.15Z,4.0,4.8,0,83.33,95.0,0.5,0.8,0.0,False,0
+62569,Certificado de calidad,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T18:49:16.217Z,10.0,0.03,0,150.0,95.0,0.5,2.0,0.0,False,0
+62592,Sitio Web - Implementación Home,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-21T17:53:00,2026-01-23T06:00:00,2026-02-04T22:05:46.713Z,3.0,3.6,0,83.33,85.0,12.7,0.6,0.0,False,0
+62599,No es posible eliminar un color que se haya utilizado en una ficha técnica que fue eliminada,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T20:07:03.897Z,2.0,1.41,0,141.84,100.0,-0.4,0.4,0.0,False,0
+62604,No es posible eliminar un icono que se haya utilizado en una ficha técnica que fue eliminada,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T19:59:23.843Z,2.0,1.59,0,125.79,100.0,-0.4,0.4,0.0,False,0
+62615,Se colocan en minúsculas las dimensiones ingresadas al crear ficha técnica,JAC Fichas Tecnicas,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T20:52:13.027Z,1.5,1.8,0,83.33,100.0,-0.4,0.3,0.0,False,0
+62647,Revision career path devs interno,Development Hub,uriel.cortes@inbest.cloud,Done,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2026-01-21T23:42:05.41Z,1.0,0,0,0,70.0,16.7,0.2,0.0,False,0
+62654,Seguimiento TL 19-23 Ene,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-23T15:25:01.43Z,2.0,0,0,0,95.0,0.4,0.4,0.0,False,0
+62655,Seguimiento TL 19-23 Ene,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-02-04T22:44:16.34Z,1.0,0,0,0,85.0,12.7,0.2,0.0,False,0
+62656,Seguimiento TL 26-30Ene,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:00:39.033Z,2.0,2.4,0,83.33,90.0,5.7,0.4,0.0,False,0
+62657,Seguimiento TL 26-30 Ene,GML - Integración DMS en CRM Post Venta,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:46:00.097Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+62659,Seguimiento TL 19-23 Ene,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T06:00:00,2026-01-30T18:52:06.497Z,1.0,0.04,0,150.0,85.0,7.5,0.2,0.0,False,0
+62660,Seguimiento TL 26-30 Ene,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T19:04:28.157Z,1.0,0.13,0,150.0,95.0,0.5,0.2,0.0,False,0
+62665,CRM Ventas - [JSSF-869] AGREGAR ORIGEN - Mesa de soporte de iNBest,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-21T06:00:00,2026-01-21T06:00:00,2026-02-04T22:41:25.973Z,0.4,0.48,0,83.33,70.0,14.7,0.08,0.0,False,0
+62713,Validaciones,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-13T06:00:00,2026-01-30T06:00:00,,8.0,0,0,0,0,0,0,0,False,0
+63140,Finalizar recepción,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T15:27:00,2026-01-23T15:27:44.04Z,2.0,0,0,0,95.0,0.0,0.4,0.0,False,0
+63141,RV: JAC - Semanal - Sesión Botmaker,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-21T06:00:00,2026-01-21T06:00:00,2026-01-23T15:36:43.683Z,0.5,0,0,0,95.0,2.4,0.1,0.0,False,0
+63142,RV: JAC - Semanal - Sesión Botmaker,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-21T06:00:00,2026-01-21T06:00:00,2026-02-03T18:12:53.27Z,0.5,0,0,0,85.0,13.5,0.1,0.0,False,0
+63143,Seguimiento Jac - Actualización SEO,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-22T06:00:00,2026-01-23T15:37:00.117Z,0.5,0,0,0,95.0,1.4,0.1,0.0,False,0
+63144,Seguimiento Jac - Actualización SEO,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-22T06:00:00,2026-02-04T22:02:55.807Z,0.5,0,0,0,85.0,13.7,0.1,0.0,False,0
+63145,CRM Ventas - [JSSF-872] CRM Ventas | Almacenar código CP en Leads,GML- Soporte,alejandro.valenzuela@inbest.cloud,Active,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,4.0,0,0,0,100.0,0,0,0.0,False,0
+63146,CRM Ventas - [JSSF-872] CRM Ventas | Almacenar código CP en Leads,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:42:29.673Z,4.0,4.8,0,83.33,90.0,5.7,0.8,0.0,False,0
+63147,Sitio Web - [JSSF-870] Cambiar horarios de atención en micrositio de Monterrey Lindavista - Mesa de soporte de iNBest,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-21T06:00:00,2026-01-22T06:00:00,2026-02-04T22:01:22.993Z,0.7,0,0,0,85.0,13.7,0.14,0.0,False,0
+63148,Sitio Web - Revisión/ajustes dispositivo android para bloque de Cookies,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-21T06:00:00,2026-01-22T06:00:00,2026-02-04T22:03:39.1Z,2.5,0,0,0,85.0,13.7,0.5,0.0,False,0
+63152,Pantalla de Usuarios,GML - Nuevos Requerimientos en CRM Ventas,alejandro.valenzuela@inbest.cloud,Active,Unknown,2026-01-22T06:00:00,2026-01-30T15:53:00,,8.0,9.6,0,83.33,100.0,0,0,0.0,False,0
+63166,Presentación de Backlog,Unitrade-POC Data,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-23T18:06:00,2026-01-23T18:21:46.02Z,1.0,0,0,0,95.0,0.0,0.2,0.0,False,0
+63167,Sitio Web - Implementación Home - Semana 1,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:06:39.997Z,24.0,0,0,0,90.0,5.7,4.8,0.0,False,0
+63173,RV: Invitación: Revisión rama seo-optimization,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-23T18:55:00,2026-01-23T18:55:00,2026-02-04T22:04:20.783Z,0.5,0,0,0,85.0,12.1,0.1,0.0,False,0
+63177,Post Venta - Ajustes Replica Calendly,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-23T19:03:00,2026-02-09T15:15:37.62Z,5.0,6.0,0,83.33,70.0,16.8,1.0,0.0,False,0
+63180,CRM Ventas - Reestablecimiento de tokens de indigitall para puebas en dev,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-05T06:00:00,2026-02-03T16:53:21.587Z,2.0,0,0,0,70.0,29.5,0.4,0.0,False,0
+63182,CRM Ventas - [JSSF-850] CRM Ventas | Historia de Panel de horarios y días inhábiles - Mesa de soporte de iNBest,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-06T06:00:00,2026-01-06T06:00:00,2026-02-03T17:04:17.573Z,3.0,0,0,0,70.0,28.5,0.6,0.0,False,0
+63183,CRM Ventas - Revisión de leads que están en crm y no en hubspot,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-13T06:00:00,2026-02-03T18:24:17.14Z,1.0,0,0,0,70.0,21.5,0.2,0.0,False,0
+63207,Exportar conciliación por decena y version,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-26T18:10:10.61Z,8.0,0,0,0,120.0,-3.5,1.6,1.75,False,0
+63210,Corregir exportacion de cedula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-26T18:10:35.17Z,14.0,0.05,0,150.0,120.0,-3.5,2.8,1.75,False,0
+63211,GML - CRM Ventas - Diseño Historial - Sesión,GML - Nuevos Requerimientos en CRM Ventas,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,2026-01-28T17:10:26.87Z,1.0,0,0,0,95.0,2.5,0.2,0.0,False,0
+63212,GML - CRM Ventas - Diseño Historial - Sesión,GML - Nuevos Requerimientos en CRM Ventas,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,2026-01-27T22:23:29.977Z,1.0,1.2,0,83.33,95.0,1.7,0.2,0.0,False,0
+63213,GML - CRM Ventas - Diseño Historial - Sesión,GML - Nuevos Requerimientos en CRM Ventas,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,2026-01-28T01:18:12.32Z,1.0,0,0,0,95.0,1.8,0.2,0.0,False,0
+63214,GML - CRM Ventas - Diseño Historial - Sesión,GML - Nuevos Requerimientos en CRM Ventas,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,2026-01-30T19:07:08.78Z,1.0,0.01,0,150.0,90.0,4.5,0.2,0.0,False,0
+63230,KickOff - Nuevos Requerimientos en CRM Ventas - Alejandro,GML - Nuevos Requerimientos en CRM Ventas,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-22T06:00:00,2026-01-26T16:34:34.613Z,1.0,0,0,0,90.0,4.4,0.2,0.0,False,0
+63231,KickOff - Nuevos Requerimientos en CRM Ventas - Gerardo,GML - Nuevos Requerimientos en CRM Ventas,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-22T06:00:00,2026-02-04T22:36:34.193Z,1.0,0,0,0,85.0,13.7,0.2,0.0,False,0
+63238,Weekly Checkpoint - Semana 26 -30 Ene,GML - Nuevos Requerimientos en CRM Ventas,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:14:49.6Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+63239,Weekly Checkpoint - Semana 26 -30 Ene,GML - Nuevos Requerimientos en CRM Ventas,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:38:04.077Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+63251,Seguimiento TL 26 -30 Ene,GML - Nuevos Requerimientos en CRM Ventas,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,,1.0,0,0,0,0,0,0,0,False,0
+63252,Seguimiento TL 26 -30 Ene,GML - Nuevos Requerimientos en CRM Ventas,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T22:39:23.043Z,1.0,0,0,0,90.0,5.7,0.2,0.0,False,0
+63268,Weekly Checkpoint - Semana 26 -30 Ene,GML - Nuevos Requerimientos en CRM Ventas,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-26T16:32:00,2026-01-30T06:00:00,2026-01-30T17:19:52.73Z,1.0,0,0,0,95.0,0.5,0.2,0.0,False,0
+63280,Adicionales,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-26T18:26:00,2026-01-30T06:00:00,2026-01-29T16:43:28.64Z,8.0,0.23,0,150.0,100.0,-0.6,1.6,0.0,False,0
+63281,Adicionales,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-26T18:27:00,2026-01-30T06:00:00,2026-01-29T16:43:06.127Z,8.0,0,0,0,100.0,-0.6,1.6,0.0,False,0
+63290,Mapeo de eventos aduanales a EDI 214,Unitrade,diego.lopez@inbest.cloud,Closed,Unknown,2026-01-29T16:19:00,2026-01-29T16:49:00,2026-02-03T18:36:31.44Z,5.4,0,0,0,90.0,5.1,1.08,0.0,False,0
+63327,CRM Ventas - [JSSF-874] CORREGIR 0 EN APARTADO DE PLAZO (COTIZACIÓN) - Mesa de soporte de iNBest,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-27T16:34:00,2026-01-27T16:34:00,2026-02-04T22:52:11.813Z,1.0,1.2,0,83.33,85.0,8.3,0.2,0.0,False,0
+63345,CRM Ventas - [JSSF-835] CRM Ventas | Encuesta en Caliente - Implementación BotMaker,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-22T06:00:00,2026-01-29T17:45:00,2026-02-20T15:41:37.17Z,30.0,0.0,0,0,70.0,21.9,6.0,0.0,False,0
+63348,CheckPoint 12 de Enero,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-12T06:00:00,2026-01-12T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+63350,CheckPoint 12 de Enero,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-12T06:00:00,2026-01-12T06:00:00,2026-01-28T00:22:00.5Z,0.5,0,0,0,70.0,15.8,0.1,0.0,False,0
+63352,CheckPoint 19 de enero,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-19T06:00:00,2026-01-19T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+63353,CheckPoint 19 de enero,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-19T06:00:00,2026-01-28T00:23:23.487Z,0.5,0,0,0,85.0,8.8,0.1,0.0,False,0
+63356,CheckPoint 19 de enero,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-19T06:00:00,2026-01-19T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+63358,CheckPoint 19 de enero,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-19T06:00:00,2026-01-28T00:22:51.513Z,0.5,0,0,0,85.0,8.8,0.1,0.0,False,0
+63359,CheckPoint 26 de enero,Hermosillo-Data Lake,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+63361,CheckPoint 26 de enero,Hermosillo-Data Lake,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,2026-01-30T00:16:03.25Z,0.5,0,0,0,90.0,3.8,0.1,0.0,False,0
+63366,Diseño: Acondicionar imágenes para Sitio Web,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-26T06:00:00,2026-02-04T22:04:59.57Z,0.7,0,0,0,85.0,9.7,0.14,0.0,False,0
+63401,Design - Creación de plantillas imágenes mobile,GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-27T18:55:00,2026-01-30T06:00:00,2026-01-30T18:14:19.76Z,5.0,0,0,0,95.0,0.5,1.0,0.0,False,0
+63402,Sitio Web - Desarrollo - Creación de plantillas imágenes mobile,GML- Soporte,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-27T18:55:00,2026-01-30T06:00:00,2026-02-05T17:24:53.133Z,5.0,0,0,0,90.0,6.5,1.0,0.0,False,0
+63463,Consultoría/Soporte CRM,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T21:58:30.9Z,4.0,4.8,0,83.33,90.0,5.7,0.8,0.0,False,0
+63534,Sesión con equipo Quiter,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-27T22:01:00,2026-01-27T22:01:00,2026-01-28T01:15:16.84Z,1.0,0,0,0,95.0,0.1,0.2,0.0,False,0
+63537,Post Venta - Seguimiento Integración Intelisis,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-27T22:06:00,2026-01-28T01:12:19.92Z,2.0,0,0,0,95.0,0.1,0.4,0.0,False,0
+63538,Meet express - Encuesta en Caliente - Dudas equipo JAC Home,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-27T22:07:00,2026-01-27T22:07:00,2026-01-28T01:14:02.393Z,0.25,0,0,0,95.0,0.1,0.05,0.0,False,0
+63540,Meet express - Encuesta en Caliente - Dudas equipo JAC Home,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-27T22:07:00,2026-01-27T22:07:00,2026-02-04T23:17:52.733Z,0.25,0,0,0,85.0,8.0,0.05,0.0,False,0
+63542,Generación de maqueta Historial,GML - Nuevos Requerimientos en CRM Ventas,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-26T23:08:00,2026-01-27T23:08:00,2026-01-28T18:13:36.05Z,2.0,2.4,0,83.33,95.0,0.8,0.4,0.0,False,0
+63556,Seguimiento TL,Unitrade,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T21:21:36.3Z,2.0,0,0,0,90.0,6.6,0.4,0.0,False,0
+63557,Weekly,Unitrade,osvaldo.deluna@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-05T21:06:04.51Z,0.5,0,0,0,90.0,6.6,0.1,0.0,False,0
+63603,ST2 Lakehouse Contpaqi,CRM Innovación,pablo.ruiz@inbest.cloud,New,Unknown,2026-01-29T06:00:00,2026-02-18T06:00:00,,2.0,0,0,0,0,0,0,0,False,0
+63618,GML - Campañas JAC Home,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-28T18:32:00,2026-01-28T18:32:00,2026-02-04T21:55:34.66Z,1.0,0,0,0,85.0,7.1,0.2,0.0,False,0
+63666,Ajuste de desglose por día de la conciliación,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-29T16:43:28.64Z,8.0,0,0,0,100.0,-0.6,1.6,0.0,False,0
+63667,Correción de cálculo por anomalía en Cédula,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T16:33:15.93Z,12.0,14.4,0,83.33,90.0,5.4,2.4,0.0,False,0
+63698,Ausencia situación personal - Daniel Reyes,People - HR - Activities Hub,daniel.reyes@inbest.cloud,Closed,Unknown,2026-01-28T06:00:00,2026-01-28T06:00:00,2026-02-04T22:07:25.627Z,7.0,0,0,0,85.0,7.7,1.4,0.0,False,0
+63704,Revisión maqueta Calendly - Sesión Design - DEV,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-29T17:43:00,2026-01-29T17:43:00,2026-02-04T22:03:33Z,0.5,0,0,0,90.0,6.2,0.1,0.0,False,0
+63705,Revisión maqueta Calendly - Sesión Design - DEV,GML- Soporte,daniel.cayola@inbest.cloud,Closed,Unknown,2026-01-29T17:43:00,2026-01-29T17:43:00,2026-02-03T18:37:58.857Z,1.0,0,0,0,90.0,5.0,0.2,0.0,False,0
+63706,Revisión maqueta Calendly - Sesión Design - DEV,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-29T17:43:00,2026-01-29T17:43:00,2026-02-04T22:52:27.037Z,0.5,0,0,0,90.0,6.2,0.1,0.0,False,0
+63707,Revisión maqueta Calendly - Sesión Design - DEV,GML- Soporte,ximena.segura@inbest.cloud,Closed,Unknown,2026-01-29T17:43:00,2026-01-29T17:43:00,2026-01-30T17:14:46.633Z,0.5,0,0,0,95.0,1.0,0.1,0.0,False,0
+63764,CRM Ventas - [JSSF-878] Cambio de datos micrositio Oaxaca,GML- Soporte,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-29T06:00:00,2026-01-30T15:26:00,2026-02-04T22:09:39.427Z,1.5,0.0,0,0,90.0,5.3,0.3,0.0,False,0
+63765,Demo y Presentación Pegaduro Módulo 6,Pegaduro - Póliza acompañamiento IA,fernando.alcaraz@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-01-30T18:46:27.503Z,5.0,0,0,0,95.0,0.5,1.0,0.0,False,0
+63813,Generar memoria técnica-POV MSFT,Unitrade-POC Data,alvaro.torres@inbest.cloud,Closed,Unknown,2026-01-13T06:00:00,2026-01-17T06:00:00,2026-01-30T20:49:33.367Z,3.0,0,0,0,85.0,13.6,0.6,0.0,False,0
+63953,Ajustes derivados de feedback easytrip,Easytrip - Finanzas-Automatización,emmanuel.perez@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T16:33:07.197Z,6.0,0,0,0,90.0,5.4,1.2,0.0,False,0
+63954,Ajustes derivados de feedback easytrip,Easytrip - Finanzas-Automatización,fernando.agredano@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-04T16:33:11.733Z,6.0,0,0,0,90.0,5.4,1.2,0.0,False,0
+63958,Ajuste logotipo de agencia,JAC Fichas Tecnicas,damian.gaspar@inbest.cloud,Closed,Unknown,2026-01-30T06:00:00,2026-01-30T06:00:00,2026-02-03T22:27:12.757Z,3.0,0,0,0,90.0,4.7,0.6,0.0,False,0
+64392,CRM Ventas - [JSSF-858] SELECCIÓN MASIVA - Mesa de soporte de iNBest,GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-14T06:00:00,2026-01-14T06:00:00,2026-02-03T19:09:27.32Z,0.5,0,0,0,70.0,20.5,0.1,0.0,False,0
+64393,Checkpoint interno 01 - 05 Enero 2026 (Gerardo),GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-01T06:00:00,2026-01-05T06:00:00,2026-02-04T22:55:16.577Z,1.0,0,0,0,70.0,30.7,0.2,0.0,False,0
+64394,Checkpoint interno 06 - 09 Enero 2026 (Alex),GML- Soporte,alejandro.valenzuela@inbest.cloud,New,Unknown,2026-01-06T06:00:00,2026-01-09T06:00:00,,0.5,0,0,0,100.0,0,0,0.0,False,0
+64395,Checkpoint interno 06 - 09 Enero 2026 (Hans),GML- Soporte,hans.izarraraz@inbest.cloud,New,Unknown,2026-01-06T06:00:00,2026-01-09T06:00:00,,0.5,0,0,0,0,0,0,0,False,0
+64416,Checkpoint interno 26 - 30 Enero 2026 (Uriel),GML- Soporte,uriel.cortes@inbest.cloud,Closed,Unknown,2026-01-26T06:00:00,2026-01-30T06:00:00,2026-02-23T18:17:14.52Z,1.0,0.0,0,0,70.0,24.5,0.2,0.0,False,0
+64484,Definicion de branding OBOK,Obok,ximena.segura@inbest.cloud,New,Unknown,2026-01-15T06:00:00,2026-02-28T06:00:00,,1.88,0,0,0,0,0,0,0,False,0
+64485,Definicion de branding OBOK,Obok,daniel.cayola@inbest.cloud,Active,Unknown,2026-01-15T06:00:00,2026-02-28T06:00:00,,3.0,0,0,0,100.0,0,0,0.0,False,0
+64489,Propuesta Systema Post venta JAC,UX-UI Hub,daniel.cayola@inbest.cloud,Done,Unknown,2026-01-01T06:00:00,2026-01-31T06:00:00,2026-02-03T22:07:40.187Z,8.0,0,0,0,90.0,3.7,1.6,0.0,False,0
+64710,Weekly Checkpoint - 29Ene2026,GML - Integración DMS en CRM Post Venta,alejandro.valenzuela@inbest.cloud,Closed,Unknown,2026-01-29T06:00:00,2026-01-29T06:00:00,2026-02-04T22:30:30.213Z,1.0,0,0,0,90.0,6.7,0.2,0.0,False,0
+64981,"Post Venta - [JSSF-741] Agregar Filtos en Clientes, Vin,Fechas, Origenes y en Servicios CRM PV - Mesa de soporte de iNBest",GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-08T06:00:00,2026-02-05T16:50:07.477Z,4.0,0,0,0,70.0,28.5,0.8,0.0,False,0
+64982,CRM Ventas - [JSSF-849] CRM Ventas | Barra de búsqueda en pantalla de Usuarios - Mesa de soporte de iNBest,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-08T06:00:00,2026-02-05T16:49:03.81Z,4.0,0,0,0,70.0,28.5,0.8,0.0,False,0
+64983,Generar Logs para el sistema,GML - Integración DMS en CRM Post Venta,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-05T06:00:00,2026-01-14T06:00:00,2026-02-05T16:51:52.753Z,8.0,0,0,0,70.0,22.5,1.6,0.0,False,0
+64984,Post Venta - [JSSF-864] Citas y Servicios Destacartados - Mesa de soporte de iNBest,GML- Soporte,gerardo.melgoza@inbest.cloud,Closed,Unknown,2026-01-19T06:00:00,2026-01-21T06:00:00,2026-02-05T16:50:57.697Z,8.0,0,0,0,70.0,15.5,1.6,0.0,False,0

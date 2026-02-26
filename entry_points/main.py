@@ -393,6 +393,13 @@ def handle_work_item_query(args, organization, personal_access_token):
         print("   Example: --start-date 2025-10-01 --end-date 2025-10-31")
         return
 
+    # Resolve planned hours: CLI flag > config > None
+    planned_hours = getattr(args, 'planned_hours', None)
+    if planned_hours is None:
+        config_planned = work_item_ops.config_loader.config.get('default_planned_hours_per_month')
+        if config_planned is not None:
+            planned_hours = float(config_planned)
+
     # Execute query using Logic App
     try:
         result = work_item_ops.get_work_items_from_logic_app(
@@ -402,7 +409,8 @@ def handle_work_item_query(args, organization, personal_access_token):
             calculate_efficiency=not args.no_efficiency,
             use_parallel_processing=not args.no_parallel,
             max_workers=args.max_workers,
-            export_csv=args.export_csv
+            export_csv=args.export_csv,
+            compare_planned_hours=planned_hours
         )
     except Exception as e:
         print(f"❌ Failed to fetch work items from Logic App: {e}")
@@ -506,12 +514,6 @@ def handle_work_item_query(args, organization, personal_access_token):
         if len(work_items) > 5:
             print(f"... and {len(work_items) - 5} more items")
     
-    # Export to CSV if requested
-    if args.export_csv:
-        # Use enhanced export function
-        base_filename = args.export_csv.replace('.csv', '')
-        work_item_ops.export_enhanced_work_items_to_csv(work_items, kpis, base_filename)
-    
     print("\n" + "="*80)
 
 
@@ -599,6 +601,12 @@ def main():
     parser.add_argument("--delivery-score-weight", type=float, help="Delivery score weight in developer score (default: 0.3)")
     parser.add_argument("--completion-rate-weight", type=float, help="Completion rate weight in developer score (default: 0.2)")
     parser.add_argument("--on-time-delivery-weight", type=float, help="On-time delivery weight in developer score (default: 0.1)")
+    
+    # Planned hours estimation discrepancy
+    parser.add_argument("--planned-hours", type=float,
+                        help="Expected planned hours per developer per month. Adds estimation discrepancy "
+                             "columns to the developer summary CSV showing how far task estimates deviate "
+                             "from this target. Falls back to config default_planned_hours_per_month.")
     
     # Performance optimization flags (kept for compatibility with new Logic App flow)
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel revision fetching (use sequential instead)")

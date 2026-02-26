@@ -134,6 +134,7 @@
     },
     "minimum_items_for_scoring": 3
   },
+  "default_planned_hours_per_month": 155,
   "work_item_defaults": {
     "estimated_hours_by_type": {
       "user story": 8.0,
