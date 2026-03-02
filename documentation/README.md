@@ -43,13 +43,19 @@ python run.py --list-projects
 python run.py --query-work-items \
   --assigned-to "Developer1,Developer2" \
   --start-date "2025-01-01" \
-  --end-date "2025-01-31" \
-  --export-csv "report.csv"
+  --end-date "2025-01-31"
 ```
 
-**Output files:**
+**Default output files (Excel):**
+- `report.xlsx` - Detailed work item data
+- `report_developer_summary.xlsx` - Developer metrics summary
+
+**Optional CSV output:**
+```bash
+python run.py --query-work-items --start-date "2025-01-01" --end-date "2025-01-31" --export-csv "report.csv"
+```
 - `report.csv` - Detailed work item data
-- `report_developer_summary.csv` - Developer metrics summary
+- `report_developer_summary.csv` - Developer metrics summary (includes leading `Team` column)
 
 ### Service Hook Management
 
