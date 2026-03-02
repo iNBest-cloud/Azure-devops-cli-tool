@@ -6,7 +6,7 @@ import json
 import logging
 import re
 import sys
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 from pathlib import Path
 
 
@@ -107,6 +107,46 @@ def load_email_mapping(mapping_file: str = "user_email_mapping.json") -> Dict[st
         raise ValueError(f"Invalid email mapping file ({mapping_file}):\n   {error_msg}")
 
     return mapping
+
+
+def load_collaborator_metadata(metadata_file: str = "collaborator_metadata.json") -> Dict[str, Dict[str, Any]]:
+    """
+    Load collaborator metadata keyed by email.
+
+    Expected JSON structure:
+    {
+        "user@company.com": {"name": "User Name", "team": "Team", "area": "Area"}
+    }
+    """
+    metadata_path = Path(metadata_file)
+    if not metadata_path.exists():
+        logger.warning(f"Collaborator metadata file not found: {metadata_file}")
+        return {}
+
+    try:
+        with open(metadata_path, "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
+    except Exception as exc:
+        logger.error(f"Failed to load collaborator metadata from {metadata_file}: {exc}")
+        return {}
+
+    if not isinstance(raw_data, dict):
+        logger.error(f"Invalid collaborator metadata format in {metadata_file}: root must be an object")
+        return {}
+
+    normalized: Dict[str, Dict[str, Any]] = {}
+    for email, metadata in raw_data.items():
+        if not isinstance(email, str):
+            continue
+        if not isinstance(metadata, dict):
+            continue
+        normalized[email.strip().lower()] = {
+            "name": metadata.get("name", ""),
+            "team": metadata.get("team", ""),
+            "area": metadata.get("area", "")
+        }
+
+    return normalized
 
 
 def resolve_emails(

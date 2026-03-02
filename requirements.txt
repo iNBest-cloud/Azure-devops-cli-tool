@@ -5,3 +5,4 @@ argparse
 pytz
 pyodbc
 azure-identity
+openpyxl

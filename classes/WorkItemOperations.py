@@ -5,7 +5,7 @@ from config.config_loader import ConfigLoader
 from helpers.fabric_logic_app_helper import create_fabric_helper
 from helpers.logic_app_client import create_logic_app_client
 from helpers.env_loader import get_logic_app_url, EnvironmentError
-from helpers.email_mapping import resolve_emails
+from helpers.email_mapping import resolve_emails, load_collaborator_metadata
 from helpers.timezone_utils import get_date_boundaries_mexico_city
 from datetime import datetime, timedelta
 import json
@@ -16,6 +16,11 @@ import concurrent.futures
 import time
 import requests
 import logging
+
+try:
+    from openpyxl import Workbook
+except ImportError:  # pragma: no cover - handled via runtime message
+    Workbook = None
 
 
 class WorkItemOperations(AzureDevOps):
@@ -1224,6 +1229,7 @@ class WorkItemOperations(AzureDevOps):
                                        use_parallel_processing: bool = True,
                                        max_workers: int = 10,
                                        export_csv: Optional[str] = None,
+                                       export_excel: Optional[str] = None,
                                        compare_planned_hours: Optional[float] = None) -> Dict:
         """
         🚀 NEW DEFAULT METHOD: Fetch work items from Logic App and calculate efficiency.
@@ -1246,6 +1252,7 @@ class WorkItemOperations(AzureDevOps):
             use_parallel_processing: Enable parallel revision fetching (default: True)
             max_workers: Number of parallel workers (default: 10)
             export_csv: CSV filename for export (optional)
+            export_excel: Excel filename for export (optional)
             compare_planned_hours: Target planned hours for proportional scaling comparison (optional)
 
         Returns:
@@ -1356,11 +1363,15 @@ class WorkItemOperations(AzureDevOps):
             }
         }
 
-        # Export to CSV if requested
+        # Export results when requested
         if export_csv:
             base_filename = export_csv.replace('.csv', '')
             self.export_enhanced_work_items_to_csv(work_items, kpis, base_filename,
                                                     planned_hours=compare_planned_hours)
+        elif export_excel:
+            base_filename = export_excel.replace('.xlsx', '')
+            self.export_enhanced_work_items_to_excel(work_items, kpis, base_filename,
+                                                     planned_hours=compare_planned_hours)
 
         return result
 
@@ -2223,153 +2234,201 @@ class WorkItemOperations(AzureDevOps):
         
         print(f"🚀 ========================================\n")
     
-    def export_enhanced_work_items_to_csv(self, 
-                                        work_items: List[Dict],
-                                        kpis: Dict,
-                                        base_filename: str = "work_items_export",
-                                        planned_hours: Optional[float] = None) -> None:
+    def _get_detailed_report_fieldnames(self) -> List[str]:
+        return [
+            'ID', 'Title', 'Project Name', 'Assigned To', 'State', 'Work Item Type',
+            'Start Date', 'Target Date', 'Closed Date', 'Estimated Hours',
+            'Active Time (Hours)', 'Blocked Time (Hours)', 'Efficiency %',
+            'Delivery Score', 'Days Ahead/Behind Target',
+            'Completion Bonus', 'Timing Bonus', 'Was Reopened', 'Active After Reopen'
+        ]
+
+    def _get_summary_report_fieldnames(self, planned_hours: Optional[float]) -> List[str]:
+        fieldnames = [
+            'Team', 'Developer', 'Total Work Items', 'Completed Items', 'Items With Active Time',
+            'Sample Confidence %', 'Completion Rate %', 'On-Time Delivery %',
+            'Average Efficiency %', 'Average Delivery Score', 'Overall Developer Score',
+            'Total Active Hours', 'Total Estimated Hours', 'Avg Days Ahead/Behind',
+            'Reopened Items Handled', 'Reopened Rate %', 'Work Item Types', 'Projects Count',
+            'Early Deliveries', 'On-Time Deliveries', 'Late 1-3 Days', 'Late 4-7 Days',
+            'Late 8-14 Days', 'Late 15+ Days'
+        ]
+        if planned_hours is not None:
+            fieldnames.extend([
+                'Planned Hours Target', 'Estimation Discrepancy %', 'Estimation Reliability'
+            ])
+        return fieldnames
+
+    def _build_detailed_report_row(self, item: Dict) -> Dict:
+        efficiency = item.get("efficiency", {})
+        return {
+            'ID': item.get('id', ''),
+            'Title': item.get('title', ''),
+            'Project Name': item.get('project_name', ''),
+            'Assigned To': item.get('assigned_to', ''),
+            'State': item.get('state', ''),
+            'Work Item Type': item.get('work_item_type', ''),
+            'Start Date': item.get('start_date', ''),
+            'Target Date': item.get('target_date', ''),
+            'Closed Date': item.get('closed_date', ''),
+            'Estimated Hours': efficiency.get('estimated_time_hours', 0),
+            'Active Time (Hours)': efficiency.get('active_time_hours', 0),
+            'Blocked Time (Hours)': efficiency.get('blocked_time_hours', 0),
+            'Efficiency %': efficiency.get('efficiency_percentage', 0),
+            'Delivery Score': efficiency.get('delivery_score', 0),
+            'Days Ahead/Behind Target': efficiency.get('days_ahead_behind', 0),
+            'Completion Bonus': efficiency.get('completion_bonus', 0),
+            'Timing Bonus': efficiency.get('delivery_timing_bonus', 0),
+            'Was Reopened': efficiency.get('was_reopened', False),
+            'Active After Reopen': efficiency.get('active_after_reopen', 0)
+        }
+
+    def _build_summary_report_row(self,
+                                  developer: str,
+                                  metrics: Dict,
+                                  planned_hours: Optional[float],
+                                  collaborator_metadata: Dict[str, Dict]) -> Dict:
+        timing = metrics.get('delivery_timing_breakdown', {})
+        normalized_email = str(developer).strip().lower()
+        collaborator = collaborator_metadata.get(normalized_email, {})
+
+        row = {
+            'Team': collaborator.get('team') or 'Unassigned',
+            'Developer': developer,
+            'Total Work Items': metrics.get('total_work_items', 0),
+            'Completed Items': metrics.get('completed_items', 0),
+            'Items With Active Time': metrics.get('items_with_efficiency', 0),
+            'Sample Confidence %': metrics.get('sample_confidence', 0),
+            'Completion Rate %': metrics.get('completion_rate', 0),
+            'On-Time Delivery %': metrics.get('on_time_delivery_percentage', 0),
+            'Average Efficiency %': metrics.get('average_fair_efficiency', 0),
+            'Average Delivery Score': metrics.get('average_delivery_score', 0),
+            'Overall Developer Score': metrics.get('overall_developer_score', 0),
+            'Total Active Hours': metrics.get('total_active_hours', 0),
+            'Total Estimated Hours': metrics.get('total_estimated_hours', 0),
+            'Avg Days Ahead/Behind': metrics.get('average_days_ahead_behind', 0),
+            'Reopened Items Handled': metrics.get('reopened_items_handled', 0),
+            'Reopened Rate %': metrics.get('reopened_rate', 0),
+            'Work Item Types': len(metrics.get('work_item_types', [])),
+            'Projects Count': metrics.get('projects_count', 0),
+            'Early Deliveries': timing.get('early', 0),
+            'On-Time Deliveries': timing.get('on_time', 0),
+            'Late 1-3 Days': timing.get('late_1_3', 0),
+            'Late 4-7 Days': timing.get('late_4_7', 0),
+            'Late 8-14 Days': timing.get('late_8_14', 0),
+            'Late 15+ Days': timing.get('late_15_plus', 0)
+        }
+
+        if planned_hours is not None:
+            total_est = metrics.get('total_estimated_hours', 0)
+            if planned_hours > 0:
+                discrepancy_pct = round(((total_est - planned_hours) / planned_hours) * 100, 1)
+            else:
+                discrepancy_pct = 0
+
+            abs_disc = abs(discrepancy_pct)
+            if abs_disc <= 15:
+                reliability = 'Good'
+            elif abs_disc <= 40:
+                reliability = 'Review'
+            else:
+                reliability = 'Unreliable'
+
+            row['Planned Hours Target'] = planned_hours
+            row['Estimation Discrepancy %'] = discrepancy_pct
+            row['Estimation Reliability'] = reliability
+
+        return row
+
+    def export_enhanced_work_items_to_csv(self,
+                                          work_items: List[Dict],
+                                          kpis: Dict,
+                                          base_filename: str = "work_items_export",
+                                          planned_hours: Optional[float] = None) -> None:
         """
         Export enhanced work items data and per-developer metrics to CSV files.
-        
-        Args:
-            work_items: List of work items with enhanced efficiency data
-            kpis: KPI data with per-developer metrics
-            base_filename: Base filename for exports (without extension)
-            planned_hours: Expected planned hours per developer; adds estimation discrepancy columns when set
         """
-        if not work_items:
-            print("No work items to export. Creating empty CSV with headers.")
-            # Create empty detailed report with headers
-            items_filename = f"{base_filename}.csv"
-            try:
-                with open(items_filename, 'w', newline='', encoding='utf-8') as csvfile:
-                    fieldnames = [
-                        'ID', 'Title', 'Project Name', 'Assigned To', 'State', 'Work Item Type',
-                        'Start Date', 'Target Date', 'Closed Date', 'Estimated Hours',
-                        'Active Time (Hours)', 'Blocked Time (Hours)', 'Efficiency %',
-                        'Delivery Score', 'Days Ahead/Behind Target',
-                        'Completion Bonus', 'Timing Bonus', 'Was Reopened', 'Active After Reopen'
-                    ]
-                    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                    writer.writeheader()
-                print(f"Created empty detailed report: {items_filename}")
-            except Exception as e:
-                print(f"Error creating empty CSV: {e}")
-            return
-        
+        detailed_fieldnames = self._get_detailed_report_fieldnames()
+        summary_fieldnames = self._get_summary_report_fieldnames(planned_hours)
+        collaborator_metadata = load_collaborator_metadata()
+
+        items_filename = f"{base_filename}.csv"
+        summary_filename = f"{base_filename}_developer_summary.csv"
+        developer_metrics = kpis.get('developer_metrics', {})
+
         try:
-            # Export detailed work items
-            items_filename = f"{base_filename}.csv"
             with open(items_filename, 'w', newline='', encoding='utf-8') as csvfile:
-                fieldnames = [
-                    'ID', 'Title', 'Project Name', 'Assigned To', 'State', 'Work Item Type',
-                    'Start Date', 'Target Date', 'Closed Date', 'Estimated Hours',
-                    'Active Time (Hours)', 'Blocked Time (Hours)', 'Efficiency %',
-                    'Delivery Score', 'Days Ahead/Behind Target',
-                    'Completion Bonus', 'Timing Bonus', 'Was Reopened', 'Active After Reopen'
-                ]
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer = csv.DictWriter(csvfile, fieldnames=detailed_fieldnames)
                 writer.writeheader()
-
                 for item in work_items:
-                    efficiency = item.get("efficiency", {})
-                    writer.writerow({
-                        'ID': item['id'],
-                        'Title': item['title'],
-                        'Project Name': item.get('project_name', ''),
-                        'Assigned To': item['assigned_to'],
-                        'State': item['state'],
-                        'Work Item Type': item['work_item_type'],
-                        'Start Date': item.get('start_date', ''),
-                        'Target Date': item.get('target_date', ''),
-                        'Closed Date': item.get('closed_date', ''),
-                        'Estimated Hours': efficiency.get('estimated_time_hours', 0),
-                        'Active Time (Hours)': efficiency.get('active_time_hours', 0),
-                        'Blocked Time (Hours)': efficiency.get('blocked_time_hours', 0),
-                        'Efficiency %': efficiency.get('efficiency_percentage', 0),
-                        'Delivery Score': efficiency.get('delivery_score', 0),
-                        'Days Ahead/Behind Target': efficiency.get('days_ahead_behind', 0),
-                        'Completion Bonus': efficiency.get('completion_bonus', 0),
-                        'Timing Bonus': efficiency.get('delivery_timing_bonus', 0),
-                        'Was Reopened': efficiency.get('was_reopened', False),
-                        'Active After Reopen': efficiency.get('active_after_reopen', 0)
-                    })
-            
+                    writer.writerow(self._build_detailed_report_row(item))
             print(f"Successfully exported {len(work_items)} detailed work items to {items_filename}")
-            
-            # Export developer summary
-            summary_filename = f"{base_filename}_developer_summary.csv"
-            developer_metrics = kpis.get('developer_metrics', {})
-            
-            if developer_metrics:
-                fieldnames = [
-                    'Developer', 'Total Work Items', 'Completed Items', 'Items With Active Time',
-                    'Sample Confidence %', 'Completion Rate %', 'On-Time Delivery %',
-                    'Average Efficiency %', 'Average Delivery Score', 'Overall Developer Score',
-                    'Total Active Hours', 'Total Estimated Hours', 'Avg Days Ahead/Behind',
-                    'Reopened Items Handled', 'Reopened Rate %', 'Work Item Types', 'Projects Count',
-                    'Early Deliveries', 'On-Time Deliveries', 'Late 1-3 Days', 'Late 4-7 Days',
-                    'Late 8-14 Days', 'Late 15+ Days'
-                ]
-                if planned_hours is not None:
-                    fieldnames.extend([
-                        'Planned Hours Target', 'Estimation Discrepancy %', 'Estimation Reliability'
-                    ])
 
-                with open(summary_filename, 'w', newline='', encoding='utf-8') as csvfile:
-                    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                    writer.writeheader()
+            with open(summary_filename, 'w', newline='', encoding='utf-8') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=summary_fieldnames)
+                writer.writeheader()
+                for developer, metrics in developer_metrics.items():
+                    row = self._build_summary_report_row(
+                        developer=developer,
+                        metrics=metrics,
+                        planned_hours=planned_hours,
+                        collaborator_metadata=collaborator_metadata
+                    )
+                    writer.writerow(row)
+            print(f"Successfully exported developer summary to {summary_filename}")
 
-                    for developer, metrics in developer_metrics.items():
-                        timing = metrics.get('delivery_timing_breakdown', {})
-                        row = {
-                            'Developer': developer,
-                            'Total Work Items': metrics.get('total_work_items', 0),
-                            'Completed Items': metrics.get('completed_items', 0),
-                            'Items With Active Time': metrics.get('items_with_efficiency', 0),
-                            'Sample Confidence %': metrics.get('sample_confidence', 0),
-                            'Completion Rate %': metrics.get('completion_rate', 0),
-                            'On-Time Delivery %': metrics.get('on_time_delivery_percentage', 0),
-                            'Average Efficiency %': metrics.get('average_fair_efficiency', 0),
-                            'Average Delivery Score': metrics.get('average_delivery_score', 0),
-                            'Overall Developer Score': metrics.get('overall_developer_score', 0),
-                            'Total Active Hours': metrics.get('total_active_hours', 0),
-                            'Total Estimated Hours': metrics.get('total_estimated_hours', 0),
-                            'Avg Days Ahead/Behind': metrics.get('average_days_ahead_behind', 0),
-                            'Reopened Items Handled': metrics.get('reopened_items_handled', 0),
-                            'Reopened Rate %': metrics.get('reopened_rate', 0),
-                            'Work Item Types': len(metrics.get('work_item_types', [])),
-                            'Projects Count': metrics.get('projects_count', 0),
-                            'Early Deliveries': timing.get('early', 0),
-                            'On-Time Deliveries': timing.get('on_time', 0),
-                            'Late 1-3 Days': timing.get('late_1_3', 0),
-                            'Late 4-7 Days': timing.get('late_4_7', 0),
-                            'Late 8-14 Days': timing.get('late_8_14', 0),
-                            'Late 15+ Days': timing.get('late_15_plus', 0)
-                        }
-
-                        if planned_hours is not None:
-                            total_est = metrics.get('total_estimated_hours', 0)
-                            if planned_hours > 0:
-                                discrepancy_pct = round(((total_est - planned_hours) / planned_hours) * 100, 1)
-                            else:
-                                discrepancy_pct = 0
-                            abs_disc = abs(discrepancy_pct)
-                            if abs_disc <= 15:
-                                reliability = 'Good'
-                            elif abs_disc <= 40:
-                                reliability = 'Review'
-                            else:
-                                reliability = 'Unreliable'
-                            row['Planned Hours Target'] = planned_hours
-                            row['Estimation Discrepancy %'] = discrepancy_pct
-                            row['Estimation Reliability'] = reliability
-
-                        writer.writerow(row)
-                
-                print(f"Successfully exported developer summary to {summary_filename}")
-            
         except IOError as e:
             print(f"Error writing to CSV files: {e}")
         except Exception as e:
             print(f"An unexpected error occurred during CSV export: {e}")
+
+    def export_enhanced_work_items_to_excel(self,
+                                            work_items: List[Dict],
+                                            kpis: Dict,
+                                            base_filename: str = "report",
+                                            planned_hours: Optional[float] = None) -> None:
+        """
+        Export enhanced work items data and per-developer metrics to Excel files.
+        """
+        if Workbook is None:
+            print("❌ Excel export requires openpyxl. Install dependencies with: pip install -r requirements.txt")
+            return
+
+        detailed_fieldnames = self._get_detailed_report_fieldnames()
+        summary_fieldnames = self._get_summary_report_fieldnames(planned_hours)
+        collaborator_metadata = load_collaborator_metadata()
+
+        detailed_filename = f"{base_filename}.xlsx"
+        summary_filename = f"{base_filename}_developer_summary.xlsx"
+        developer_metrics = kpis.get('developer_metrics', {})
+
+        try:
+            detailed_wb = Workbook()
+            detailed_ws = detailed_wb.active
+            detailed_ws.title = "Detailed Report"
+            detailed_ws.append(detailed_fieldnames)
+            for item in work_items:
+                row = self._build_detailed_report_row(item)
+                detailed_ws.append([row.get(field, "") for field in detailed_fieldnames])
+            detailed_wb.save(detailed_filename)
+            print(f"Successfully exported {len(work_items)} detailed work items to {detailed_filename}")
+
+            summary_wb = Workbook()
+            summary_ws = summary_wb.active
+            summary_ws.title = "Developer Summary"
+            summary_ws.append(summary_fieldnames)
+            for developer, metrics in developer_metrics.items():
+                row = self._build_summary_report_row(
+                    developer=developer,
+                    metrics=metrics,
+                    planned_hours=planned_hours,
+                    collaborator_metadata=collaborator_metadata
+                )
+                summary_ws.append([row.get(field, "") for field in summary_fieldnames])
+            summary_wb.save(summary_filename)
+            print(f"Successfully exported developer summary to {summary_filename}")
+
+        except IOError as e:
+            print(f"Error writing to Excel files: {e}")
+        except Exception as e:
+            print(f"An unexpected error occurred during Excel export: {e}")

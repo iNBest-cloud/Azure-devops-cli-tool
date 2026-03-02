@@ -93,12 +93,15 @@ Commands:
                        If omitted, queries all users from user_email_mapping.json.
                        Supports both names ("Carlos Vazquez") and emails ("carlos.vazquez@inbest.cloud").
         --no-efficiency : Skip efficiency calculations for faster results.
-        --export-csv : Export results to CSV file (detailed and summary).
+        --export-csv : Export results to CSV files (detailed and summary). If omitted, default export is Excel.
         --no-parallel : Disable parallel revision fetching (use sequential).
         --max-workers : Number of parallel workers (default: 10).
 
       Examples:
-        # Query all users for October 2025
+        # Query all users for October 2025 (default Excel output: report.xlsx + report_developer_summary.xlsx)
+        python main.py --query-work-items --start-date 2025-10-01 --end-date 2025-10-31
+
+        # Query all users and force CSV output
         python main.py --query-work-items --start-date 2025-10-01 --end-date 2025-10-31 --export-csv reports/october.csv
 
         # Query specific users
@@ -193,6 +196,7 @@ Environment Variables:
 
 Configuration Files:
   user_email_mapping.json : Name-to-email mapping for user resolution (REQUIRED for --query-work-items).
+  collaborator_metadata.json : Email-keyed metadata used to enrich developer summary exports (Team/Area).
 
 Use --help for a detailed usage guide.
 """
@@ -400,6 +404,10 @@ def handle_work_item_query(args, organization, personal_access_token):
         if config_planned is not None:
             planned_hours = float(config_planned)
 
+    default_excel_export = None if args.export_csv else "report.xlsx"
+    if default_excel_export:
+        print(f"📊 No --export-csv provided. Defaulting to Excel export: {default_excel_export}")
+
     # Execute query using Logic App
     try:
         result = work_item_ops.get_work_items_from_logic_app(
@@ -410,6 +418,7 @@ def handle_work_item_query(args, organization, personal_access_token):
             use_parallel_processing=not args.no_parallel,
             max_workers=args.max_workers,
             export_csv=args.export_csv,
+            export_excel=default_excel_export,
             compare_planned_hours=planned_hours
         )
     except Exception as e:
@@ -568,7 +577,7 @@ def main():
     parser.add_argument("--start-date", help="Start date for filtering (YYYY-MM-DD format) - REQUIRED")
     parser.add_argument("--end-date", help="End date for filtering (YYYY-MM-DD format) - REQUIRED")
     parser.add_argument("--no-efficiency", action="store_true", help="Skip efficiency calculations")
-    parser.add_argument("--export-csv", help="Export results to CSV file")
+    parser.add_argument("--export-csv", help="Export results to CSV files (detailed and summary). If omitted, defaults to Excel output (report.xlsx)")
 
     # Daily snapshot arguments
     parser.add_argument("--daily-snapshot", action="store_true",
