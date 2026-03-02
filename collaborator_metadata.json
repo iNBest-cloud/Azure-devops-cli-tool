@@ -158,5 +158,30 @@
     "name": "Ximena Segura",
     "team": "UX/UI",
     "area": "Professional Services"
+  },
+  "daniel.reyes@inbest.cloud": {
+    "name": "Daniel Reyes",
+    "team": "SF-Hans",
+    "area": "Professional Services"
+  },
+  "alejandro.valenzuela@inbest.cloud": {
+    "name": "Alejandro Valenzuela",
+    "team": "SF-Alejandro",
+    "area": "Professional Services"
+  },
+  "emmanuel.perez@inbest.cloud": {
+    "name": "Emmanuel Pérez",
+    "team": "SF-Nocedal",
+    "area": "Professional Services"
+  },
+  "diego.lopez@inbest.cloud": {
+    "name": "Diego Lopez",
+    "team": "SF-Osvaldo",
+    "area": "Professional Services"
+  },
+  "damian.gaspar@inbest.cloud": {
+    "name": "Damian Gaspar",
+    "team": "SF-Osvaldo",
+    "area": "Professional Services"
   }
 }
