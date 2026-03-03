@@ -198,5 +198,15 @@
     "name": "Bernardo Antonio",
     "team": "SF-Erika",
     "area": "Professional Services"
+  },
+  "alvaro.torres@inbest.cloud": {
+    "name": "Alvaro Torres",
+    "team": "Data",
+    "area": "Data"
+  },
+  "andres.escobedo@inbest.cloud": {
+    "name": "Andrés Escobedo",
+    "team": "Data",
+    "area": "Data"
   }
 }
